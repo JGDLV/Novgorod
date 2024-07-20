@@ -1,0 +1,63 @@
+-
+	var clearPhone = function(x) {
+		return x.replace(/\D/g, '');
+	}
+
+	var mainMenu = [
+		{ href: '#', text: 'Путеводитель' },
+		{ href: '#', text: 'Карта гостя' },
+		{ href: '#', text: 'Приложение' },
+	]
+
+	var phone = '8 800 222 00 53'
+
+.header
+	.container
+		.header__top
+			.header__top-inner
+				.logo
+					a.logo__link(href="/") 
+						img.logo__image(src="img/logo.svg" alt="")
+						p.logo__text При поддержке Правительства <br>Новогородской области
+				.tagline Туристический портал Новгородской области
+		.header__bottom
+			.header__bottom-inner
+				.main-menu
+					ul.main-menu-items
+						each item in mainMenu
+							li.main-menu__item
+								a.main-menu__link(href=item.href) !{item.text}
+				.menu-toggle
+					.icon-toggle
+						span 
+						span 
+						span 
+				a.phone(href="tel:+" + clearPhone(phone)) !{phone}
+				.search
+					form.search-form
+						input(type="text" placeholder="Поиск...").search__input
+				.lang
+					.lang__item
+						img(src="img/ru.svg" alt="")
+						| RU
+
+.mobile-header.mobile-only
+	.container
+		.mobile-header__inner
+			.mobile-header__logo
+				a.mobile-header__logo-link(href="/") 
+					img.mobile-header__logo-image(src="img/coat-of-arms-blue.svg" alt="")
+					p.mobile-header__logo-text Туристический портал <br>Новгородской области
+			.mobile-header-buttons
+				a.mobile-header__search(href="#") 
+				a.mobile-header__phone(href="#")
+				.mobile-header__lang RU
+				.menu-toggle.mobile-header-menu-toggle
+					.icon-toggle
+						span 
+						span 
+						span 
+.header-menu
+	//- .scroll-pane(style="height:calc(100vh - 100px)")
+	include _footer.pug
+include bottom-menu.pug

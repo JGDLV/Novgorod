@@ -1,0 +1,109 @@
+extends _layout.pug
+
+block variables
+    -
+        var title = 'Ресторан Карамазовы'
+        var description = 'Ресторан Карамазовы'
+        var index = false
+
+        var travel = {
+            header: 'Уютно и вкусно',
+            items: [
+                {
+                    image: '',
+                    header: 'Обед в утонченной атмосфере',
+                    text: 'Погрузитесь в атмосферу роскоши, наслаждаясь утонченными блюдами и изысканным сервисом.'
+                },
+                {
+                    image: '',
+                    header: 'Итальянские мотивы',
+                    text: 'Попробуйте блюда, вдохновленные итальянской кухней, приготовленные с любовью и вниманием к деталям.'
+                },
+                {
+                    image: '',
+                    header: 'Русские деликатесы',
+                    text: 'Откройте для себя богатство вкусов русских деликатесов, оживших в блюдах ресторана "Карамазовы"'
+                },
+                {
+                    image: '',
+                    header: 'Романтические встречи',
+                    text: 'Создайте романтическую атмосферу, выбрав летнюю веранду для особых встреч.'
+                },
+            ]
+        }
+
+        var history = [
+            'Ресторан "Карамазовы" предлагает уникальное сочетание дворянской кухни с изысками современной Италии.',
+            'В меню "Карамазовы" вы найдете блюда эпохи Достоевского с элементами итальянской и русской кухни. От кулебяки до ремесленного хлеба ручной работы.',
+            'Дворянский банкетный зал, вместимостью до 60 человек, созданный для особых событий и мероприятий. Идеальное место для проведения банкетов и торжеств в роскошной обстановке.',
+            'Основной зал ресторана вмещает 90 человек, обеспечивая уют и прекрасные виды. Идеальное место для ужина с семьей, встречи с друзьями или делового обеда.',
+        ]
+
+block content
+    .intro.intro--inner.intro--restoran-karamazovy.z-1
+        .container
+            .discount
+                .discount__value -10%
+                .discount__text на основное меню по карте гостя
+            p.intro__subheader Старая Русса
+            h1.intro__header РЕСТОРАН <br>КАРАМАЗОВЫ
+            include components/play-video-button.pug
+            .intro-grid
+                .intro__item
+                    .intro__item-text утонченная <br>кухня
+                .intro__item
+                    .intro__item-text уютная <br>обстановка
+                .intro__item
+                    .intro__item-text комфортный <br>отдых
+    .section.section--gray.history
+        .container
+            h2.history__header.section__header Философия ресторана
+            include components/history-grid.pug
+    .section.section--white.after.travel.z-1
+        .container
+            h2.travel__header.section__header !{travel.header}
+            include components/travel-grid.pug
+            .how-to-get-bottom.how-to-get-bottom--inner
+                .how-to-get-bottom__left
+                    img.how-to-get__image(src="img/coat-of-arms.svg" alt="")
+                .how-to-get-bottom__right
+                    p.how-to-get-bottom__text НУЖНА ПОМОЩЬ? <br>ОСТАВЬТЕ СВОИ КОНТАКТЫ И МЫ СВЯЖЕМСЯ С ВАМИ.
+                    include components/how-to-get-form.pug
+    .section.section--lightblue.atmosphere
+        .container
+            h2.atmosphere__header.section__header Атмосфера Карамазовых
+            include components/atmosphere-grid.pug
+    .section.section--gray.section--middle
+        include components/card.pug
+        .container
+            .how-to-get
+                .how-to-get-map
+                    .how-to-get-map__inner
+                        h2.how-to-get-map__header.section__header КАК ДОБРАТЬСЯ
+                        .how-to-get-map-grid
+                            .how-to-get-map__item
+                                .how-to-get-map__item-header Адрес:
+                                .how-to-get-map__item-text г. Старая Русса, Гостинодворская ул., 20
+                            .how-to-get-map__item
+                                .how-to-get-map__item-header Телефон:
+                                .how-to-get-map__item-text #[a(href="tel:+78165232777") +7 (81652) 3-27-77]
+                            .how-to-get-map__item
+                                .how-to-get-map__item-header E-mail:
+                                .how-to-get-map__item-text
+                                    //- p #[a(href="mailto:kosmosfera@parkglampov.ru") kosmosfera@parkglampov.ru]
+                                    p -
+                            .how-to-get-map__item
+                                .how-to-get-map__item-header Сайт:
+                                .how-to-get-map__item-text
+                                    p #[a(href="//vk.com/karamazovy.rest") vk.com/karamazovy.rest]
+                            .how-to-get-map__item
+                                .how-to-get-map__item-header GPS:
+                                .how-to-get-map__item-text 57.991393, 31.361309
+                    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A83d1b0909ee5ae1024b76fc7a9a95ded5f2a18c45fa8a0207edfd48376e3bce7&amp;width=100%25&amp;height=529&amp;lang=ru_RU&amp;scroll=false"></script>
+                include components/how-to-get-bottom.pug
+    include components/partners.pug
+    .section.section--gray.welcome
+        include components/welcome.pug
+
+
+

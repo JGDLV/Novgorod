@@ -1,0 +1,217 @@
+extends _layout.pug
+
+block variables
+    -
+        var title = 'О проекте'
+        var description = 'О проекте'
+        var index = false
+
+        var travel = {
+            header: 'Сделано при нашем участии',
+            items: [
+                {
+                    image: '',
+                    header: 'Гастрономический фестиваль «Князь, Вы кушать хотите?»',
+                    text: 'III Гастрономический фестиваль «Князь, Вы кушать хотите?» – это возможность погрузиться в атмосферу эпохи Федора Михайловича Достоевского, попробовать любимые блюда писателя и героев его произведений. За два года своего существования фестиваль стал известен не только в Новгородской области, но за ее пределами.'
+                },
+                {
+                    image: '',
+                    header: 'Грантовый конкурс «Земля Новгородская»',
+                    text: 'Туристический офис «Русь Новгородская» запустил грантовый конкурс для реализации проектов в сфере туризма.'
+                },
+                {
+                    image: '',
+                    header: 'Обучающий семинар "Развитие туризма с учётом особенностей территории"',
+                    text: 'Обучающий семинар.'
+                },
+                {
+                    image: '',
+                    header: 'Обучающий семинар "Генерация идей с учётом особенностей территории"',
+                    text: 'Обучающий семинар'
+                },
+            ]
+        }
+
+        var assistance = {
+            header: 'Содействие в проведении фестивалей',
+            items: [
+                {
+                    image: '',
+                    title: 'Фестиваль музыкальных древностей «Словиша»',
+                    text: 'Международный фестиваль музыкальных древностей «СЛОВИША» памяти Владимира Ивановича Поветкина. Символом фестиваля являются пятиструнные лирообразные гусли с резной надписью «СЛОВИША», найденные в 1975 году в Великом Новгороде на Троицком раскопе в слоях 70-х годов XI века.',
+                },
+                {
+                    image: '',
+                    title: 'Фестиваль <br>Сарафан',
+                    text: 'Основная идея фестиваля — создать мост между прошлым и будущим. Через демонстрацию возможностей использования элементов традиционного русского костюма в современном дизайне, привить любовь к национальной культуре и традициям, популяризировать российские бренды на рынке моды.',
+                },
+                {
+                    image: '',
+                    title: 'Межрегиональный фестиваль «ИГРЫ И ЛЮДИ»',
+                    text: 'Фестиваль проводится с целью популяризации культурного наследия Новгородской области через сохранение и развитие народной игровой культуры России, приобщения широких слоев населения, особенно детей и молодежи, к традиционной игровой культуре, воспитания у подрастающего поколения бережного отношения к культурному наследию своего народа.',
+                },
+                {
+                    image: '',
+                    title: 'Фестиваль средневековой музыки «Княжья братчина»',
+                    text: 'Международный фестиваль музыкальных древностей «СЛОВИША» памяти Владимира Ивановича Поветкина. Символом фестиваля являются пятиструнные лирообразные гусли с резной надписью «СЛОВИША», найденные в 1975 году в Великом Новгороде на Троицком раскопе в слоях 70-х годов XI века.',
+                },
+                {
+                    image: '',
+                    title: 'Фестиваль «Забытый подвиг — вторая ударная армия»',
+                    text: 'Основная идея фестиваля — создать мост между прошлым и будущим. Через демонстрацию возможностей использования элементов традиционного русского костюма в современном дизайне, привить любовь к национальной культуре и традициям, популяризировать российские бренды на рынке моды.',
+                },
+                {
+                    image: '',
+                    title: 'Фестиваль <br>КиноПРОБЫ',
+                    text: 'Второй музыкальный международный рок-фестиваль, состоялся в июне 2018 года на территории аэродрома Окуловка в Новгородской области. В программе приняли участие Би-2, ДДТ, Алиса, Леонид Агутин, Brainstorm, Гречка, Дельфин и многие другие.',
+                },
+            ]
+        }
+
+        tourismInfrastructure = {
+            header: 'Разработка туристической инфраструктуры',
+            items: [
+                {
+                    image: '',
+                    title: 'Туристская навигация',
+                    text: 'Карта Гостя предназначена для индивидуального туриста, желающего посетить как можно больше музеев и экскурсий в Новгородской области. Она также дает ряд привилегий, включая скидки при бронировании гостиниц, посещении ресторанов и кафе, проезде на междугороднем общественном транспорте.',
+                },
+                {
+                    image: '',
+                    title: 'Информационные центры',
+                    text: 'Устройство туристических информационных центров на территории Новгородской области.',
+                },
+                {
+                    image: '',
+                    title: 'Организация фотовыставок',
+                    text: 'В аэропортах «Пулково» (Санкт-Петербург), «Внуково» и «Шереметьево» (Москва), в г. Петрозаводск.',
+                },
+                {
+                    image: '',
+                    title: 'Брендинг региона',
+                    text: 'Разработка и продвижение туристко-экспортного бренда Новгородской области.',
+                },
+                {
+                    image: '',
+                    title: 'Участие в международных туристских выставках',
+                    text: '«Интурмаркет», «ОТДЫХ», «MITT».',
+                },
+                {
+                    image: '',
+                    title: 'Поддержка проектов',
+                    text: 'Поддерживаем проекты, направленные на развитие новых туристических маршрутов и мероприятий.',
+                },
+                {
+                    image: '',
+                    title: 'Путеводитель по Великому Новгороду',
+                    text: 'Найти одну-единственную фразу. Разгадать хитроумную загадку. Пройти непростой квест. И все это — в древнейшем российском городе.',
+                },
+            ]
+        }
+
+        var history = [
+            'Продвижение Великого Новгорода и Новгородской области на территории России и за рубежом.',
+            'Информационное сопровождение инвестиционных проектов в сфере туризма.',
+            'Содействие повышению качества услуг поддержанию стандартов сервиса в сфере туризма и гостеприимства.',
+            'Создание положительного имиджа области в интернет-пространстве.',
+        ]
+
+block content
+    .intro.intro--project
+        .container
+            p.intro__subheader О проекте
+            h1.intro__header РУСЬ <br>НОВГОРОДСКАЯ
+            .intro__text Путешествия по истории и культуре Новгородской области
+            include components/play-video-button.pug
+            .intro-grid.intro-grid--small
+                .intro__item
+                    .intro__item-text единый информационный <br>ресурс в сфере туризма
+                .intro__item
+                    .intro__item-text доступная и полная информация <br>о туристических возможностях
+                .intro__item
+                    .intro__item-text познавательные путешествия по уникальным <br>местам Новгородской области
+    .section.section--gray.history
+        .container
+            h2.history__header.section__header Цели проекта Русь Новгородская
+            include components/history-grid.pug
+
+            .become-a-partner
+                .become-a-partner-top
+                    h2.become-a-partner__header СТАТЬ ПАРТНЕРОМ
+                    .become-a-partner__text Вы можете стать партнёром АНО «ТО «Русь Новгородская». Возможно сотрудничество по участию в программе «Карта гостя», поставке сувениров в областные ТИЦ, информационной поддержке мероприятий, размещении Вашего объекта на нашем портале и по другим направлениям. Напишите нам Ваши пожелания.
+                .become-a-partner-bottom
+                    form.how-to-get-form
+                        .how-to-get-form__part
+                            .how-to-get-form__label Как вам удобнее связаться?
+                            include components/dropdown.pug
+                        .how-to-get-form__part
+                            .how-to-get-form__label Номер телефона / E-mail
+                            input.how-to-get-form__input(type="text" placeholder="+7 912 912 91 91 / mail@mail.ru")
+                        button.btn.how-to-get-form__button(type="submit") Стать партнером
+    .section.section--white.after.travel.z-1
+        .container
+            h2.travel__header.section__header !{travel.header}
+            include components/travel-grid.pug
+    .section.section--lightblue.atmosphere
+        .container
+            h2.atmosphere__header.section__header !{tourismInfrastructure.header}
+            .tourism-infrastructure
+                .tourism-infrastructure-grid
+                    each item in tourismInfrastructure.items
+                        .tourism-infrastructure__item
+                            img.tourism-infrastructure__item-image(src=item.image, alt=item.title)
+                            .tourism-infrastructure__item-content
+                                .tourism-infrastructure__item-title !{item.title}
+                                .tourism-infrastructure__item-text !{item.text}
+
+    .section.section--gray.section--middle.assistance
+        .container
+            h2.section__header.assistance__header !{assistance.header}
+            .assistance-grid
+                each item in assistance.items
+                    .assistance__item
+                        img.assistance__item-image(src=item.image alt=item.title)
+                        .assistance__item-title !{item.title}
+                        .assistance__item-text !{item.text}
+
+            .assistance-bottom
+                .contacts-info
+                    h2.section__header.contacts-info__header КОНТАКТНАЯ ИНФОРМАЦИЯ
+                    .contacts-info-grid
+                        .contacts-info__item
+                            .contacts-info__item-header Мы находимся по адресу:
+                            .contacts-info__item-text Великий Новгород, ул. Тихвинская, д. 11/16
+                        .contacts-info__item
+                            .contacts-info__item-header Телефон:
+                            .contacts-info__item-text #[a(href="tel:+79210281553") +7 (921) 028-15-53]
+                        .contacts-info__item
+                            .contacts-info__item-header E-mail:
+                            .contacts-info__item-text #[a(href="mailto:info@novgorod.travel") info@novgorod.travel]
+                        .contacts-info__item
+                            .contacts-info__item-header Горячая линия для туристов:
+                            .contacts-info__item-text #[a(href="tel:8 800 222-00-53") 8 800 222-00-53]
+
+                .application-for-partnership
+                    .application-for-partnership-top
+                        h2.application-for-partnership__header Заявка на <br>партнерство
+                        .application-for-partnership__text Заполните эту форму и мы свяжемся с вами <br>для уточнения всех нюансов.
+                        img.application-for-partnership__image(src="img/coat-of-arms.svg", alt="")
+                    .application-for-partnership-bottom
+                        form.application-for-partnership-form
+                            label.application-for-partnership-form__label
+                                .application-for-partnership-form__text Ваше имя
+                                input.application-for-partnership-form__input(type="text" placeholder="Введите ваше имя")
+                            label.application-for-partnership-form__label
+                                .application-for-partnership-form__text Ваш телефон
+                                input.application-for-partnership-form__input(type="text" placeholder="Введите ваш телефон")
+                            label.application-for-partnership-form__label
+                                .application-for-partnership-form__text Ваш e-mail
+                                input.application-for-partnership-form__input(type="text" placeholder="Введите ваш e-mail")
+                            label.application-for-partnership-form__label
+                                .application-for-partnership-form__text Комментарий
+                                input.application-for-partnership-form__input(type="text" placeholder="Введите текст")
+                            button.btn.application-for-partnership-form__button(type="submit") отправить
+
+    .section.section--white.section--middle.welcome
+        include components/welcome.pug
+

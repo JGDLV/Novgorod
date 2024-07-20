@@ -1,0 +1,40 @@
+-
+    var reasons = {
+        header: 'Причины посетить Новгородскую область',
+        items: [
+            {
+                icon: 'img/reasons-01.svg',
+                text: 'Интересует путешествие в <br>Средневековье'
+            },
+            {
+                icon: 'img/reasons-02.svg',
+                text: 'Выбираете для себя <br>автоэкскурсию'
+            },
+            {
+                icon: 'img/reasons-03.svg',
+                text: 'Планируете сбежать от тягот <br>на выходные в соседний город'
+            },
+            {
+                icon: 'img/reasons-04.svg',
+                text: 'Хотите духовно развиваться, <br>посещая церкви и монастыри'
+            },
+            {
+                icon: 'img/reasons-05.svg',
+                text: 'Открываете для себя <br>отдых в России летом'
+            },
+            {
+                icon: 'img/reasons-06.svg',
+                text: 'Хотите разбавить свою жизнь поездкой <br>с подругой по историческим местам'
+            },
+        ]
+    }
+
+.section.section--white.after.reasons
+    .container
+        h2.reasons__header.section__header !{reasons.header}
+        .reasons-grid
+            each item in reasons.items
+                .reasons__item
+                    img.reasons__item-icon(src=item.icon, alt="")
+                    .reasons__item-text !{item.text}
+        img.reasons__bg-image(src="img/reasons-bg-image.png", alt="")

@@ -1,0 +1,58 @@
+-
+    var teasers = [
+        {
+            icon: 'img/location.svg',
+            text: 'Как добраться',
+            items: [
+                '',
+            ]
+        },
+        {
+            icon: 'img/hotel.svg',
+            text: 'Где остановиться',
+            items: [
+                '',
+            ]
+        },
+        {
+            icon: 'img/rest.svg',
+            text: 'Где перекусить',
+            items: [
+                'Рестораны',
+                'Бары и пабы',
+                'Чайханы',
+                'Кафе и кофейни',
+                'Траттории',
+                'Столовые',
+            ]
+        },
+        {
+            icon: 'img/dost.svg',
+            text: 'Что посетить',
+            items: [
+                '',
+            ]
+        },
+        {
+            icon: 'img/gift.svg',
+            text: 'Что увезти домой',
+            items: [
+                '',
+            ]
+        },
+    ]
+
+.teasers
+    .teasers-items
+        each item in teasers
+            .teasers__item
+                .teasers__item-image-block
+                    img.teasers__item-image(src=item.icon alt="")
+                .teasers-dropdown.dropdown
+                    input(type='hidden' name='dropdown' value='')
+                    .dropdown__layout
+                    .teasers-dropdown__current.dropdown__current !{item.text}
+                    ul.teasers-dropdown-items.dropdown-items
+                        each li in item.items
+                            p 
+                                a(href="#") !{li}

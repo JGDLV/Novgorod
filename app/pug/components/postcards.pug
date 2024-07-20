@@ -1,0 +1,57 @@
+-
+    var postcards = {
+        header: 'Привет из путешествия',
+        text: 'Выбирайте и заполняйте открытку. Отправляйте любимому или любимой, другу или подруге, родным и близким, коллегам',
+        items: [
+            {
+                type: 'онлайн-открытка',
+                href: '#',
+                image: 'img/postcards-01.png',
+                title: 'Иверский Валдайский Богородицкий Святоозерский мужской монастырь',
+            },
+            {
+                type: 'онлайн-открытка',
+                href: '#',
+                image: 'img/postcards-02.png',
+                title: 'Господин Великий Новгород',
+            },
+            {
+                type: 'онлайн-открытка',
+                href: '#',
+                image: 'img/postcards-03.png',
+                title: 'Вечерний звон',
+            },
+            {
+                type: 'онлайн-открытка',
+                href: '#',
+                image: 'img/postcards-04.png',
+                title: 'Зимний закат',
+            },
+            {
+                type: 'онлайн-открытка',
+                href: '#',
+                image: 'img/postcards-05.png',
+                title: 'Жаркий июнь. Владимирская башня',
+            },
+            {
+                type: 'онлайн-открытка',
+                href: '#',
+                image: 'img/postcards-06.png',
+                title: 'Усадьба Граве. Кулотино',
+            },
+        ]
+    }
+
+.postcards
+    .postcards-top
+        h2.section__header.postcards__header !{postcards.header}
+        .postcards__text !{postcards.text}
+    .postcards-bottom
+        .postcards-grid
+            each item in postcards.items
+                .postcards__item
+                    .postcards__item-type !{item.type}
+                    a.postcards__item-link(href=item.href) 
+                        img.postcards__item-image(src=item.image alt=item.title)
+                    a.postcards__item-title(href=item.href) !{item.title}
+        include controls.pug

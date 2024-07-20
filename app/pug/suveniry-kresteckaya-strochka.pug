@@ -1,0 +1,144 @@
+extends _layout.pug
+
+block variables
+    -
+        var title = 'Сувениры'
+        var description = 'Сувениры'
+        var index = false
+
+        var ideas = {
+            header: 'идеи сувениров',
+            items: [
+                {
+                    type: 'сувениры',
+                    href: '#',
+                    image: 'img/ideas-01.png',
+                    title: 'Глиняные игрушки',
+                    text: 'В старину за местными глиняными свистульками-петуш ...'
+                },
+                {
+                    type: 'сувениры',
+                    href: '#',
+                    image: 'img/ideas-02.png',
+                    title: 'Валдайские колокольчики',
+                    text: 'Валдайский колокольчик – сувенир, который навсегда ...'
+                },
+                {
+                    type: 'сувениры',
+                    href: '#',
+                    image: 'img/ideas-03.png',
+                    title: 'Береста и изделия из бересты',
+                    text: 'Выбор берестяных изделий огромен: шкатулки, хлебни ...'
+                },
+                {
+                    type: 'сувениры',
+                    href: '#',
+                    image: 'img/ideas-04.png',
+                    title: 'Полавские ковры',
+                    text: 'Ковры, сотканные в поселке Пола Парфинского района ...'
+                },
+                {
+                    type: 'сувениры',
+                    href: '#',
+                    image: 'img/ideas-05.png',
+                    title: 'Старорусская соль и сувениры на её основе',
+                    text: 'Соль можно купить в мешочке, в узелке, в обычной у ...'
+                },
+                {
+                    type: 'сувениры',
+                    href: '#',
+                    image: 'img/ideas-06.png',
+                    title: 'Цера и писало',
+                    text: 'Привезти такой оригинальный сувенир из Новгорода, ...'
+                },
+            ]
+        }
+
+        var history = [
+            'В далёком 1860 году в селе Старое Рахино Крестецкого уезда Новгородской губернии появилась вышивка с необычным орнаментом. Жены военных из Новгородской и Тверской областей на дому перерабатывали лен, который тогда выращивали на этой территории. Вышивальщицы придумали свой собственный способ обработки материала: выдёргивали из ткани нитки, создавая, таким образом, оригинальный узор.',
+            'Состоятельные путешественники по дороге между Петербургом и Москвой останавливались в посёлке Крестцы и охотно раскупали льняные полотенца, скатерти, покрывала, занавески. В 1882 скатерти и занавеси со «сновочной вышивкой» впервые выставляются в Москве. В 1911 образцы изделий с крестецкими гипюрами представлены на 1-ой Показательной выставке художественных промыслов России в Санкт-Петербурге. Работы мастеров ручной вышивки награждены Первой медалью на международной выставке в Турине. Изделия новгородских артелей художественной строчки получают мировое признание.',
+            'В 1931 продукция Крестецкой строчки стала поставляться за рубеж: Швеция, Англия, Франция, Бельгия, Голландия. Сегодня образцы крестецкой вышивки можно увидеть в коллекциях Государственного Русского музея, Государственного музея Эрмитаж, в Российском этнографическом музее, в Новгородском государственном объединённом музее-заповеднике, во Всероссийском музее декоративно-прикладного и народного искусства в Москве.',
+            'А современные путешественники могут привезти в подарок близким или себе домой качественную одежду, с элементами крестецкой строчки, домашний текстиль, наборы для сервировки стола, крестильные наборы или сделать заказ по индивидуальному проекту. Где купить: <a href="//www.krstrochka.ru">www.krstrochka.ru</a>',
+        ]
+
+block content
+    .intro.intro--souvenirs
+        .container
+            p.intro__subheader Сувениры
+            h1.intro__header КРЕСТЕЦКАЯ <br>СТРОЧКА
+            .intro__text Уникальное наследие русской вышивки
+            include components/play-video-button.pug
+            .intro-grid.intro-grid--small
+                .intro__item
+                    .intro__item-text аутентичные сувениры, <br>созданные мастерами
+                .intro__item
+                    .intro__item-text сохранение древних <br>традиций русской <br>вышивки
+                .intro__item
+                    .intro__item-text эксклюзивные изделия, <br>сочетающие историю и <br>современность
+    .section.section--gray.after.history
+        .container
+            h2.history__header.section__header История Крестецкой вышивки
+            include components/history-grid.pug
+    .section.section--blue.after.ideas
+        .container
+            .ideas-top
+                h2.section__header.ideas__header !{ideas.header}
+                .ideas-top__choise
+                    .ideas-top__choise-text Выберите вид сувениров:
+                    .dropdown.dropdown--ideas
+                        input(type='hidden' name='dropdown' value='')
+                        .dropdown__layout
+                        .dropdown__current
+                        ul.dropdown-items.scroll-pane(style="height:241px")
+                            div(style="padding:6px 12px 8px")
+                                p #[strong Сувениры]
+                                li.dropdown__item Береста и изделия из бересты
+                                li.dropdown__item Глиняные игрушки
+                                li.dropdown__item Валдайские колокольчики
+                                li.dropdown__item Полавские ковры
+                                li.dropdown__item Крестецкая строчка
+                                li.dropdown__item Старорусская соль и продукция на её основе
+                                li.dropdown__item Детские игрушки «Мякиши»
+                                li.dropdown__item Цера и писало
+                                li.dropdown__item Ёлочные шары и игрушки
+                                li.dropdown__item Фарфор
+                                li.dropdown__item Сувениры по творчеству Фёдора Достоевского
+                                li.dropdown__item Настольная игра «Лабиринты древнего Новгорода»
+                                li.dropdown__item Изделия из дерева
+                                <br>
+                                p #[strong Гастрономические сувениры]
+                                li.dropdown__item Масла, каши, мука
+                                li.dropdown__item Иван-чай
+                                li.dropdown__item Варенье
+                                li.dropdown__item Мёд
+                                li.dropdown__item Мармелад и шоколад
+                                li.dropdown__item Полезные сладости из натуральных продуктов
+                                li.dropdown__item Оригинальные сладости «Сласти от Забавы» из «Гастрономической коллекции «Серебряного ожерелья России»
+                                li.dropdown__item Пряник
+                                li.dropdown__item Валдайские баранки
+                                li.dropdown__item Экопродукты от «Масляного короля»
+                                li.dropdown__item Новгородские настойки
+
+            .ideas-grid
+                each item in ideas.items
+                    .ideas__item
+                        .ideas__item-type !{item.type}
+                        a.ideas__item-link(href=item.href) 
+                            img.ideas__item-image(src=item.image, alt=item.title)
+                        a.ideas__item-title(href=item.href) !{item.title}
+                        .ideas__item-text !{item.text}
+            include components/controls.pug
+
+    .section.section--gray.section--middle.souvenirs
+        .container
+            include components/shops.pug
+        include components/card.pug
+        .container.container--postcards
+            include components/postcards.pug
+            include components/how-to-get.pug
+    include components/partners.pug
+    .section.section--gray.welcome
+        include components/welcome.pug
+
+
+

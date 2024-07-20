@@ -1,0 +1,7 @@
+.swiper#travelSwiper
+    .travel-grid.swiper-wrapper
+        each item in travel.items
+            .travel__item.swiper-slide
+                img.travel__item-image(src=item.image, alt="")
+                .travel__item-header !{item.header}
+                .travel__item-text !{item.text}

@@ -1,0 +1,57 @@
+-
+    var shops = {
+        header: 'Сувенирные лавки и магазины',
+        items: [
+            {
+                image: 'img/shops-image.png',
+                type: 'Сувенирная лавка',
+                title: 'Городской Центр туризма г. Старая Русса',
+                address: 'Новгородская обл., Старая Русса, ул. Воскресенская, 6',
+                whours: 'пн.-пт.: с 09:00 - 18:00, сб.: 10:00 - 16:00',
+                phones: [
+                    '8 (816 52) 5-29-77',
+                    '8 (911) 633-30-30',
+                ],
+                email: 'tourism.strussa@gmail.com'
+            },
+            {
+                image: 'img/shops-image.png',
+                type: 'Сувенирная лавка',
+                title: 'Городской Центр туризма г. Старая Русса',
+                address: 'Новгородская обл., Старая Русса, ул. Воскресенская, 6',
+                whours: 'пн.-пт.: с 09:00 - 18:00, сб.: 10:00 - 16:00',
+                phones: [
+                    '8 (816 52) 5-29-77',
+                    '8 (911) 633-30-30',
+                ],
+                email: 'tourism.strussa@gmail.com'
+            },
+            {
+                image: 'img/shops-image.png',
+                type: 'Сувенирная лавка',
+                title: 'Городской Центр туризма г. Старая Русса',
+                address: 'Новгородская обл., Старая Русса, ул. Воскресенская, 6',
+                whours: 'пн.-пт.: с 09:00 - 18:00, сб.: 10:00 - 16:00',
+                phones: [
+                    '8 (816 52) 5-29-77',
+                    '8 (911) 633-30-30',
+                ],
+                email: 'tourism.strussa@gmail.com'
+            },
+        ]
+    }
+
+.shops
+    h2.section__header.shops__header !{shops.header}
+    .shops-grid
+        each item in shops.items
+            .shops__item
+                img.shops__item-image(src=item.image, alt=item.title)
+                .shops__item-type !{item.type}
+                .shops__item-title !{item.title}
+                .shops__item-address !{item.address}
+                .shops__item-whours !{item.whours}
+                .shops__item-phones
+                    a(href="tel:+" + item.phones[0]) !{item.phones[0]}, 
+                    a(href="tel:+" + item.phones[1]) !{item.phones[1]},
+                a.shops__item-email(href="mailto:" + item.email) !{item.email}

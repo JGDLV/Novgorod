@@ -1,0 +1,60 @@
+-
+    var howToGet = {
+        header: 'Как <br>добраться',
+        text: 'Добраться из Новгородской области можно на поезде, автобусе и автомобиле.',
+        items: [
+            {
+                image: 'img/train.svg',
+                header: 'На <br>поезде',
+                text: [
+                    'Главным железнодорожным вокзалом Новгородской области является "Великий Новгород".',
+                    'Имеется вокзал с залом ожидания и билетными кассами. Под станционными путями проложен подземный пешеходный переход.',
+                    'Поезда принимают и отправляют ежедневно. Стоимость билетов и расписание можно узнать на официальном сайте РЖД.',
+                ],
+                button: {
+                    href: '#',
+                    text: 'Купить билеты'
+                }
+            },
+            {
+                image: 'img/bus-blue.svg',
+                header: 'На <br>автобусе',
+                text: [
+                    'Доехать до Великого Новгорода можно практически с любого автовокзала города или с помощью специальных туристических автобусов.',
+                    'Как правило, отправления проходят круглосуточно. Стоимость билетов варьируется в зависимости от удаленности от региона.',
+                ],
+                button: {
+                    href: '#',
+                    text: 'Купить билеты'
+                }
+            },
+            {
+                image: 'img/car.svg',
+                header: 'На <br>машине',
+                text: [
+                    'Доехать до Великого Новгорода можно по федеральной трассе М11. По пути в дороге можно неоднократно остановиться в хостелах, точках общественного питания, медицинских пунктах и других местах размещения.',
+                ],
+                button: {
+                    href: '#',
+                    text: 'Проложить маршрут'
+                }
+            },
+        ]
+    }
+
+.how-to-get-top
+    .how-to-get-grid
+        .how-to-get__item
+            h2.how-to-get__header.section__header !{howToGet.header}
+            p.how-to-get__text !{howToGet.text}
+        each item in howToGet.items
+            .how-to-get__item
+                .how-to-get__item-top
+                    img.how-to-get__item-image(src=item.image alt="")
+                    .how-to-get__item-header !{item.header}
+                    .how-to-get__item-toggler
+                .how-to-get__item-content
+                    .how-to-get__item-text
+                        each text in item.text
+                            p !{text}
+                    a.btn(href=item.button.href) !{item.button.text}

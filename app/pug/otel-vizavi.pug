@@ -1,0 +1,113 @@
+extends _layout.pug
+
+block variables
+    -
+        var title = 'Отель Визави'
+        var description = 'Отель Визави'
+        var index = false
+
+        var travel = {
+            header: 'Отдых в Визави',
+            items: [
+                {
+                    image: '',
+                    header: 'Интерьер номеров',
+                    text: 'Погрузитесь в атмосферу роскоши и стиля в номерах с потрясающим видом, где каждая деталь создана для неповторимого отдыха.'
+                },
+                {
+                    image: '',
+                    header: 'Кулинарное искусство',
+                    text: 'Откройте для себя кулинарные шедевры в ресторане “Визави”, где каждое блюдо — это настоящее произведение искусства.'
+                },
+                {
+                    image: '',
+                    header: 'Релакс и развлечения',
+                    text: 'Уютные уголки обеспечивают отличный отдых, где можно расслабиться и насладиться книгой, чашкой чая или просто тихим вечером.'
+                },
+                {
+                    image: '',
+                    header: 'Панорамный вид на город',
+                    text: 'Отель Визави располагается в самом сердце Старой Руссы, предоставляя уникальную возможность быть близко ко всему, что предлагает этот чарующий город.'
+                },
+            ]
+        }
+
+        var history = [
+            'Гостиница расположилась в самом центре города Старая Русса. К услугам гостей парковка, круглосуточная регистрационная стойка, прачечная, бильярд, сауна и трансфер. Скоростной интернет Wi-Fi доступен на всей территории бесплатно',
+            'В уютных номерах гостиницы установлен телевизор, кондиционер, мини-бар и электрический чайник. В собственной ванной комнате предоставляется фен.',
+            'Питание организовано в ресторане, в котором каждое утро накрывается сытный завтрак.',
+            'Отель находится в центре города Старая Русса, расстояние от ближайшего железнодорожного вокзала всего 1.8 км.',
+        ]
+
+block content
+    .intro.intro--inner.intro--vizavi
+        .container
+            .discount.mobile-only
+                .discount__value -10%
+                .discount__text по карте гостя
+            p.intro__subheader Старая Русса
+            .intro__discount-wrap
+                h1.intro__header
+                    | ОТЕЛЬ <br>ВИЗАВИ
+                .discount.discount--vertical
+                    .discount__value -10%
+                    .discount__text по карте гостя
+            include components/play-video-button.pug
+            .intro-grid
+                .intro__item
+                    .intro__item-text роскошный <br>комфорт и сервис
+                .intro__item
+                    .intro__item-text расположение <br>в центре города
+                .intro__item
+                    .intro__item-text комфортный <br>отдых
+    .section.section--gray.history
+        .container
+            h2.history__header.section__header Философия отеля
+            include components/history-grid.pug
+    .section.section--white.after.travel.z-1
+        .container
+            h2.travel__header.section__header !{travel.header}
+            include components/travel-grid.pug
+            .how-to-get-bottom.how-to-get-bottom--inner
+                .how-to-get-bottom__left
+                    img.how-to-get__image(src="img/coat-of-arms.svg" alt="")
+                .how-to-get-bottom__right
+                    p.how-to-get-bottom__text Построй индивидуальный маршрут при помощи специалиста <br>и получи скидку 30% на Карту гостя
+                    include components/how-to-get-form.pug
+    .section.section--lightblue.atmosphere
+        .container
+            h2.atmosphere__header.section__header Атмосфера Визави
+            include components/atmosphere-grid.pug
+    .section.section--gray.section--middle
+        include components/card.pug
+        .container
+            .how-to-get
+                .how-to-get-map
+                    .how-to-get-map__inner
+                        h2.how-to-get-map__header.section__header КАК ДОБРАТЬСЯ
+                        .how-to-get-map-grid
+                            .how-to-get-map__item
+                                .how-to-get-map__item-header Адрес:
+                                .how-to-get-map__item-text г. Старая Русса, ул. Минеральная, 59А
+                            .how-to-get-map__item
+                                .how-to-get-map__item-header Телефон:
+                                .how-to-get-map__item-text #[a(href="tel:+78165232777") +7 (81652) 3-27-77]
+                            .how-to-get-map__item
+                                .how-to-get-map__item-header E-mail:
+                                .how-to-get-map__item-text
+                                    p #[a(href="mailto:info@hotel-vizavi.ru") info@hotel-vizavi.ru]
+                                    p #[a(href="mailto:lenayurist@mail.ru") lenayurist@mail.ru]
+                            .how-to-get-map__item
+                                .how-to-get-map__item-header Сайт:
+                                .how-to-get-map__item-text #[a(href="//hotel-vizavi.ru" target="_blank") hotel-vizavi.ru]
+                            .how-to-get-map__item
+                                .how-to-get-map__item-header GPS:
+                                .how-to-get-map__item-text 57.986435, 31.365541
+                    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A047483ebbfa4d5c4f078624b93f9cd288c47674b4d154dd5a078f24f11d65bd9&amp;width=100%25&amp;height=529&amp;lang=ru_RU&amp;scroll=false"></script>
+                include components/how-to-get-bottom.pug
+    include components/partners.pug
+    .section.section--gray.welcome
+        include components/welcome.pug
+
+
+

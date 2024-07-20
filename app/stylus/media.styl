@@ -1,0 +1,1998 @@
+@media (max-width: 576px)
+    body
+        padding: 56px 0 44px
+
+    .mobile-only
+        display: block
+
+    .section
+        padding: 16px 0 74px
+
+    .header
+        display: none
+
+    .after::after
+        width: 48px
+        height: 15px
+
+    .history
+        padding: 45px 0 65px
+
+        &__header
+            font-size: 50px
+            line-height: normal
+            text-align: center
+            margin-bottom: 28px
+
+        &-grid
+            grid-template-columns: 1fr
+            grid-row-gap: 23px
+
+        &__item
+            font-size: 13px
+            line-height: 1.3
+            padding-left: 34px
+            padding-right: 0
+            min-height: 50px
+
+            &::before
+                width: 28px
+                height: 50px
+
+        &__bg-image
+            display: none
+
+        &__button
+            width: 336px
+            margin-top: 28px
+
+    .welcome
+        padding: 43px 0 59px !important
+
+        &-top
+            flex-direction: column
+            gap: 40px
+            margin-bottom: 19px
+
+            &__right
+                width: 100%
+
+        &-bottom
+            flex-direction: column
+            gap: 24px
+            padding: 37px 0px 46px
+
+            &::before
+                bottom: 207px
+                left: -188px
+
+            &::after
+                top: 241px
+                right: -157px
+
+            &__left
+                width: 100%
+                text-align: center
+
+        &__header
+            font-size: 50px
+            text-align: center
+            margin-bottom: 24px
+
+        &__button
+            max-width: 100%
+
+    .travel
+        padding: 46px 0 0
+        border-radius: 8px
+
+        #travelSwiper
+            margin-bottom: 39px
+
+        .swiper-wrapper
+            box-sizing: border-box
+
+        &.after
+            &::after
+                content: none
+
+        &__header
+            font-size: 50px
+            line-height: normal
+            margin-bottom: 33px
+
+        &-grid
+            display: flex
+            margin-bottom: 39px
+            gap: 0
+
+        &__item
+            // min-width: 259px
+            height: auto
+
+        & + .atmosphere
+            margin-top: -8px
+
+    .how-to-get
+        &-bottom
+            flex-direction: column
+            margin: 0 -14px
+            padding: 49px 35px 43px
+            border-radius: 8px
+
+            &::after
+                position: absolute
+                content: ''
+                display: block
+                top: 100%
+                left: 50%
+                transform: translateX(-50%)
+                width: 48px
+                height: 15px
+                background-size: contain
+                background-repeat: no-repeat
+                z-index: 10
+                background-image: url('../img/after-blue.svg')
+
+            &__right
+                padding-top: 18px
+
+            &__text
+                font-size: 23px
+                line-height: 24.769px
+                margin-bottom: 31px !important
+                text-align: center
+
+        &__image
+            width: 167px !important
+            margin-top: 0 !important
+            display: block
+            margin: auto
+
+        &-form
+            grid-template-columns: 1fr
+            gap: 18px !important
+
+            &__label
+                display: none
+
+    .atmosphere
+        padding: 53px 0 59px
+
+        &::before
+            width: 589px
+            height: 589px
+            border-radius: 589px
+            top: 208px
+            left: -7px
+
+        &__header
+            font-size: 49px
+            margin-bottom: 17px
+            line-height: normal
+
+        &-grid
+            grid-template-columns: repeat(2, 1fr)
+            grid-template-rows: repeat(7, 85px)
+            grid-column-gap: 10px
+            grid-row-gap: 10px
+
+        &__item
+            &:nth-child(1)
+                grid-area: 1 / 1 / 3 / 3
+
+            &:nth-child(2)
+                grid-area: 3 / 1 / 4 / 2
+
+            &:nth-child(3)
+                grid-area: 3 / 2 / 4 / 3
+
+            &:nth-child(4)
+                grid-area: 4 / 1 / 5 / 2
+
+            &:nth-child(5)
+                grid-area: 4 / 2 / 5 / 3
+
+            &:nth-child(6)
+                grid-area: 5 / 1 / 6 / 2
+
+            &:nth-child(7)
+                grid-area: 5 / 2 / 6 / 3
+
+            &:nth-child(8)
+                grid-area: 6 / 1 / 8 / 3
+
+        & + .section--middle
+            padding-top: 14px !important
+
+    .card
+        &__inner
+            padding: 0 14px 38px
+
+            &::before
+                width: 376px
+                height: 367px
+                top: -74px
+                right: -7px
+
+        &__top
+            flex-direction: column-reverse
+            margin-bottom: 40px
+
+            &-right
+                padding-top: 14px
+                margin-bottom: 10px
+
+            &-left
+                &-bottom
+                    flex-direction: column
+                    gap: 13px
+
+        &__header
+            text-align: center
+            font-size: 84px
+            margin-bottom: 12px
+            position: relative
+            z-index: 1
+
+        &__subheader
+            text-align: center
+            font-size: 17px
+            line-height: 16.37px
+
+        &__text
+            text-align: center
+            font-size: 13px
+
+            br
+                display: none
+
+        &__button
+            width: 100%
+            box-sizing: border-box
+
+        &-grid
+            grid-template-columns: 1fr
+            grid-row-gap: 24px
+
+        &__item
+            &-image
+                max-width: 55px
+
+    .how-to-get
+        .how-to-get-bottom
+            padding-top: 42px
+            padding-bottom: 59px
+            position: relative
+
+        .how-to-get-bottom__left
+            display: none
+
+        .how-to-get-bottom__text
+            font-size: 25px
+            line-height: 26.923px
+            margin-bottom: 28px !important
+
+    .how-to-get-map
+        margin: 0 -14px
+
+        &__inner
+            position: static
+            background: $blue
+            padding: 37px 14px 29px
+            width: 100%
+
+        &__header
+            font-size: 50px
+            margin-bottom: 18px
+
+        &-grid
+            gap: 18px
+
+        iframe
+            height: 294px
+
+    .partners
+        padding: 38px 0 51px
+
+        &__header
+            font-size: 50px
+            margin-bottom: 18px
+
+        &-slider
+            margin: 0
+
+            .slider-button
+                display: none
+
+        &-grid
+            display: grid
+            grid-template-columns: repeat(3, 1fr)
+            grid-column-gap: 24px
+            grid-row-gap: 20px
+            padding: 0
+            transform: none !important
+
+        &__item
+            width: auto !important
+            height: auto !important
+            margin: 0 !important
+
+            &-image
+                width: 103.178px
+                height: 103.89px
+
+    .section--middle:not(.inform):not(.souvenirs) + .partners
+        margin-top: -85px
+
+    .card + .how-to-get
+        margin-top: 60px
+
+    .how-to-get
+        &-top
+            margin: 0 -14px
+            border-radius: 0
+            padding: 47px 12px 0
+
+        &__header
+            font-size: 50px
+            line-height: 44.4px
+            margin-bottom: 13px
+
+            br
+                display: none
+
+        &-grid
+            grid-template-columns: 1fr
+            gap: 0
+
+        &__item
+            &:first-child
+                margin-bottom: 34px
+
+            &:not(:first-child)
+                border-bottom: 1px solid #EBECEC
+                margin-bottom: 13px
+
+                .how-to-get__item-content
+                    padding-top: 0
+                    padding-bottom: 28px
+                    display: none
+
+                &:last-child
+                    border-bottom: 0
+
+            &-top
+                align-items: center
+                padding-bottom: 19px
+
+            &-image
+                height: 36px
+
+            &-header
+                font-size: 17px
+                line-height: 18.308px
+                padding: 0
+                margin: 0
+
+                br
+                    display: none
+
+            &-text
+                margin-bottom: 28px
+
+            &-toggler
+                display: block
+
+    .guide
+        padding: 49px 0 59px
+
+        &-top
+            grid-template-columns: 1fr
+            margin-bottom: 0
+
+        &__header
+            font-size: 50px
+            line-height: 44.4px
+            margin-bottom: 28px
+
+            br
+                display: none
+
+        &__text
+            margin-top: -44px
+            margin-bottom: 23px
+            color: rgba(63, 75, 91, 0.5)
+
+            p
+                font-size: 13px
+                line-height: normal
+
+        &-bottom
+            flex-direction: column
+
+        &-aside
+            width: 100%
+            margin-bottom: 19px
+
+        &-content
+            width: 100%
+
+        &-grid
+            grid-template-columns: repeat(2, 1fr) !important
+            gap: 12px
+
+        &__bg-image
+            display: none
+
+        &__item
+            flex-direction: column
+            padding: 10px
+
+            &-image
+                width: 100%
+                display: block
+                margin-bottom: 5px
+
+            &-title
+                display: -webkit-box
+                -webkit-line-clamp: 2
+                -webkit-box-orient: vertical
+                overflow: hidden
+                text-overflow: ellipsis
+
+            &-more
+                text-align: center
+                margin-top: 29px
+
+            &-type
+                margin: -3px 0 13px
+
+            &-discount
+                top: 1px
+                left: 1px
+
+                &-value
+                    width: 32.2px
+                    height: 32.2px
+                    font-size: 9.471px
+
+                &-text
+                    height: 22px
+                    padding-right: 9px
+                    font-size: 8.513px
+
+        & + .section--middle
+            padding-top: 13px !important
+
+    .controls-block
+        flex-wrap: wrap
+
+        &__button
+            order: 0
+            width: 100% !important
+            margin: 0 0 12px !important
+
+        a:first-child
+            order: 1
+            margin: auto
+
+        a:last-child
+            order: 2
+            margin: auto
+
+    .guide .controls-block
+        margin-top: 22px
+
+    .not-found
+        flex-direction: column
+        padding: 77px 30px 87px
+
+        &__left
+            min-width: 181px
+            margin-bottom: 29px
+
+        &__right
+            padding-left: 0
+
+        &__header
+            font-size: 78px
+            line-height: 69.42px
+            text-align: center
+
+        &__text
+            text-align: center
+
+        & + .teasers
+            display: none
+
+    .search-page
+        padding: 76px 0 59px !important
+
+        &-top
+            flex-direction: column
+            align-items: flex-start
+            margin-bottom: 23px
+
+        &__header
+            margin-bottom: -3px
+
+        &-form
+            width: 100%
+
+            &__button
+                display: none
+
+    .getting-to
+        padding: 45px 0 55px
+
+        &__header
+            font-size: 50px
+            line-height: normal
+            margin-bottom: 56px
+
+        &-grid
+            grid-template-columns: 1fr
+
+            & + .map-rounded
+                iframe
+                    height: 345px
+
+        &__item
+            &-header
+                br
+                    display: none
+
+            &:first-child
+                .getting-to__item-bottom
+                    padding-top: 16px
+                    display: grid
+                    gap: 13px 0px
+                    grid-template-columns: 160px 180px
+
+                .getting-to__item-from
+                    margin: 0
+
+                .btn.mobile-only
+                    display: flex
+                    margin: 27px auto 3px
+                    width: 229px
+
+            &-map-link
+                display: none
+
+            &-link
+                width: 229px
+
+    .getting-to-help
+        border-radius: 8px
+        padding-bottom: 0
+
+        .how-to-get-bottom--inner
+            padding: 25px 34px 59px
+
+        .how-to-get-bottom__text
+            font-size: 25px
+            line-height: 26.923px
+            margin-bottom: 30px !important
+
+        .how-to-get-bottom__left
+            display: none
+
+    .audioguides
+        padding: 58px 0 59px
+
+        &-grid
+            grid-template-columns: 1fr
+
+        &__item
+            padding-bottom: 44px
+
+        &__button
+            width: 100%
+
+        &__bg-image
+            display: none
+
+    .become-a-partner
+        margin: 61px -14px 0 !important
+        padding: 28px 34px 40px
+        text-align: center
+
+        &-top
+            flex-direction: column
+
+        &__text
+            padding-top: 0
+            margin: -2px 0 4px
+
+    .intro--project + .history
+        padding-bottom: 0
+
+    .assistance
+        &__header
+            font-size: 50px
+            line-height: normal
+            margin-bottom: 31px
+
+        &-grid
+            grid-template-columns: 1fr
+
+        &__item
+            padding-left: 20px
+            padding-right: 20px
+
+            &-image
+                margin-bottom: 17px
+
+        &-bottom
+            padding-top: 58px
+            flex-direction: column
+            gap: 31px
+
+    .atmosphere + .section--middle.assistance
+        padding: 47px 0 59px !important
+
+    .contacts-info
+        width: 100%
+        padding: 36px 20px 41px
+
+        &__header
+            font-size: 47px
+            line-height: 41.736px
+            margin-bottom: 29px
+
+    .application-for-partnership
+        text-align: center
+        padding: 39px 20px 49px
+
+        &__image
+            display: none
+
+        &-form
+            grid-template-columns: 1fr
+
+            &__text
+                text-align: left
+
+            &__button
+                margin-top: 10px
+
+    .tourism-infrastructure
+        &-grid
+            display: flex
+            flex-direction: column
+            gap: 32px
+
+        &__item
+            &-image
+                height: 167.227px !important
+
+            &:first-child
+                .tourism-infrastructure__item-content
+                    display: block
+
+                .tourism-infrastructure__item-title
+                    margin-bottom: 5px
+
+    .inform.section--middle
+        padding: 61px 0 0 !important
+        background: #fff
+
+    .inform
+        &__map
+            margin: 0 -14px
+
+            iframe
+                height: 367px
+
+        &-grid
+            border-radius: 0
+            margin: 0 -14px
+            padding: 55px 15px 0
+            grid-template-columns: 1fr
+            grid-row-gap: 40px
+
+        &__item
+            flex-direction: column
+            gap: 20px
+            border-bottom: 0
+            padding-bottom: 0
+
+            &-image
+                height: 204px
+
+    .inform-grid + .card
+        margin-top: 40px
+
+    .inform-grid + .card + .inform-grid
+        padding-top: 64px
+        margin-top: 0
+        margin-bottom: 49px
+
+    .audioguide
+        padding: 59px 0 59px
+
+        &-top
+            flex-direction: column-reverse
+            gap: 22px
+            margin-bottom: 59px
+
+        &__image
+            height: 228px
+
+        &__text
+            font-size: 13px
+            line-height: normal
+            width: 100%
+
+        &-grid
+            flex-direction: column
+            gap: 32px
+
+        &__left
+            width: 100%
+
+        &__right
+            width: 100%
+
+        &-list
+            padding: 7px 15px 10px 15px
+            margin-bottom: 31px
+
+            &-items
+                columns: unset
+
+        &-map
+            iframe
+                height: 538px
+
+    .person
+        padding: 49px 0 56px
+
+        &__header
+            font-size: 40px
+            line-height: normal
+            margin-bottom: 27px
+
+        &__inner
+            flex-direction: column
+            gap: 11px
+
+        &__image
+            width: 243px
+            display: block
+            margin: 0 auto
+
+    .writer
+        padding: 59px 0 59px !important
+
+        &-audioguide
+            flex-direction: column
+            padding: 34px 14px 47px
+            gap: 23px
+
+            &__header, &__subheader
+                text-align: center
+
+            &__right
+                padding-top: 0
+
+    .exhibitions
+        padding: 46px 0 59px !important
+
+        .exhibitions__header
+            margin-top: 0 !important
+
+        &__header
+            font-size: 50px
+            line-height: normal
+            margin: 47px 0 22px !important
+
+        &-grid
+            grid-template-columns: 1fr
+            gap: 12px
+
+        &__item
+            padding-bottom: 11px
+
+            &-text
+                margin-bottom: 16px
+
+    .ideas
+        padding: 35px 0 31px
+
+        &__header
+            text-align: center
+            font-size: 50px
+            line-height: normal
+            margin-bottom: 0
+
+        &-top
+            flex-direction: column
+            margin-bottom: 62px
+            gap: 17px
+
+        .dropdown--ideas
+            width: 100%
+
+        &-grid
+            grid-template-columns: 1fr
+            gap: 20px
+
+            & + .controls-block
+                margin-top: 30px
+
+        & + .section--middle
+            padding: 47px 0 0 !important
+
+    .shops
+        margin-top: 0
+        padding-bottom: 59px
+
+        &__header
+            font-size: 50px
+            line-height: 44.4px
+            margin-bottom: 32px
+
+        &-grid
+            grid-template-columns: 1fr
+
+    .postcards
+        padding: 47px 0 59px
+
+        &-top
+            flex-direction: column
+            margin-bottom: 29px
+
+        &__header
+            font-size: 50px
+            line-height: 44.4px
+            margin-bottom: 20px
+            text-align: center
+
+        &__text
+            margin: 0
+            text-align: center
+            max-width: none
+
+        &-grid
+            grid-template-columns: 1fr
+
+            & + .controls-block
+                margin-top: 30px
+
+    .profit
+        padding: 45px 0 59px
+
+        &__header
+            font-size: 50px
+            line-height: normal
+            margin-bottom: 30px
+
+        &__inner
+            flex-direction: column
+            gap: 16px
+
+        &-grid
+            grid-template-columns: 1fr
+            padding: 0 14px
+            gap: 22px
+
+        &__item
+            gap: 21px
+
+            &-header
+                font-size: 13px
+
+            &-icon-part
+                margin-top: 5px
+
+            &-text
+                font-size: 13px
+                padding-right: 20px
+
+        &__banner
+            margin-top: 0
+            padding: 17px 30px 20px 98px
+            position: relative
+            text-align: left
+
+            &-icon
+                position: absolute
+                top: 21px
+                left: 14px
+
+            &-header
+                font-size: 13px
+
+            &-text
+                font-size: 13px
+
+    .buy
+        padding: 31px 0 78px
+
+        &__header
+            font-size: 50px
+            line-height: normal
+            margin-bottom: 31px
+
+        &-grid
+            grid-template-columns: 1fr
+            gap: 10px
+            padding-bottom: 42px
+
+        &__item
+            text-align: left
+            display: flex
+            gap: 11px
+            padding: 10px
+
+            &-icon
+                height: 52px
+                margin: 0
+
+            &-image
+                width: 181px
+                margin-bottom: 0
+
+            &-header
+                margin-bottom: 0
+
+            &-info
+                flex-direction: column
+                align-items: flex-start
+                text-align: left
+
+            &-content
+                display: flex
+                flex-direction: column
+                justify-content: space-between
+
+            &--main
+                padding: 27px 30px 26px 61px
+                align-items: center
+                gap: 18px
+
+            .buy__item-quantity-form
+                justify-content: flex-start
+
+            .buy__item-quantity-form__input
+                width: 31.693px
+                height: 23.33px
+                border-radius: 3.176px
+                font-size: 13px
+
+            .buy__item-quantity-form button
+                font-size: 13.206px
+
+    .buy-total
+        grid-template-columns: repeat(2, 1fr)
+        padding-top: 30px
+        gap: 22px
+
+        &-price
+            text-align: left
+
+            &__header, &__text
+                margin-top: 0
+                font-size: 21px
+                line-height: 25.375px
+
+        &__text
+            grid-column: span 2
+            font-size: 10px
+
+    .brochure
+        padding: 13px 20px 431px
+        text-align: center
+
+        &::before
+            width: 376px
+            height: 367px
+            top: auto
+            right: -7px
+            bottom: 62px
+
+        &__header
+            font-size: 84px
+            line-height: 84px
+            margin-bottom: 34px
+
+        &__text
+            padding: 0 10px
+
+        &__button
+            width: 100%
+
+        &__image
+            top: auto
+            bottom: -62px
+            right: auto
+            left: 59%
+            transform: translateX(-50%)
+            max-width: none
+            width: 449px
+
+    .places
+        padding: 59px 0 58px !important
+
+        &-tabs
+            &-controls
+                gap: 0
+
+            &__control
+                border-radius: 9px
+                border: 1px solid $blue
+                font-size: 18px
+                font-weight: 500
+                text-align: center
+                color: $blue
+                padding: 10px 12px
+
+                &:first-child
+                    border-radius: 9px 0 0 9px
+
+                &:last-child
+                    border-radius: 0 9px 9px 0
+                    margin-left: -1px
+
+                &.active
+                    background: $blue
+                    color: #fff
+
+            &__content
+                padding-top: 30px
+
+            &-grid
+                margin-top: 25px
+                grid-template-columns: repeat(2, 1fr)
+                grid-column-gap: 10px
+                grid-row-gap: 38px
+
+            &__item
+                &:nth-child(3)
+                    grid-column: span 2
+                    flex-direction: row
+                    gap: 10px
+
+                    .places-tabs__item-half
+                        width: 50%
+
+                &:last-child
+                    grid-column: span 2
+
+        .map-rounded
+            margin: 0 -14px
+            border-radius: 0
+
+            iframe
+                height: 585px
+
+    .points-of-sale
+        padding: 37px 0 28px !important
+
+        &__header
+            font-size: 50px
+            margin-bottom: 20px
+
+        &-grid
+            grid-template-columns: repeat(2, 1fr)
+            gap: 12px
+
+            & + .controls-block
+                margin-top: 20px
+
+        &__item
+            flex-direction: column
+            padding: 6px 6px 13px
+
+            &-image
+                height: 99px
+                margin-bottom: -2px
+
+    .program-partners
+        padding: 46px 0 54px
+
+        &__header
+            font-size: 50px
+            line-height: normal
+            margin-bottom: 32px
+
+        &-grid
+            grid-template-columns: 1fr
+            gap: 22px
+
+        &__item
+            display: flex
+            gap: 10px
+            align-items: center
+
+            &-image
+                max-height: 79px
+
+                &-part
+                    height: auto
+                    min-width: 92px
+                    margin-bottom: 0
+
+            &-text
+                padding: 0
+                font-size: 13px
+                text-align: left
+
+    .mfp-auto-cursor .mfp-content
+        padding: 0 14px
+
+    .modal
+        &__header
+            font-size: 23px
+
+        &-booking
+            .modal__header
+                margin-bottom: 34px
+
+            &-form
+                &__inner
+                    flex-direction: column
+                    gap: 18px
+
+                &__label
+                    display: none
+
+                &__half
+                    width: 100%
+
+                &__button
+                    width: 100%
+                    margin-top: 18px
+
+        &-thanks
+            padding: 56px 70px 106px
+            text-align: center
+
+            .modal__header
+                margin-bottom: 7px
+
+            &__inner
+                flex-direction: column
+                align-items: center
+                gap: 15px
+
+        &-postcard-thanks
+            padding: 62px 20px 52px
+
+            &__header
+                margin-bottom: 29px
+
+            &__button
+                width: 100%
+
+        &-postcard
+            flex-direction: column
+            padding: 38px 20px 55px
+
+            &__left, &__right
+                width: 100%
+
+            &__header
+                text-align: center
+                margin-bottom: 33px
+
+            &__postcard
+                width: 284px
+                margin: 0 auto 24px
+
+                .postcards__item
+                    margin-bottom: 16px
+
+            &__text
+                text-align: center
+                margin-bottom: 25px
+
+        &-order
+            .modal__header
+                margin-bottom: 19px
+
+            &-form
+                &-grid
+                    grid-template-columns: 1fr
+
+                &__header
+                    grid-column: span 1
+
+    .teasers
+        display: none
+
+    .card--before::before
+        content: none
+
+    .this-is
+        padding: 45px 0 0
+        margin-bottom: -27px
+
+        &__header
+            font-size: 50px
+            line-height: normal
+            margin-bottom: 15px
+
+        &__inner
+            flex-direction: column
+            gap: 12px
+
+        &__left, &__right
+            width: 100%
+
+        &__text
+            color: rgba(63, 75, 91, 0.5)
+
+            p
+                line-height: 1.1
+
+        &-grid
+            grid-row-gap: 22px
+
+        &__item
+            padding: 0
+            text-align: center
+
+            &-image
+                position: static
+                height: 58px
+                display: block
+                margin: 0 auto 7px
+
+            &-header
+                font-size: 25px
+                margin: 0 0 -4px
+
+    .cities
+        padding: 33px 0 59px
+
+        &__header
+            font-size: 50px
+            line-height: 44px
+            margin-bottom: 29px
+
+        &-items
+            display: flex
+            gap: 0
+
+        &__item
+            // min-width: 160.312px
+
+    .pastime
+        padding: 43px 0 0
+
+        &__header
+            font-size: 50px
+            line-height: normal
+            margin-bottom: 22px
+
+        &-grid
+            grid-template-columns: 1fr
+            gap: 10px
+
+            & + .controls-block
+                margin-top: 14px
+
+        &__item
+            &-text
+                margin-bottom: 16px
+
+    .events
+        padding: 42px 0 0
+        margin-bottom: -12px
+
+        &-items
+            display: flex
+            gap: 0
+
+        &__item
+            // min-width: 160.312px
+            &-image
+                height: 244.921px
+                border-radius: 8.906px
+                background: #FFF
+                margin-bottom: 7px
+
+            &-title
+                font-size: 13px
+
+    .download
+        padding: 46px 0 0
+
+        &__header
+            font-size: 50px
+            line-height: normal
+            margin-bottom: 36px
+            text-align: center
+
+        &__inner
+            flex-direction: column
+
+            &::before
+                right: -155px
+                bottom: -90px
+
+        &__left
+            width: 100%
+
+        &-grid
+            grid-template-columns: repeat(2, 1fr)
+            grid-column-gap: 10px
+            grid-row-gap: 24px
+
+        &__image
+            margin: -11px 0 0
+
+    .routes
+        padding: 47px 0 59px
+
+        &__header
+            font-size: 50px
+            line-height: normal
+            margin-bottom: 25px
+
+        &-grid
+            display: flex
+            gap: 0
+
+        &__item
+            // min-width: 262px
+            &-text
+                padding: 5px 10px 0
+
+        .swiper-wrapper
+            box-sizing: border-box
+
+    .map
+        padding: 0
+
+        &__header
+            font-size: 50px
+            line-height: 44.4px
+            text-align: center
+
+        &__inner
+            width: 100%
+            height: auto
+            margin-left: 0
+            padding: 48px 30px 26px
+            bottom: auto
+            min-height: 0
+
+        &__image
+            display: none
+
+    .reasons
+        padding: 47px 0 59px
+
+        &__header
+            text-align: center
+            font-size: 50px
+            line-height: normal
+            margin-bottom: 32px
+
+        &-grid
+            grid-template-columns: repeat(2, 1fr)
+            grid-column-gap: 12px
+            grid-row-gap: 20px
+
+        &__item
+            flex-direction: column
+            text-align: center
+
+            &-icon
+                display: block
+                margin: 0 auto -6px
+
+            &-text
+                br
+                    display: none
+
+        &__bg-image
+            display: none
+
+    .journal
+        padding: 47px 0 54px
+
+        &__header
+            font-size: 50px
+            line-height: normal
+            text-align: center
+            margin-bottom: 14px
+
+        &-banner
+            padding-bottom: 45px
+
+            &__header
+                margin-bottom: 5px
+
+            &__text
+                margin-bottom: 21px
+
+    .section__top
+        display: block
+        margin-bottom: 34px
+
+        &-text
+            text-align: center
+            padding: 0
+            margin: 0 0 0
+            color: rgba(63, 75, 91, 0.5)
+
+            br
+                display: none
+
+    .footer
+        padding: 15px 0 0
+
+        &__logo
+            gap: 8px !important
+
+            &-image
+                width: 34px
+                height: 38.533px
+
+            &-text
+                font-size: 7.334px
+
+        &-grid
+            display: grid
+            grid-template-columns: repeat(3, 1fr)
+            grid-column-gap: 17px
+            grid-row-gap: 7px
+            padding: 27px 0 0
+
+            a
+                font-weight: 700
+
+        &__bottom
+            padding-bottom: 100px
+
+            &-inner
+                flex-wrap: wrap
+
+                &::after
+                    width: 762px
+                    height: 642.36px
+                    border-radius: 762px
+                    bottom: -673px
+                    right: -397px
+
+            &-block
+                &--1
+                    width: 100%
+                    margin-bottom: 26px
+
+                    .footer-menu
+                        max-height: 270px
+
+                &--2
+                    width: 100%
+                    margin-bottom: 39px
+
+                    .footer-menu
+                        max-height: 270px
+                        column-count: 2
+                        column-gap: 0
+
+                        &__link
+                            white-space: normal
+
+    .footer__bottom-block--4 .footer-menu--bold
+        display: none
+
+    .footer-menu:not(:last-child)
+        margin-bottom: 39px
+
+    .header-menu
+        top: 56px
+        left: 0
+        right: 0
+        height: calc(100vh - 100px)
+
+        .footer__bottom
+            padding-bottom: 133px
+
+        .scroll-pane
+            background: $blue
+            padding: 6px 0 !important
+
+            .jspVerticalBar
+                right: 5px
+
+                .jspArrow
+                    height: 6px
+                    background: none
+
+                &::before
+                    bottom: 12px
+
+            .jspDrag
+                background: $lightblue2
+
+    .discount.mobile-only
+        display: flex
+
+    .intro
+        padding: 57px 0 58px
+        height: 560px
+        background-size: cover
+
+        &--main
+            background-image: url('../img/intro-main-mobile.png')
+            padding-top: 45px
+
+        &--staraya-russa
+            background-image: url('../img/intro-staraya-russa-mobile.png')
+
+        &--shirokaya-maslennica
+            background-image: url('../img/intro-shirokaya-maslennica-mobile.png')
+
+        &--vizavi
+            background-image: url('../img/intro-otel-vizavi-mobile.png')
+            padding: 0 !important
+
+        &--glehmping
+            background-image: url('../img/intro-glehmping-mobile.png')
+
+        &--restoran-karamazovy
+            background-image: url('../img/intro-restoran-karamazovy-mobile.png')
+            padding: 0 !important
+
+        &--gde-ostanovitsya
+            background-image: url('../img/intro-gde-ostanovitsya-mobile.png')
+
+            .intro__header
+                font-size: 71.29px !important
+                line-height: 58.281px !important
+                margin-top: 0 !important
+
+                br
+                    display: none
+
+            .intro__text
+                max-width: none !important
+
+        &--gde-poest
+            background-image: url('../img/intro-gde-poest-mobile.png')
+
+            .intro__header
+                font-size: 71.29px !important
+                line-height: 58.281px !important
+                margin-top: 0 !important
+
+        &--region
+            background-image: url('../img/intro-region-mobile.png')
+
+            .intro-grid
+                grid-template-columns: repeat(3, 1fr)
+                gap: 10px
+
+            .intro__item
+                padding-right: 10px
+
+                &:nth-child(2)
+                    border-right: 1px solid #fff !important
+
+                &:last-child
+                    padding-right: 0 !important
+
+        &--souvenirs
+            background-image: url('../img/intro-souvenirs-mobile.png')
+
+            .intro__text
+                max-width: none !important
+
+            .intro-grid
+                display: flex
+                flex-wrap: wrap
+                row-gap: 10px
+
+            .intro__item
+                width: 35%
+
+        &--audioguides
+            background-image: url('../img/intro-audioguides-mobile.png')
+            padding-top: 68px !important
+
+            .intro__header
+                font-size: 105.368px !important
+                line-height: 86.14px !important
+
+        &--audioguide
+            background-image: url('../img/intro-audioguide-mobile.png')
+
+            .intro__header
+                font-size: 71.29px !important
+                line-height: 58.281px !important
+                margin-top: 0 !important
+
+            .intro-grid
+                grid-template-columns: repeat(3, 1fr)
+                gap: 10px
+
+            .intro__item
+                padding-right: 10px
+
+                &:nth-child(2)
+                    border-right: 1px solid #fff !important
+
+                &:last-child
+                    padding-right: 0 !important
+
+        &--writer
+            background-image: url('../img/intro-writer-mobile.png')
+            height: 619px
+            text-align: center
+            padding: 35px 0 0 !important
+
+            .intro__subheader
+                margin-bottom: 9px !important
+
+            .intro__header
+                font-size: 67.29px !important
+                line-height: 55.011px !important
+
+            .intro__text
+                max-width: none !important
+                margin-top: 21px !important
+
+            .intro-grid
+                margin-top: auto !important
+                margin-bottom: 30px
+
+            .intro__item
+                &:first-child
+                    text-align: right
+
+                &:nth-child(2)
+                    text-align: left
+
+                &:last-child
+                    grid-column: span 2
+                    padding: 0 60px
+
+        &--inform
+            background-image: url('../img/intro-inform-mobile.png')
+
+            .intro__header
+                font-size: 71.29px !important
+                line-height: 58.281px !important
+                margin-top: 0 !important
+                margin-bottom: 0
+
+            .intro__text
+                max-width: none !important
+
+            .intro-grid
+                grid-template-columns: repeat(3, 1fr)
+                gap: 10px
+
+            .intro__item
+                padding-right: 10px
+
+                &:nth-child(2)
+                    border-right: 1px solid #fff !important
+
+                &:last-child
+                    padding-right: 0 !important
+
+        &--project
+            background-image: url('../img/intro-project-mobile.png')
+
+        &--getting-to
+            background-image: url('../img/intro-getting-to-mobile.png')
+
+            .intro__header
+                font-size: 67px !important
+                line-height: 54.774px !important
+
+            .intro-grid
+                grid-template-columns: repeat(3, 1fr)
+                gap: 10px
+
+            .intro__item
+                padding-right: 10px
+
+                &:nth-child(2)
+                    border-right: 1px solid #fff !important
+
+                &:last-child
+                    padding-right: 0 !important
+
+        &--card
+            height: 685px
+            padding: 54px 0 61px !important
+
+            &::before
+                width: 405px
+                height: 294px
+                left: 0
+                bottom: 18px
+                top: auto
+
+            .intro__header
+                font-size: 71.29px !important
+                line-height: 58.281px !important
+                margin-top: -3px
+
+            .intro__image
+                position: static
+                order: 5
+                margin-top: auto
+
+            .intro-grid
+                margin-top: 52px !important
+
+            .intro__item
+                padding-right: 10px
+
+                &-text
+                    font-size: 11px
+
+        &__header
+            font-size: 84.289px
+            line-height: 69px
+
+            & + .intro__subheader
+                margin-top: 18px
+
+        &__subheader
+            font-size: 20px
+            line-height: 24.8px
+
+            br
+                display: none
+
+            & + .intro__bottom
+                margin-top: 42px
+
+        &__text
+            font-size: 13px
+            min-height: 0
+
+            br
+                display: none
+
+        &__bottom
+            flex-direction: column
+            gap: 33px
+
+            &-item
+                flex-direction: column
+                font-size: 13px
+                gap: 17px
+                max-width: 240px
+
+                br
+                    display: none
+
+                .btn
+                    margin-left: 0 !important
+
+        &-grid
+            // gap: 15px
+            display: grid
+            grid-template-columns: repeat(3, 1fr)
+            gap: 20px
+
+        &__item
+            padding-right: 20px
+
+            br
+                display: none
+
+            &-text
+                font-size: 13px
+
+        .discount:first-child
+            margin-top: 0 !important
+            margin-bottom: 25px !important
+
+    .intro--main
+        .btn
+            max-width: 230px
+
+    .intro:not(.intro--main)
+        // padding: 123px 0 105px
+        // padding: 0 !important
+        padding: 0
+
+        .container
+            display: flex
+            flex-direction: column
+            justify-content: center
+            height: 100%
+
+        .intro__subheader
+            font-size: 15px
+            line-height: 18.6px
+            order: 0
+
+        .intro__header
+            font-size: 84.289px
+            line-height: 70px
+            order: 1
+
+        // .intro__subheader + .intro__header
+        // margin-top: -9px !important
+        .intro__text
+            order: 2
+            // margin-top: 30px
+            margin-top: 17px
+            max-width: 240px
+
+        .intro__button
+            order: 3
+            margin-top: 13px
+            font-size: 13px
+            width: 153px
+
+        .intro__header + .intro__button
+            margin-top: 21px !important
+
+        .intro-grid
+            order: 4
+            margin-top: 33px
+
+        .discount__text
+            font-size: 13px
+            line-height: 12.133px
+            max-width: 120px
+
+        .intro__discount-wrap
+            .discount
+                display: none
+
+    .intro-grid--small
+        grid-template-columns: repeat(2, 1fr)
+
+        .intro__item
+            &-text
+                font-size: 9px
+
+            &:nth-child(2)
+                border-right: 0
+
+    .calendar::before
+        content: none
+
+    .download__button
+        font-size: 10px
+
+    .card-slider
+        padding: 0 14px
+
+        .swiper-slide
+            padding-bottom: 15px
+
+        .card__middle
+            flex-direction: column
+            gap: 20px
+            padding: 0
+            margin-bottom: 34px
+            position: relative
+            z-index: 1
+
+        .card__text
+            max-width: none
+            font-size: 13px
+            font-weight: 400
+
+        .card-tabs, .card-tabs__controls
+            width: 100%
+
+        .card-tabs__control
+            height: 34px
+            font-size: 13px
+            width: 50%
+
+        .card-content
+            flex-direction: column
+
+        .card-content-grid
+            border-radius: 6px
+            grid-template-columns: 1fr
+            grid-row-gap: 41px
+            margin-right: 0
+            padding: 15px 15px 18px
+            margin-bottom: 55px
+
+            &::after
+                left: 50%
+                transform: translateX(-50%)
+                top: calc(100% + 13px)
+
+        .card-content__item
+            gap: 14px
+
+            &::after
+                content: '+'
+                left: 14px
+                top: calc(100% + 23px)
+
+            &:last-child
+                &::after
+                    content: none
+
+            &-header
+                margin-top: 5px
+
+            &-text
+                white-space: nowrap
+
+        .card-content-prices
+            margin-right: 0
+            margin-bottom: 55px
+            border-radius: 6px
+            padding: 21px 15px 17px 15px
+
+        .card-content__price
+            display: flex
+            gap: 10px
+            margin-bottom: 26px
+
+            &:last-child
+                margin-bottom: 0
+
+            &-header
+                white-space: normal
+                max-width: 120px
+                margin-bottom: 0
+
+            &-value
+                white-space: nowrap
+
+        .card-content-info__text
+            text-align: center
+            margin-top: 30px
+
+        & + .container--postcards
+            margin-top: -47px
+
+    .card--first
+        .card__header
+            font-size: 32px
+            line-height: 30.815px
+            padding: 0
+            margin-bottom: 16px
+
+        .card__inner
+            padding: 61px 13px 59px
+
+        .card-content__image
+            position: static
+            transform: none
+
+    .card--second
+        .card__header
+            font-size: 32px
+            line-height: 30.815px
+            padding: 0
+            margin-bottom: 16px
+
+        .card__inner
+            padding: 61px 13px 59px
+
+            &::before
+                width: 376px
+                height: 367px
+                right: auto
+                bottom: auto
+                top: -315px
+                left: -7px
+
+        .card-content__image
+            display: none
+
+        .card-content-info
+            gap: 22px
+
+    .container--inform + .card-slider
+        margin-top: 9px
+
+        & + .container--inform
+            margin-top: -138px

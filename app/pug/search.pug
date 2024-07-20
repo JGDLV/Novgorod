@@ -1,0 +1,42 @@
+extends _layout.pug
+
+block variables
+    -
+        var title = 'Результаты поиска'
+        var description = 'Результаты поиска'
+        var index = true
+
+block content
+    include components/intro.pug
+    include components/search.pug
+    .section.section--gray
+        .container
+            include components/teasers.pug
+        include components/card.pug
+        .container
+            include components/this-is.pug
+    include components/guide.pug
+    .section.section--gray.after
+        .container
+            include components/cities.pug
+            include components/how-to-get.pug
+            include components/pastime.pug
+    .section.section--blue.after.z-1
+        .container
+            include components/events.pug
+    include components/download.pug
+    include components/routes.pug
+    .section.map.z-1
+        .container
+            .map__inner
+                h2.map__header.section__header Все дороги ведут в Новгородскую область!
+                img.map__image(src="img/coat-of-arms.svg" alt="")
+        include components/map.pug
+    include components/reasons.pug
+    include components/journal.pug
+    include components/partners.pug
+    .section.section--gray.welcome
+        include components/welcome.pug
+
+
+

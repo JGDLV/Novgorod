@@ -1,0 +1,41 @@
+body()
+	min-height: 100%
+	position: relative
+
+footer()
+	position: absolute
+	bottom: 0
+	left: 0
+	right: 0
+
+flex()
+	display: flex
+	flex-wrap: wrap
+
+dark($color)
+	background-color: darken($color, 5%)
+
+absolute()
+	position: absolute
+	content: ''
+	display: block
+
+tr()
+	transition: all 0.5s ease
+
+center()
+	top: 50%
+	left: 50%
+	transform: translate(-50%, -50%)
+
+font(name, file, weight = 400, style = 'normal')
+	@font-face
+		font-family: name
+		src: url('../fonts/' + file + '.eot')
+		src: url('../fonts/' + file + '.eot?#iefix') format('embedded-opentype'),
+		     url('../fonts/' + file + '.woff') format('woff'),
+		     url('../fonts/' + file + '.woff2') format('woff2'),
+		     url('../fonts/' + file + '.ttf') format('truetype'),
+		     url('../fonts/' + file + '.svg#') format('svg')
+		font-weight: weight
+		font-style: style

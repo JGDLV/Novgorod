@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Ресторан Карамазовы</title>
+    <meta name="description" content="Ресторан Карамазовы">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Onest:wght@100..900&amp;display=swap">
+    <link rel="stylesheet" href="css/libs.min.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/green-audio-player.min.css">
+    <link rel="stylesheet" href="css/jquery.jscrollpane.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <div class="header">
+      <div class="container">
+        <div class="header__top">
+          <div class="header__top-inner">
+            <div class="logo"><a class="logo__link" href="/"> <img class="logo__image" src="img/logo.svg" alt="">
+                <p class="logo__text">При поддержке Правительства <br>Новогородской области</p></a></div>
+            <div class="tagline">Туристический портал Новгородской области</div>
+          </div>
+        </div>
+        <div class="header__bottom">
+          <div class="header__bottom-inner">
+            <div class="main-menu">
+              <ul class="main-menu-items">
+                <li class="main-menu__item"><a class="main-menu__link" href="#">Путеводитель</a></li>
+                <li class="main-menu__item"><a class="main-menu__link" href="#">Карта гостя</a></li>
+                <li class="main-menu__item"><a class="main-menu__link" href="#">Приложение</a></li>
+              </ul>
+            </div>
+            <div class="menu-toggle">
+              <div class="icon-toggle"><span> </span><span> </span><span> </span></div>
+            </div><a class="phone" href="tel:+88002220053">8 800 222 00 53</a>
+            <div class="search">
+              <form class="search-form">
+                <input class="search__input" type="text" placeholder="Поиск...">
+              </form>
+            </div>
+            <div class="lang">
+              <div class="lang__item"><img src="img/ru.svg" alt="">RU</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mobile-header mobile-only">
+      <div class="container">
+        <div class="mobile-header__inner">
+          <div class="mobile-header__logo"><a class="mobile-header__logo-link" href="/"> <img class="mobile-header__logo-image" src="img/coat-of-arms-blue.svg" alt="">
+              <p class="mobile-header__logo-text">Туристический портал <br>Новгородской области</p></a></div>
+          <div class="mobile-header-buttons"><a class="mobile-header__search" href="#"> </a><a class="mobile-header__phone" href="#"></a>
+            <div class="mobile-header__lang">RU</div>
+            <div class="menu-toggle mobile-header-menu-toggle">
+              <div class="icon-toggle"><span> </span><span> </span><span> </span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="header-menu">
+      <div class="footer">
+        <div class="container">
+          <div class="footer__top"><a class="footer__logo" href="#"> <img class="footer__logo-image" src="img/logo.svg" alt="">
+              <p class="footer__logo-text">При поддержке <br>Правительства Новогородской области</p></a>
+            <div class="footer-grid mobile-only"><a class="footer__link" href="#">Карта гостя</a><a class="footer__link" href="#">Инфо-Центры</a><a class="footer__link" href="#">Журнал</a><a class="footer__link" href="#">Туроператоры</a><a class="footer__link" href="#">Аудиогиды</a><a class="footer__link" href="#">Великие имена</a>
+            </div>
+          </div>
+          <div class="footer__bottom">
+            <div class="footer__bottom-inner">
+              <div class="footer__bottom-block footer__bottom-block--1">
+                <div class="footer__bottom-block-header">Города и населенные пункты</div>
+                <div class="footer-menu">
+                  <ul class="footer-menu-items">
+                    <li class="footer-menu__item"><a class="footer-menu__link" href="#">Батецкий район</a></li>
+                    <li class="footer-menu__item"><a class="footer-menu__link" href="#">Боровичский район</a></li>
+                    <li class="footer-menu__item"><a class="footer-menu__link" href="#">Валдайский район</a></li>
+                    <li class="footer-menu__item"><a class="footer-menu__link" href="#">Великий новгород</a></li>
+                    <li class="footer-menu__item"><a class="footer-menu__link" href="#">Волотовский округ</a></li>
+                    <li class="footer-menu__item"><a class="footer-menu__link" href="#">Демянский район</a></li>
+                    <li class="footer-menu__item"><a class="footer-menu__link" href="#">Крестецкий район</a></li>
+                    <li class="footer-menu__item"><a class="footer-menu__link" href="#">Любытинский район</a></li>
+                    <li class="footer-menu__item"><a class="footer-menu__link" href="#">Маловишерский район</a></li>
+                    <li class="footer-menu__item"><a class="footer-menu__link" href="#">Маревский округ</a></li>
+                    <li class="footer-menu__item"><a class="footer-menu__link" href="#">Мошенской район</a></li>
+                    <li class="footer-menu__item"><a class="footer-menu__link" href="#">Новгородский район</a></li>
+                    <li class="footer-menu__item"><a class="footer-menu__link" href="#">Окуловский район</a></li>
+                    <li class="footer-menu__item"><a class="footer-menu__link" href="#">Парфинский район</a></li>
+                    <li class="footer-menu__item"><a class="footer-menu__link" href="#">Пестовский район</a></li>
+                    <li class="footer-menu__item"><a class="footer-menu__link" href="#">Поддорский район</a></li>
+                    <li class="footer-menu__item"><a class="footer-menu__link" href="#">Солецкий округ</a></li>
+                    <li class="footer-menu__item"><a class="footer-menu__link" href="#">Старорусский район</a></li>
+                    <li class="footer-menu__item"><a class="footer-menu__link" href="#">Хвойнинский округ</a></li>
+                    <li class="footer-menu__item"><a class="footer-menu__link" href="#">Холмский район</a></li>
+                    <li class="footer-menu__item"><a class="footer-menu__link" href="#">Чудовский район</a></li>
+                    <li class="footer-menu__item"><a class="footer-menu__link" href="#">Шимский район</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="footer__bottom-block footer__bottom-block--2">
+                <div class="footer__bottom-block-header"><a href="#">Места</a> / <a href="#">Экскурсии</a> / <a href="#">События</a></div>
+                <div class="footer-menu">
+                  <ul class="footer-menu-items">
+                    <li class="footer-menu__item"><a class="footer-menu__link" href="#">Музеи</a></li>
+                    <li class="footer-menu__item"><a class="footer-menu__link" href="#">Храмы и монастыри</a></li>
+                    <li class="footer-menu__item"><a class="footer-menu__link" href="#">Детский отдых</a></li>
+                    <li class="footer-menu__item"><a class="footer-menu__link" href="#">Активный отдых</a></li>
+                    <li class="footer-menu__item"><a class="footer-menu__link" href="#">Природа</a></li>
+                    <li class="footer-menu__item"><a class="footer-menu__link" href="#">Выставки</a></li>
+                    <li class="footer-menu__item"><a class="footer-menu__link" href="#">Оздоровительный туризм</a></li>
+                    <li class="footer-menu__item"><a class="footer-menu__link" href="#">Развлечения</a></li>
+                    <li class="footer-menu__item"><a class="footer-menu__link" href="#">Приключения</a></li>
+                    <li class="footer-menu__item"><a class="footer-menu__link" href="#">Гастрономический туризм</a></li>
+                    <li class="footer-menu__item"><a class="footer-menu__link" href="#">Культура</a></li>
+                    <li class="footer-menu__item"><a class="footer-menu__link" href="#">Необычные места</a></li>
+                    <li class="footer-menu__item"><a class="footer-menu__link" href="#">Мастер классы</a></li>
+                    <li class="footer-menu__item"><a class="footer-menu__link" href="#">Поклонный туризм</a></li>
+                    <li class="footer-menu__item"><a class="footer-menu__link" href="#">Охота и рыбалка</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="footer__bottom-block footer__bottom-block--3">
+                <div class="footer__bottom-block-header"><a href="#">Где остановиться</a></div>
+                <div class="footer-menu">
+                  <ul class="footer-menu-items">
+                    <li class="footer-menu__item"><a class="footer-menu__link" href="#">Гостиница</a></li>
+                    <li class="footer-menu__item"><a class="footer-menu__link" href="#">Санаторий</a></li>
+                    <li class="footer-menu__item"><a class="footer-menu__link" href="#">База отдыха</a></li>
+                    <li class="footer-menu__item"><a class="footer-menu__link" href="#">Апартаменты</a></li>
+                    <li class="footer-menu__item"><a class="footer-menu__link" href="#">Хостел</a></li>
+                    <li class="footer-menu__item"><a class="footer-menu__link" href="#">Гостевой дом</a></li>
+                    <li class="footer-menu__item"><a class="footer-menu__link" href="#">Глэмпинг</a></li>
+                  </ul>
+                </div>
+                <div class="footer__bottom-block-header"><a href="#">О проекте</a></div>
+                <div class="footer-menu">
+                  <ul class="footer-menu-items">
+                    <li class="footer-menu__item"><a class="footer-menu__link" href="#">Партнеры</a></li>
+                    <li class="footer-menu__item"><a class="footer-menu__link" href="#">Обратная связь</a></li>
+                    <li class="footer-menu__item"><a class="footer-menu__link" href="#">Контакты</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="footer__bottom-block footer__bottom-block--4">
+                <div class="footer__bottom-block-header"><a href="#">Где поесть</a></div>
+                <div class="footer-menu">
+                  <ul class="footer-menu-items">
+                    <li class="footer-menu__item"><a class="footer-menu__link" href="#">Рестораны</a></li>
+                    <li class="footer-menu__item"><a class="footer-menu__link" href="#">Бары и пабы</a></li>
+                    <li class="footer-menu__item"><a class="footer-menu__link" href="#">Чайханы</a></li>
+                    <li class="footer-menu__item"><a class="footer-menu__link" href="#">Кафе и кофейни</a></li>
+                    <li class="footer-menu__item"><a class="footer-menu__link" href="#">Траттории</a></li>
+                    <li class="footer-menu__item"><a class="footer-menu__link" href="#">Столовые</a></li>
+                  </ul>
+                </div>
+                <div class="footer-menu footer-menu--bold">
+                  <ul class="footer-menu-items">
+                    <li class="footer-menu__item"><a class="footer-menu__link" href="#">Карта гостя</a></li>
+                    <li class="footer-menu__item"><a class="footer-menu__link" href="#">Туроператоры</a></li>
+                    <li class="footer-menu__item"><a class="footer-menu__link" href="#">Инфо-Центры</a></li>
+                    <li class="footer-menu__item"><a class="footer-menu__link" href="#">Аудиогиды</a></li>
+                    <li class="footer-menu__item"><a class="footer-menu__link" href="#">Видеогиды</a></li>
+                    <li class="footer-menu__item"><a class="footer-menu__link" href="#">Журнал</a></li>
+                    <li class="footer-menu__item"><a class="footer-menu__link" href="#">Великие имена</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bottom-menu mobile-only">
+      <ul class="bottom-menu-items">
+        <li class="bottom-menu__item"><a class="bottom-menu__link" href="#"><img class="bottom-menu__link-image" src="img/bottom-guide.svg" alt="">
+            <div class="bottom-menu__link-text">Путеводитель</div></a></li>
+        <li class="bottom-menu__item"><a class="bottom-menu__link" href="#"><img class="bottom-menu__link-image" src="img/bottom-card.svg" alt="">
+            <div class="bottom-menu__link-text">Карта гостя</div></a></li>
+        <li class="bottom-menu__item"><a class="bottom-menu__link" href="#"><img class="bottom-menu__link-image" src="img/bottom-app.svg" alt="">
+            <div class="bottom-menu__link-text">Приложение</div></a></li>
+      </ul>
+    </div>
+    <div class="content">
+      <div class="intro intro--inner intro--restoran-karamazovy z-1">
+        <div class="container">
+          <div class="discount">
+            <div class="discount__value">-10%</div>
+            <div class="discount__text">на основное меню по карте гостя</div>
+          </div>
+          <p class="intro__subheader">Старая Русса</p>
+          <h1 class="intro__header">РЕСТОРАН <br>КАРАМАЗОВЫ</h1><a class="intro__button" href="#"><img src="img/play.svg" alt="" width="26" height="26">Смотреть видео</a>
+          <div class="intro-grid">
+            <div class="intro__item">
+              <div class="intro__item-text">утонченная <br>кухня</div>
+            </div>
+            <div class="intro__item">
+              <div class="intro__item-text">уютная <br>обстановка</div>
+            </div>
+            <div class="intro__item">
+              <div class="intro__item-text">комфортный <br>отдых</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section section--gray history">
+        <div class="container">
+          <h2 class="history__header section__header">Философия ресторана</h2>
+          <div class="history-grid">
+            <div class="history__item">Ресторан "Карамазовы" предлагает уникальное сочетание дворянской кухни с изысками современной Италии.</div>
+            <div class="history__item">В меню "Карамазовы" вы найдете блюда эпохи Достоевского с элементами итальянской и русской кухни. От кулебяки до ремесленного хлеба ручной работы.</div>
+            <div class="history__item">Дворянский банкетный зал, вместимостью до 60 человек, созданный для особых событий и мероприятий. Идеальное место для проведения банкетов и торжеств в роскошной обстановке.</div>
+            <div class="history__item">Основной зал ресторана вмещает 90 человек, обеспечивая уют и прекрасные виды. Идеальное место для ужина с семьей, встречи с друзьями или делового обеда.</div>
+          </div>
+        </div>
+      </div>
+      <div class="section section--white after travel z-1">
+        <div class="container">
+          <h2 class="travel__header section__header">Уютно и вкусно</h2>
+          <div class="swiper" id="travelSwiper">
+            <div class="travel-grid swiper-wrapper">
+              <div class="travel__item swiper-slide"><img class="travel__item-image" src="" alt="">
+                <div class="travel__item-header">Обед в утонченной атмосфере</div>
+                <div class="travel__item-text">Погрузитесь в атмосферу роскоши, наслаждаясь утонченными блюдами и изысканным сервисом.</div>
+              </div>
+              <div class="travel__item swiper-slide"><img class="travel__item-image" src="" alt="">
+                <div class="travel__item-header">Итальянские мотивы</div>
+                <div class="travel__item-text">Попробуйте блюда, вдохновленные итальянской кухней, приготовленные с любовью и вниманием к деталям.</div>
+              </div>
+              <div class="travel__item swiper-slide"><img class="travel__item-image" src="" alt="">
+                <div class="travel__item-header">Русские деликатесы</div>
+                <div class="travel__item-text">Откройте для себя богатство вкусов русских деликатесов, оживших в блюдах ресторана "Карамазовы"</div>
+              </div>
+              <div class="travel__item swiper-slide"><img class="travel__item-image" src="" alt="">
+                <div class="travel__item-header">Романтические встречи</div>
+                <div class="travel__item-text">Создайте романтическую атмосферу, выбрав летнюю веранду для особых встреч.</div>
+              </div>
+            </div>
+          </div>
+          <div class="how-to-get-bottom how-to-get-bottom--inner">
+            <div class="how-to-get-bottom__left"><img class="how-to-get__image" src="img/coat-of-arms.svg" alt=""></div>
+            <div class="how-to-get-bottom__right">
+              <p class="how-to-get-bottom__text">НУЖНА ПОМОЩЬ? <br>ОСТАВЬТЕ СВОИ КОНТАКТЫ И МЫ СВЯЖЕМСЯ С ВАМИ.</p>
+              <form class="how-to-get-form">
+                <div class="how-to-get-form__part">
+                  <div class="how-to-get-form__label">Как вам удобнее связаться?</div>
+                  <div class="dropdown">
+                    <input type="hidden" name="dropdown" value="">
+                    <div class="dropdown__layout"></div>
+                    <div class="dropdown__current">Выберите способ связи</div>
+                    <ul class="dropdown-items">
+                      <li class="dropdown__item">Способ связи №1</li>
+                      <li class="dropdown__item">Способ связи №2</li>
+                      <li class="dropdown__item">Способ связи №3</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="how-to-get-form__part">
+                  <div class="how-to-get-form__label">Номер телефона / E-mail</div>
+                  <input class="how-to-get-form__input" type="text" placeholder="+7 912 912 91 91 / mail@mail.ru">
+                </div>
+                <button class="btn how-to-get-form__button" type="submit">Помогите мне</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section section--lightblue atmosphere">
+        <div class="container">
+          <h2 class="atmosphere__header section__header">Атмосфера Карамазовых</h2>
+          <div class="atmosphere-grid">
+            <div class="atmosphere__item"></div>
+            <div class="atmosphere__item"></div>
+            <div class="atmosphere__item"></div>
+            <div class="atmosphere__item"></div>
+            <div class="atmosphere__item"></div>
+            <div class="atmosphere__item"></div>
+            <div class="atmosphere__item"></div>
+            <div class="atmosphere__item"></div>
+          </div><a class="btn btn--blue atmosphere__button" href="#">Забронировать</a>
+        </div>
+      </div>
+      <div class="section section--gray section--middle">
+        <div class="card-slider card-slider--inner">
+          <div class="swiper" id="cardSwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="card card--first card--before after after--blue card--inner">
+                  <div class="card__inner">
+                    <div class="card__header">А вы знаете, как сэкономить с картой гостя, приехав на сутки в Великий Новгород?</div>
+                    <div class="card-content">
+                      <div class="card-content-grid">
+                        <div class="card-content__item"><img class="card-content__item-icon" src="img/card-01.svg" alt="">
+                          <div class="card-content__item-content">
+                            <div class="card-content__item-header">Отель</div>
+                            <div class="card-content__item-text">Сутки в отеле “Русь Новгородская”</div>
+                          </div>
+                        </div>
+                        <div class="card-content__item"><img class="card-content__item-icon" src="img/card-02.svg" alt="">
+                          <div class="card-content__item-content">
+                            <div class="card-content__item-header">Завтрак</div>
+                            <div class="card-content__item-text">Шведский стол в ресторане “Новиков”</div>
+                          </div>
+                        </div>
+                        <div class="card-content__item"><img class="card-content__item-icon" src="img/card-03.svg" alt="">
+                          <div class="card-content__item-content">
+                            <div class="card-content__item-header">Музей</div>
+                            <div class="card-content__item-text">Посещение выставки</div>
+                          </div>
+                        </div>
+                        <div class="card-content__item"><img class="card-content__item-icon" src="img/card-04.svg" alt="">
+                          <div class="card-content__item-content">
+                            <div class="card-content__item-header">Ужин</div>
+                            <div class="card-content__item-text">Ужин в ресторане “Новиков” на двоих</div>
+                          </div>
+                        </div>
+                        <div class="card-content__item"><img class="card-content__item-icon" src="img/card-05.svg" alt="">
+                          <div class="card-content__item-content">
+                            <div class="card-content__item-header">Экскурсия</div>
+                            <div class="card-content__item-text">Обзорная экскурсия по Новгороду</div>
+                          </div>
+                        </div>
+                        <div class="card-content__item"><img class="card-content__item-icon" src="img/card-06.svg" alt="">
+                          <div class="card-content__item-content">
+                            <div class="card-content__item-header">Музей</div>
+                            <div class="card-content__item-text">Посещение выставки</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card-content-prices">
+                        <div class="card-content__price">
+                          <div class="card-content__price-header">Цена без карты:</div>
+                          <div class="card-content__price-value">26 000&nbsp;₽</div>
+                        </div>
+                        <div class="card-content__price">
+                          <div class="card-content__price-header">Цена с картой:</div>
+                          <div class="card-content__price-value">22 000&nbsp;₽</div>
+                        </div>
+                        <div class="card-content__price">
+                          <div class="card-content__price-header">Общая экономия:</div>
+                          <div class="card-content__price-value">4 000&nbsp;₽</div>
+                        </div>
+                      </div><img class="card-content__image" src="img/guest-card.png" alt="">
+                      <div class="card-content-info">
+                        <div class="card-content-info__text">Узнайте выгоду при поездке на выходные</div><a class="btn card-content-info__button" href="#">Узнать больше</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card card--second after after--blue">
+                  <div class="card__inner"><img class="card-content__image" src="img/rounded-text-big.svg" alt="">
+                    <div class="card__header">Путешествуйте по Великому Новгороду выгодно!</div>
+                    <div class="card__middle">
+                      <div class="card__text">Выберите продолжительность вашего путешествия и узнайте, сколько можно сэкономить благодаря карте гостя!</div>
+                      <div class="card-tabs tabs">
+                        <div class="card-tabs__controls tabs__controls">
+                          <div class="card-tabs__control tabs__control">Поездка на день</div>
+                          <div class="card-tabs__control tabs__control">Поездка на выходные</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-content">
+                      <div class="card-content-grid">
+                        <div class="card-content__item"><img class="card-content__item-icon" src="img/card-01.svg" alt="">
+                          <div class="card-content__item-content">
+                            <div class="card-content__item-header">Отель</div>
+                            <div class="card-content__item-text">Сутки в отеле “Русь Новгородская”</div>
+                          </div>
+                        </div>
+                        <div class="card-content__item"><img class="card-content__item-icon" src="img/card-02.svg" alt="">
+                          <div class="card-content__item-content">
+                            <div class="card-content__item-header">Завтрак</div>
+                            <div class="card-content__item-text">Шведский стол в ресторане “Новиков”</div>
+                          </div>
+                        </div>
+                        <div class="card-content__item"><img class="card-content__item-icon" src="img/card-03.svg" alt="">
+                          <div class="card-content__item-content">
+                            <div class="card-content__item-header">Музей</div>
+                            <div class="card-content__item-text">Посещение выставки</div>
+                          </div>
+                        </div>
+                        <div class="card-content__item"><img class="card-content__item-icon" src="img/card-04.svg" alt="">
+                          <div class="card-content__item-content">
+                            <div class="card-content__item-header">Ужин</div>
+                            <div class="card-content__item-text">Ужин в ресторане “Новиков” на двоих</div>
+                          </div>
+                        </div>
+                        <div class="card-content__item"><img class="card-content__item-icon" src="img/card-05.svg" alt="">
+                          <div class="card-content__item-content">
+                            <div class="card-content__item-header">Экскурсия</div>
+                            <div class="card-content__item-text">Обзорная экскурсия по Новгороду</div>
+                          </div>
+                        </div>
+                        <div class="card-content__item"><img class="card-content__item-icon" src="img/card-06.svg" alt="">
+                          <div class="card-content__item-content">
+                            <div class="card-content__item-header">Музей</div>
+                            <div class="card-content__item-text">Посещение выставки</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card-content-prices">
+                        <div class="card-content__price">
+                          <div class="card-content__price-header">Цена без карты:</div>
+                          <div class="card-content__price-value">26 000&nbsp;₽</div>
+                        </div>
+                        <div class="card-content__price">
+                          <div class="card-content__price-header">Цена с картой:</div>
+                          <div class="card-content__price-value">22 000&nbsp;₽</div>
+                        </div>
+                        <div class="card-content__price">
+                          <div class="card-content__price-header">Общая экономия:</div>
+                          <div class="card-content__price-value">4 000&nbsp;₽</div>
+                        </div>
+                      </div>
+                      <div class="card-content-info"><img src="img/guest-card.png" alt=""><a class="btn btn--white card-content-info__button" href="#">Купить карту</a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card card--before after after--blue card--inner">
+                  <div class="card__inner">
+                    <div class="card__top">
+                      <div class="card__top-left">
+                        <h2 class="card__header">КАРТА ГОСТЯ</h2>
+                        <p class="card__subheader">твоё безлимитное путешествие <br>по Новгородской области</p>
+                        <div class="card__top-left-bottom">
+                          <p class="card__text">карта дает право на бесплатное посещение <br>музеев и экскурсий, а также включает <br>выгодные предложения и скидки</p><a class="btn card__button" href="#">Узнать больше</a>
+                        </div>
+                      </div>
+                      <div class="card__top-right"><img class="card__image" src="img/guest-card.png" alt="КАРТА ГОСТЯ"></div>
+                    </div>
+                    <div class="card-grid">
+                      <div class="card__item"><img class="card__item-image" src="img/bus.svg" alt="">
+                        <p class="card__item-header">Автобусные поездки</p>
+                        <p class="card__item-text">Санкт-Петербург — Великий Новгород — Санкт-Петербург</p>
+                      </div>
+                      <div class="card__item"><img class="card__item-image" src="img/kid.svg" alt="">
+                        <p class="card__item-header">Детям</p>
+                        <p class="card__item-text">Детские развлекательные центры и контактные зоопарки</p>
+                      </div>
+                      <div class="card__item"><img class="card__item-image" src="img/paint.svg" alt="">
+                        <p class="card__item-header">Мастер-классы</p>
+                        <p class="card__item-text">В творческих мастерских и культурных центрах</p>
+                      </div>
+                      <div class="card__item"><img class="card__item-image" src="img/theater.svg" alt="">
+                        <p class="card__item-header">Культурные мероприятия</p>
+                        <p class="card__item-text">Концерты, спектакли и киносенсы</p>
+                      </div>
+                      <div class="card__item"><img class="card__item-image" src="img/museum.svg" alt="">
+                        <p class="card__item-header">Музеи и развлечения</p>
+                        <p class="card__item-text">Более 50 музейных объектов, отели, рестораны, кафе и сувенирные магазины</p>
+                      </div>
+                      <div class="card__item"><img class="card__item-image" src="img/bagage.svg" alt="">
+                        <p class="card__item-header">Экскурсии</p>
+                        <p class="card__item-text">Более 30 экскурсий: театрализованные, речные, автобусные и пешеходные, обзорные и по отдельным экспозициям</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="how-to-get">
+            <div class="how-to-get-map">
+              <div class="how-to-get-map__inner">
+                <h2 class="how-to-get-map__header section__header">КАК ДОБРАТЬСЯ</h2>
+                <div class="how-to-get-map-grid">
+                  <div class="how-to-get-map__item">
+                    <div class="how-to-get-map__item-header">Адрес:</div>
+                    <div class="how-to-get-map__item-text">г. Старая Русса, Гостинодворская ул., 20</div>
+                  </div>
+                  <div class="how-to-get-map__item">
+                    <div class="how-to-get-map__item-header">Телефон:</div>
+                    <div class="how-to-get-map__item-text"><a href="tel:+78165232777">+7 (81652) 3-27-77</a></div>
+                  </div>
+                  <div class="how-to-get-map__item">
+                    <div class="how-to-get-map__item-header">E-mail:</div>
+                    <div class="how-to-get-map__item-text">
+                      <p>-</p>
+                    </div>
+                  </div>
+                  <div class="how-to-get-map__item">
+                    <div class="how-to-get-map__item-header">Сайт:</div>
+                    <div class="how-to-get-map__item-text">
+                      <p><a href="//vk.com/karamazovy.rest">vk.com/karamazovy.rest</a></p>
+                    </div>
+                  </div>
+                  <div class="how-to-get-map__item">
+                    <div class="how-to-get-map__item-header">GPS:</div>
+                    <div class="how-to-get-map__item-text">57.991393, 31.361309</div>
+                  </div>
+                </div>
+              </div><script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A83d1b0909ee5ae1024b76fc7a9a95ded5f2a18c45fa8a0207edfd48376e3bce7&amp;width=100%25&amp;height=529&amp;lang=ru_RU&amp;scroll=false"></script>
+            </div>
+            <div class="how-to-get-bottom">
+              <div class="how-to-get-bottom__left"><img class="how-to-get__image" src="img/coat-of-arms.svg" alt=""></div>
+              <div class="how-to-get-bottom__right">
+                <p class="how-to-get-bottom__text">НУЖНА ПОМОЩЬ? <br>ОСТАВЬТЕ СВОИ КОНТАКТЫ И МЫ СВЯЖЕМСЯ С ВАМИ.</p>
+                <form class="how-to-get-form">
+                  <div class="dropdown">
+                    <input type="hidden" name="dropdown" value="">
+                    <div class="dropdown__layout"></div>
+                    <div class="dropdown__current">Выберите способ связи</div>
+                    <ul class="dropdown-items">
+                      <li class="dropdown__item">Способ связи №1</li>
+                      <li class="dropdown__item">Способ связи №2</li>
+                      <li class="dropdown__item">Способ связи №3</li>
+                    </ul>
+                  </div>
+                  <input class="how-to-get-form__input" type="text" placeholder="+7 912 912 91 91 / mail@mail.ru">
+                  <button class="btn how-to-get-form__button" type="submit">Помогите мне</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section section--white partners">
+        <div class="container">
+          <h2 class="partners__header section__header">Наши партнеры</h2>
+          <div class="partners-slider">
+            <div class="swiper" id="partnersSwiper">
+              <div class="partners-grid swiper-wrapper">
+                <div class="partners__item swiper-slide"><img class="partners__item-image" src="" alt=""></div>
+                <div class="partners__item swiper-slide"><img class="partners__item-image" src="" alt=""></div>
+                <div class="partners__item swiper-slide"><img class="partners__item-image" src="" alt=""></div>
+                <div class="partners__item swiper-slide"><img class="partners__item-image" src="" alt=""></div>
+                <div class="partners__item swiper-slide"><img class="partners__item-image" src="" alt=""></div>
+                <div class="partners__item swiper-slide"><img class="partners__item-image" src="" alt=""></div>
+                <div class="partners__item swiper-slide"><img class="partners__item-image" src="" alt=""></div>
+                <div class="partners__item swiper-slide"><img class="partners__item-image" src="" alt=""></div>
+              </div>
+            </div>
+            <div class="slider-button slider-button-next"></div>
+            <div class="slider-button slider-button-prev"></div>
+          </div>
+        </div>
+      </div>
+      <div class="section section--gray welcome">
+        <div class="container">
+          <div class="welcome-top">
+            <div class="welcome-top__left">
+              <h2 class="welcome__header section__header">Добро пожаловать <br>в Новгородскую область!</h2><a class="btn welcome__button" href="#"><img src="img/pin-white.svg" alt="">Путеводитель</a>
+            </div>
+            <div class="welcome-top__right"><img class="welcome__image" src="img/welcome-image.png" alt=""></div>
+          </div>
+          <div class="welcome-bottom">
+            <div class="welcome-bottom__left">Скидки, бонусы и полезная информация для гостей Великого Новгорода и Новгородской области.</div>
+            <div class="welcome-bottom__right">
+              <div class="welcome-download">
+                <p class="welcome-download__text">Скачай наше приложение бесплатно:</p>
+                <div class="welcome-download__buttons"><a class="welcome-download__button welcome-download__button--blue" href="#"><img src="img/appstore.svg" alt="">Загрузите в App Store</a><a class="welcome-download__button welcome-download__button--white" href="#"><img src="img/google-play-colored.svg" alt="">Доступно в Google Play </a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="container">
+        <div class="footer__top"><a class="footer__logo" href="#"> <img class="footer__logo-image" src="img/logo.svg" alt="">
+            <p class="footer__logo-text">При поддержке <br>Правительства Новогородской области</p></a>
+          <div class="footer-grid mobile-only"><a class="footer__link" href="#">Карта гостя</a><a class="footer__link" href="#">Инфо-Центры</a><a class="footer__link" href="#">Журнал</a><a class="footer__link" href="#">Туроператоры</a><a class="footer__link" href="#">Аудиогиды</a><a class="footer__link" href="#">Великие имена</a>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <div class="footer__bottom-inner">
+            <div class="footer__bottom-block footer__bottom-block--1">
+              <div class="footer__bottom-block-header">Города и населенные пункты</div>
+              <div class="footer-menu">
+                <ul class="footer-menu-items">
+                  <li class="footer-menu__item"><a class="footer-menu__link" href="#">Батецкий район</a></li>
+                  <li class="footer-menu__item"><a class="footer-menu__link" href="#">Боровичский район</a></li>
+                  <li class="footer-menu__item"><a class="footer-menu__link" href="#">Валдайский район</a></li>
+                  <li class="footer-menu__item"><a class="footer-menu__link" href="#">Великий новгород</a></li>
+                  <li class="footer-menu__item"><a class="footer-menu__link" href="#">Волотовский округ</a></li>
+                  <li class="footer-menu__item"><a class="footer-menu__link" href="#">Демянский район</a></li>
+                  <li class="footer-menu__item"><a class="footer-menu__link" href="#">Крестецкий район</a></li>
+                  <li class="footer-menu__item"><a class="footer-menu__link" href="#">Любытинский район</a></li>
+                  <li class="footer-menu__item"><a class="footer-menu__link" href="#">Маловишерский район</a></li>
+                  <li class="footer-menu__item"><a class="footer-menu__link" href="#">Маревский округ</a></li>
+                  <li class="footer-menu__item"><a class="footer-menu__link" href="#">Мошенской район</a></li>
+                  <li class="footer-menu__item"><a class="footer-menu__link" href="#">Новгородский район</a></li>
+                  <li class="footer-menu__item"><a class="footer-menu__link" href="#">Окуловский район</a></li>
+                  <li class="footer-menu__item"><a class="footer-menu__link" href="#">Парфинский район</a></li>
+                  <li class="footer-menu__item"><a class="footer-menu__link" href="#">Пестовский район</a></li>
+                  <li class="footer-menu__item"><a class="footer-menu__link" href="#">Поддорский район</a></li>
+                  <li class="footer-menu__item"><a class="footer-menu__link" href="#">Солецкий округ</a></li>
+                  <li class="footer-menu__item"><a class="footer-menu__link" href="#">Старорусский район</a></li>
+                  <li class="footer-menu__item"><a class="footer-menu__link" href="#">Хвойнинский округ</a></li>
+                  <li class="footer-menu__item"><a class="footer-menu__link" href="#">Холмский район</a></li>
+                  <li class="footer-menu__item"><a class="footer-menu__link" href="#">Чудовский район</a></li>
+                  <li class="footer-menu__item"><a class="footer-menu__link" href="#">Шимский район</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="footer__bottom-block footer__bottom-block--2">
+              <div class="footer__bottom-block-header"><a href="#">Места</a> / <a href="#">Экскурсии</a> / <a href="#">События</a></div>
+              <div class="footer-menu">
+                <ul class="footer-menu-items">
+                  <li class="footer-menu__item"><a class="footer-menu__link" href="#">Музеи</a></li>
+                  <li class="footer-menu__item"><a class="footer-menu__link" href="#">Храмы и монастыри</a></li>
+                  <li class="footer-menu__item"><a class="footer-menu__link" href="#">Детский отдых</a></li>
+                  <li class="footer-menu__item"><a class="footer-menu__link" href="#">Активный отдых</a></li>
+                  <li class="footer-menu__item"><a class="footer-menu__link" href="#">Природа</a></li>
+                  <li class="footer-menu__item"><a class="footer-menu__link" href="#">Выставки</a></li>
+                  <li class="footer-menu__item"><a class="footer-menu__link" href="#">Оздоровительный туризм</a></li>
+                  <li class="footer-menu__item"><a class="footer-menu__link" href="#">Развлечения</a></li>
+                  <li class="footer-menu__item"><a class="footer-menu__link" href="#">Приключения</a></li>
+                  <li class="footer-menu__item"><a class="footer-menu__link" href="#">Гастрономический туризм</a></li>
+                  <li class="footer-menu__item"><a class="footer-menu__link" href="#">Культура</a></li>
+                  <li class="footer-menu__item"><a class="footer-menu__link" href="#">Необычные места</a></li>
+                  <li class="footer-menu__item"><a class="footer-menu__link" href="#">Мастер классы</a></li>
+                  <li class="footer-menu__item"><a class="footer-menu__link" href="#">Поклонный туризм</a></li>
+                  <li class="footer-menu__item"><a class="footer-menu__link" href="#">Охота и рыбалка</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="footer__bottom-block footer__bottom-block--3">
+              <div class="footer__bottom-block-header"><a href="#">Где остановиться</a></div>
+              <div class="footer-menu">
+                <ul class="footer-menu-items">
+                  <li class="footer-menu__item"><a class="footer-menu__link" href="#">Гостиница</a></li>
+                  <li class="footer-menu__item"><a class="footer-menu__link" href="#">Санаторий</a></li>
+                  <li class="footer-menu__item"><a class="footer-menu__link" href="#">База отдыха</a></li>
+                  <li class="footer-menu__item"><a class="footer-menu__link" href="#">Апартаменты</a></li>
+                  <li class="footer-menu__item"><a class="footer-menu__link" href="#">Хостел</a></li>
+                  <li class="footer-menu__item"><a class="footer-menu__link" href="#">Гостевой дом</a></li>
+                  <li class="footer-menu__item"><a class="footer-menu__link" href="#">Глэмпинг</a></li>
+                </ul>
+              </div>
+              <div class="footer__bottom-block-header"><a href="#">О проекте</a></div>
+              <div class="footer-menu">
+                <ul class="footer-menu-items">
+                  <li class="footer-menu__item"><a class="footer-menu__link" href="#">Партнеры</a></li>
+                  <li class="footer-menu__item"><a class="footer-menu__link" href="#">Обратная связь</a></li>
+                  <li class="footer-menu__item"><a class="footer-menu__link" href="#">Контакты</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="footer__bottom-block footer__bottom-block--4">
+              <div class="footer__bottom-block-header"><a href="#">Где поесть</a></div>
+              <div class="footer-menu">
+                <ul class="footer-menu-items">
+                  <li class="footer-menu__item"><a class="footer-menu__link" href="#">Рестораны</a></li>
+                  <li class="footer-menu__item"><a class="footer-menu__link" href="#">Бары и пабы</a></li>
+                  <li class="footer-menu__item"><a class="footer-menu__link" href="#">Чайханы</a></li>
+                  <li class="footer-menu__item"><a class="footer-menu__link" href="#">Кафе и кофейни</a></li>
+                  <li class="footer-menu__item"><a class="footer-menu__link" href="#">Траттории</a></li>
+                  <li class="footer-menu__item"><a class="footer-menu__link" href="#">Столовые</a></li>
+                </ul>
+              </div>
+              <div class="footer-menu footer-menu--bold">
+                <ul class="footer-menu-items">
+                  <li class="footer-menu__item"><a class="footer-menu__link" href="#">Карта гостя</a></li>
+                  <li class="footer-menu__item"><a class="footer-menu__link" href="#">Туроператоры</a></li>
+                  <li class="footer-menu__item"><a class="footer-menu__link" href="#">Инфо-Центры</a></li>
+                  <li class="footer-menu__item"><a class="footer-menu__link" href="#">Аудиогиды</a></li>
+                  <li class="footer-menu__item"><a class="footer-menu__link" href="#">Видеогиды</a></li>
+                  <li class="footer-menu__item"><a class="footer-menu__link" href="#">Журнал</a></li>
+                  <li class="footer-menu__item"><a class="footer-menu__link" href="#">Великие имена</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal modal-booking mfp-hide" id="booking">
+      <div class="modal__header">Забронируйте поездку <br>при помощи эксперта</div>
+      <form class="modal-booking-form">
+        <div class="modal-booking-form__inner">
+          <div class="modal-booking-form__half">
+            <div class="modal-booking-form__label">Как вам удобнее связаться?</div>
+            <div class="dropdown">
+              <input type="hidden" name="dropdown" value="">
+              <div class="dropdown__layout"></div>
+              <div class="dropdown__current">Выберите способ связи</div>
+              <ul class="dropdown-items">
+                <li class="dropdown__item">Способ связи №1</li>
+                <li class="dropdown__item">Способ связи №2</li>
+                <li class="dropdown__item">Способ связи №3</li>
+              </ul>
+            </div>
+          </div>
+          <div class="modal-booking-form__half">
+            <div class="modal-booking-form__label">Номер телефона / E-mail</div>
+            <input class="modal-booking-form__input" type="text" placeholder="+7 912 912 91 91 / mail@mail.ru">
+          </div>
+        </div>
+        <button class="btn btn--lightblue modal-booking-form__button" type="submit">Забронировать поездку</button>
+      </form>
+    </div>
+    <div class="modal modal-booking mfp-hide" id="booking-tent">
+      <div class="modal__header">Забронируйте шатер <br>при помощи эксперта</div>
+      <form class="modal-booking-form">
+        <div class="modal-booking-form__inner">
+          <div class="modal-booking-form__half">
+            <div class="modal-booking-form__label">Как вам удобнее связаться?</div>
+            <div class="dropdown">
+              <input type="hidden" name="dropdown" value="">
+              <div class="dropdown__layout"></div>
+              <div class="dropdown__current">Выберите способ связи</div>
+              <ul class="dropdown-items">
+                <li class="dropdown__item">Способ связи №1</li>
+                <li class="dropdown__item">Способ связи №2</li>
+                <li class="dropdown__item">Способ связи №3</li>
+              </ul>
+            </div>
+          </div>
+          <div class="modal-booking-form__half">
+            <div class="modal-booking-form__label">Номер телефона / E-mail</div>
+            <input class="modal-booking-form__input" type="text" placeholder="+7 912 912 91 91 / mail@mail.ru">
+          </div>
+        </div>
+        <button class="btn btn--lightblue modal-booking-form__button" type="submit">Забронировать шатер</button>
+      </form>
+    </div>
+    <div class="modal modal-thanks mfp-hide" id="thanks">
+      <div class="modal-thanks__inner"><img class="modal-thanks__image" src="img/check.svg" alt="">
+        <div class="modal-thanks__content">
+          <div class="modal__header">Спасибо! Ваша <br>заявка принята!</div>Наш менеджер свяжется с Вами в течение 30 минут.
+        </div>
+      </div>
+    </div>
+    <div class="modal modal-postcard mfp-hide" id="postcard">
+      <div class="modal-postcard__left">
+        <div class="modal-postcard__header">Отправьте открытку</div>
+        <div class="modal-postcard__postcard">
+          <div class="modal-postcard__postcard-header">выбранная открытка:</div>
+          <div class="postcards__item"><img class="postcards__item-image" src="img/postcards-01.png" alt="Иверский Валдайский Богородицкий Святоозерский мужской монастырь">
+            <div class="postcards__item-title">Иверский Валдайский Богородицкий Святоозерский мужской монастырь</div>
+          </div>
+          <div class="modal-postcard__postcard-text">Приезжайте путешествовать по Новгородской земле и обязательно посетите <a href="#"> место</a> на открытке</div>
+        </div>
+      </div>
+      <div class="modal-postcard__right">
+        <div class="modal-postcard__text">Заполните эту форму и мы отправим электронную открытку указанному адресату</div>
+        <form class="modal-postcard-form">
+          <label class="modal-postcard-form__label">
+            <div class="modal-postcard-form__text">От кого</div>
+            <input class="modal-postcard-form__input" type="text" placeholder="Введите ваше имя">
+          </label>
+          <label class="modal-postcard-form__label">
+            <div class="modal-postcard-form__text">E-mail получателя</div>
+            <input class="modal-postcard-form__input" type="text" placeholder="Введите e-mail получателя">
+          </label>
+          <textarea class="modal-postcard-form__textarea" placeholder="Введите сопроводительный текст"></textarea>
+          <button class="btn modal-postcard-form__button" type="submit">Отправить открытку</button>
+        </form>
+      </div>
+    </div>
+    <div class="modal modal-postcard-thanks mfp-hide" id="postcard-thanks"><img class="modal-postcard-thanks__image" src="img/tg-modal.svg" alt="">
+      <div class="modal-postcard-thanks__header">Ваша открытка <br>успешно отправлена!</div><a class="btn modal-postcard-thanks__button" href="#">Отправить еще одну открытку</a>
+    </div>
+    <div class="modal modal-postcard modal--dark mfp-hide" id="postcard-dark">
+      <div class="modal-postcard__left">
+        <div class="modal-postcard__header">Отправьте открытку</div>
+        <div class="modal-postcard__postcard">
+          <div class="modal-postcard__postcard-header">выбранная открытка:</div>
+          <div class="postcards__item"><img class="postcards__item-image" src="img/postcards-01.png" alt="Иверский Валдайский Богородицкий Святоозерский мужской монастырь">
+            <div class="postcards__item-title">Иверский Валдайский Богородицкий Святоозерский мужской монастырь</div>
+          </div>
+          <div class="modal-postcard__postcard-text">Приезжайте путешествовать по Новгородской земле и обязательно посетите <a href="#"> место</a> на открытке</div>
+        </div>
+      </div>
+      <div class="modal-postcard__right">
+        <div class="modal-postcard__text">Заполните эту форму и мы отправим электронную открытку указанному адресату</div>
+        <form class="modal-postcard-form">
+          <label class="modal-postcard-form__label">
+            <div class="modal-postcard-form__text">От кого</div>
+            <input class="modal-postcard-form__input" type="text" placeholder="Введите ваше имя">
+          </label>
+          <label class="modal-postcard-form__label">
+            <div class="modal-postcard-form__text">E-mail получателя</div>
+            <input class="modal-postcard-form__input" type="text" placeholder="Введите e-mail получателя">
+          </label>
+          <textarea class="modal-postcard-form__textarea" placeholder="Введите сопроводительный текст"></textarea>
+          <button class="btn modal-postcard-form__button" type="submit">Отправить открытку</button>
+        </form>
+      </div>
+    </div>
+    <div class="modal modal-postcard-thanks modal--dark mfp-hide" id="postcard-thanks-dark"><img class="modal-postcard-thanks__image" src="img/tg-modal.svg" alt="">
+      <div class="modal-postcard-thanks__header">Ваша открытка <br>успешно отправлена!</div><a class="btn modal-postcard-thanks__button" href="#">Отправить еще одну открытку</a>
+    </div>
+    <div class="modal modal-order mfp-hide" id="order">
+      <div class="modal__header">Оформить заказ</div>
+      <form class="modal-order-form">
+        <div class="modal-order-form-grid">
+          <div class="modal-order-form__header">Анкетные данные</div>
+          <label class="modal-order-form__label">
+            <div class="modal-order-form__text">Имя</div>
+            <input class="modal-order-form__input" type="text" placeholder="Введите ваше имя">
+          </label>
+          <label class="modal-order-form__label">
+            <div class="modal-order-form__text">Фамилия</div>
+            <input class="modal-order-form__input" type="text" placeholder="Введите вашу фамилию">
+          </label>
+          <div class="modal-order-form__label">
+            <div class="modal-order-form__text">Возраст</div>
+            <div class="dropdown dropdown--age">
+              <input type="hidden" name="dropdown" value="">
+              <div class="dropdown__layout"></div>
+              <div class="dropdown__current"> </div>
+              <ul class="dropdown-items">
+                <li class="dropdown__item">18</li>
+                <li class="dropdown__item">19</li>
+                <li class="dropdown__item">20</li>
+              </ul>
+            </div>
+          </div>
+          <div class="modal-order-form__label">
+            <div class="modal-order-form__text">Страна</div>
+            <div class="dropdown">
+              <input type="hidden" name="dropdown" value="">
+              <div class="dropdown__layout"></div>
+              <div class="dropdown__current">Выберите вашу страну</div>
+              <ul class="dropdown-items">
+                <li class="dropdown__item">РФ</li>
+                <li class="dropdown__item">Не РФ</li>
+              </ul>
+            </div>
+          </div>
+          <label class="modal-order-form__label">
+            <div class="modal-order-form__text">Телефон</div>
+            <input class="modal-order-form__input" type="text" placeholder="Введите ваш телефон">
+          </label>
+          <label class="modal-order-form__label">
+            <div class="modal-order-form__text">E-mail</div>
+            <input class="modal-order-form__input" type="text" placeholder="Введите ваш e-mail">
+          </label>
+        </div>
+        <div class="modal-order-form-grid">
+          <div class="modal-order-form__header">Способ получения</div>
+          <div class="modal-order-form__label">
+            <label class="modal-order-form__radio">
+              <input type="radio" name="options">Забрать в пункте выдачи
+            </label>
+            <div class="dropdown">
+              <input type="hidden" name="dropdown" value="">
+              <div class="dropdown__layout"></div>
+              <div class="dropdown__current">Выберите подходящий пункт</div>
+              <ul class="dropdown-items">
+                <li class="dropdown__item">Пункт выдачи 1</li>
+                <li class="dropdown__item">Пункт выдачи 2</li>
+                <li class="dropdown__item">Пункт выдачи 3</li>
+              </ul>
+            </div>
+          </div>
+          <div class="modal-order-form__label">
+            <label class="modal-order-form__radio">
+              <input type="radio" name="options">Получить в электронном виде
+            </label>
+          </div>
+          <div class="modal-order-form__label">
+            <label class="modal-order-form__radio">
+              <input type="radio" name="options">PDF на указанный e-mail
+            </label>
+          </div>
+        </div>
+        <div class="modal-order-form-grid">
+          <div class="modal-order-form__label modal-order-form__label--calendar">
+            <div class="modal-order-form__text">Укажите примерную дату получения заказа</div>
+            <div class="calendar">
+              <div class="calendar__header">Выберите дату</div>
+              <div id="calendar"></div>
+            </div>
+          </div>
+          <div class="modal-order-form__label">
+            <label class="modal-order-form__label">
+              <div class="modal-order-form__text">У меня есть промокод:</div>
+              <input class="modal-order-form__input" type="text" placeholder="Введите промокод">
+            </label>
+            <div class="modal-order-form-payment">
+              <div class="modal-order-form-payment__text">Мы принимаем к оплате:</div>
+              <div class="modal-order-form-payment__methods"><img src="img/payment-01.svg" alt=""><img src="img/payment-02.svg" alt=""><img src="img/payment-03.svg" alt=""></div>
+              <div class="modal-order-form-payment__text-small">Режим работы пункта выдачи можно уточнить на сайте. Для получения Карты Гостя в пункте выдачи предъявите ваучер или номер заказа, которые будут отправлены Вам на почту сразу после оплаты.</div>
+            </div>
+          </div>
+          <div class="modal-order-form__label">
+            <button class="btn modal-order-form__button" type="submit">Оплатить</button>
+            <div class="modal-order-form__label">
+              <label class="modal-order-form__privacy">
+                <input type="checkbox">
+                <div class="modal-order-form__radio-text">Я принимаю условия пользовательского соглашения</div>
+                <div class="modal-order-form__radio-text-small">и подтверждаю своё согласие на передачу информации в электронной форме (в том числе персональных данных) по открытым каналам связи сети Интернет c использованием SSL-шифрования.</div>
+              </label>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+    <script src="js/libs.min.js"></script>
+    <script src="js/green-audio-player.min.js"></script>
+    <script src="js/jquery.mousewheel.min.js"></script>
+    <script src="js/jquery.jscrollpane.min.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/jquery.bs.calendar.min.js"></script>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>

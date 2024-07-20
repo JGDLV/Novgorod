@@ -1,0 +1,61 @@
+-
+    var pastime = {
+        header: 'ЧЕМ ЗАНЯТЬСЯ',
+        items: [
+            {
+                image: '',
+                text: 'Районный праздник «Никитская ярмарка» и день посёлка Крестцы',
+                city: 'Крестцы',
+                date: '02.02.24'
+            },
+            {
+                image: '',
+                text: 'Районный праздник «Никитская ярмарка» и день посёлка Крестцы',
+                city: 'Крестцы',
+                date: '02.02.24'
+            },
+            {
+                image: '',
+                text: 'Районный праздник «Никитская ярмарка» и день посёлка Крестцы',
+                city: 'Крестцы',
+                date: '02.02.24'
+            },
+            {
+                image: '',
+                text: 'Районный праздник «Никитская ярмарка» и день посёлка Крестцы',
+                city: 'Крестцы',
+                date: '02.02.24'
+            },
+            {
+                image: '',
+                text: 'Районный праздник «Никитская ярмарка» и день посёлка Крестцы',
+                city: 'Крестцы',
+                date: '02.02.24'
+            },
+            {
+                image: '',
+                text: 'Районный праздник «Никитская ярмарка» и день посёлка Крестцы',
+                city: 'Крестцы',
+                date: '02.02.24'
+            },
+            {
+                image: '',
+                text: 'Районный праздник «Никитская ярмарка» и день посёлка Крестцы',
+                city: 'Крестцы',
+                date: '02.02.24'
+            },
+        ]
+    }
+
+.pastime
+    h2.pastime__header.section__header !{pastime.header}
+    .pastime-grid
+        include calendar.pug
+        each item in pastime.items
+            .pastime__item
+                img.pastime__item-image(src=item.image alt="")
+                .pastime__item-text !{item.text}
+                .pastime__item-bottom
+                    .pastime__item-city !{item.city}
+                    .pastime__item-date !{item.date}
+    include controls.pug

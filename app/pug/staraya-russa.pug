@@ -1,0 +1,84 @@
+extends _layout.pug
+
+block variables
+    -
+        var title = 'Старая Русса'
+        var description = 'Старая Русса'
+        var index = false
+
+        var travel = {
+            header: 'Путешествие по Старой Руссе',
+            items: [
+                {
+                    image: '',
+                    header: 'Единение с историей',
+                    text: 'Погрузитесь в атмосферу прошлого, пройдясь по улочкам, которые обожал сам Достоевский. Старая Русса – это маленький уютный городок, где каждый уголок оживает историческим наследием.'
+                },
+                {
+                    image: '',
+                    header: 'Всё для отдыха',
+                    text: 'На территории Старой Руссы вы найдете все необходимое для спокойного и комфортного отдыха. Зеленые парки, живописные места, и в то же время, современные удобства, такие как зоны барбекю, и водные развлечения – всё под рукой.'
+                },
+                {
+                    image: '',
+                    header: 'Рестораны и кафе',
+                    text: 'В ресторанах и кафе вас ждут блюда, вдохновленные старинными рецептами. Практически у каждого заведения созданы зоны барбекю для уютных вечеров.'
+                },
+                {
+                    image: '',
+                    header: 'Гостиницы и хостелы',
+                    text: 'На территории Старой Руссы множество уютных гостиниц и хостелов. Отельные номера и апартаменты созданы для комфортного проживания от 1 до 4 человек, обеспечивая все необходимые условия.'
+                },
+            ]
+        }
+
+        var history = [
+            'В 1478 году вместе со всеми новгородскими землями Русса вошла в состав Русского государства. В XVI веке город переименовали в Старую Руссу. В середине XVI века по количеству жителей и числу дворов Старая Русса – 4-й город государства, после Москвы, Пскова и Новгорода.',
+            'В состав Новгородской губернии Старая Русса вошла в 1727 году. Екатерина II в 1781 году пожаловала Старой Руссе герб. Символом герба стало солеварение – то, чем занимались рушане с древних времён.',
+            'Современная Старая Русса – это небольшой провинциальный город с богатой и интересной историей, зелёными парками, памятниками архитектуры, храмами, уникальным бальнеогрязевым курортом и музеями. С 2015 года Старая Русса – «Город воинской славы». В этом же году город отметил своё 1000-летие.',
+            'В январе 2019 года город Старая Русса подал заявку на включение его в состав Ганзейского союза Нового времени.',
+        ]
+
+block content
+    .intro.intro--inner.intro--staraya-russa
+        .container
+            p.intro__subheader Старорусский район
+            h1.intro__header СТАРАЯ <br>РУССА
+            include components/play-video-button.pug
+            .intro__text Исследуйте красоту Старой Руссы! Пройдите сквозь <br>века, наслаждаясь атмосферой старинных времен
+            .intro-grid
+                .intro__item
+                    .intro__item-text релакс и <br>активность
+                .intro__item
+                    .intro__item-text группой или <br>в одиночку
+                .intro__item
+                    .intro__item-text комфортный <br>отдых
+    .section.section--gray.history
+        .container
+            h2.history__header.section__header История города
+            include components/history-grid.pug
+            img.history__bg-image.history__bg-image--1(src="img/history-bg-01.png" alt="")
+    .section.section--white.after.travel.z-1
+        .container
+            h2.travel__header.section__header !{travel.header}
+            include components/travel-grid.pug
+            .how-to-get-bottom.how-to-get-bottom--inner
+                .how-to-get-bottom__left
+                    img.how-to-get__image(src="img/coat-of-arms.svg" alt="")
+                .how-to-get-bottom__right
+                    p.how-to-get-bottom__text НУЖНА ПОМОЩЬ? <br>ОСТАВЬТЕ СВОИ КОНТАКТЫ И МЫ СВЯЖЕМСЯ С ВАМИ.
+                    include components/how-to-get-form.pug
+    .section.section--lightblue.atmosphere
+        .container
+            h2.atmosphere__header.section__header Атмосферные уголки Старой Руссы
+            include components/atmosphere-grid.pug
+    .section.section--gray.section--middle
+        include components/card.pug
+        .container
+            include components/how-to-get.pug
+    include components/partners.pug
+    .section.section--gray.welcome
+        include components/welcome.pug
+
+
+

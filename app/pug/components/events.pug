@@ -1,0 +1,23 @@
+-
+    var events = [
+        { image: '', title: 'Великий Новгород за один день' },
+        { image: '', title: 'Большая Валдайская тропа' },
+        { image: '', title: 'Памятник Тысячелетие России' },
+        { image: '', title: 'Курорт Старая Русса' },
+        { image: '', title: 'Курорт Старая Русса' },
+        { image: '', title: 'Ярмарка Великий Новгород' },
+        { image: '', title: 'Базы отдыха в Новгородской области' },
+        { image: '', title: 'Витославлицы Великий Новгород' },
+        { image: '', title: 'Миклухо Маклай' },
+        { image: '', title: 'Любытино Хутор' },
+        { image: '', title: 'Государева дорога' },
+        { image: '', title: 'Мираж Великий Новгород' },
+    ]
+
+.events
+    .swiper#eventsSwiper
+        .events-items.swiper-wrapper
+            each item in events
+                a.events__item.swiper-slide(href="#") 
+                    img.events__item-image(src=item.image alt="")
+                    p.events__item-title !{item.title}

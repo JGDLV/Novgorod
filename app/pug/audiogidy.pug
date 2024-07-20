@@ -1,0 +1,109 @@
+extends _layout.pug
+
+block variables
+    -
+        var title = 'Аудиогиды'
+        var description = 'Аудиогиды'
+        var index = false
+
+        audioguides = {
+            text: 'Выберите населенный пункт:',
+            items: [
+                {
+                    image: '',
+                    title: 'Земля Новгородская',
+                    text: 'Увлекательный рассказ об истории Земли Новгородской.',
+                },
+                {
+                    image: '',
+                    title: 'Новгородская икона Божией Матери «Знамение»',
+                    text: 'Увлекательный рассказ об истории Земли Новгородской.',
+                },
+                {
+                    image: '',
+                    title: '«Народный путеводитель» по Великому Новгороду',
+                    text: '',
+                },
+                {
+                    image: '',
+                    title: 'Великий Новгород – Ганзейский город',
+                    text: '',
+                },
+                {
+                    image: '',
+                    title: '«Великий Новгород - Родина российских гениев». Сергей Рахманинов',
+                    text: '',
+                },
+                {
+                    image: '',
+                    title: 'Прогулка с историями о Новгородской земле',
+                    text: '',
+                },
+                {
+                    image: '',
+                    title: 'Аудиогид по Ярославову дворищу',
+                    text: '',
+                },
+                {
+                    image: '',
+                    title: 'Аудиогид по Новгородскому Кремлю',
+                    text: 'Живая история Великого Новгорода раскроется перед вашими глазами.',
+                },
+                {
+                    image: '',
+                    title: 'Святой благоверный Великий Князь Александр Невский на новгородской земле.',
+                    text: 'По Указу Президента России наступивший 2021 год пройдет под именем Александра Невского. Именно в этом году отмечается 800-летие со дня рождения Святог...',
+                },
+            ],
+            button: {
+                href: '#',
+                text: 'Показать еще'
+            }
+        }
+
+block content
+    .intro.intro--audioguides
+        .container
+            p.intro__subheader Погружение в историю
+            h1.intro__header АУДИОГИДЫ
+            .intro__text Твое увлекательное путешествие по <br>Новгородской области
+            .intro-grid.intro-grid--small
+                .intro__item
+                    .intro__item-text Более 50 уникальных <br>аудиогидов по ключевым <br>достопримечательностям
+                .intro__item
+                    .intro__item-text Доступные и удобные в <br>использовании аудиоматериалы <br>на любом устройстве
+                .intro__item
+                    .intro__item-text Глубокое погружение в <br>историю с подробными <br>рассказами
+    .section.section--gray.audioguides
+        .container
+            .audioguides__text !{audioguides.text}
+            .dropdown.dropdown--bordered.dropdown--audioguides
+                input(type='hidden' name='dropdown' value='')
+                .dropdown__layout
+                .dropdown__current Все
+                ul.dropdown-items
+                    li.dropdown__item #[strong Все]
+                    li.dropdown__item Боровичи
+                    li.dropdown__item Валдай
+                    li.dropdown__item Великий Новгород
+                    li.dropdown__item Крестцы
+                    li.dropdown__item Сольцы
+                    li.dropdown__item Старая Русса
+            .audioguides-grid
+                each item in audioguides.items
+                    .audioguides__item
+                        a.audioguides__item-link(href="#") 
+                            img.audioguides__item-image(src=item.image, alt=item.title)
+                        .audioguides__item-info
+                            .audioguides__item-type Аудиогид
+                            .audioguides__item-city.city Великий Новгород
+                        a.audioguides__item-title(href="#") !{item.title}
+                        .audioguides__item-text !{item.text}
+            a.btn.btn--blue.audioguides__button(href=audioguides.button.href) !{audioguides.button.text}
+            img.audioguides__bg-image(src="img/audioguides-bg-image.png" alt="")
+
+    .section.section--white.section--middle.welcome.z-1
+        include components/welcome.pug
+
+
+

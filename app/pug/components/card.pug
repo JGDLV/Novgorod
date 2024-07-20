@@ -1,0 +1,152 @@
+-
+    var card = {
+        header: 'КАРТА ГОСТЯ',
+        subheader: 'твоё безлимитное путешествие <br>по Новгородской области',
+        text: 'карта дает право на бесплатное посещение <br>музеев и экскурсий, а также включает <br>выгодные предложения и скидки',
+        button: {
+            href: '#',
+            text: 'Узнать больше'
+        },
+        image: 'img/guest-card.png',
+        items: [
+            {
+                icon: 'img/bus.svg',
+                header: 'Автобусные поездки',
+                text: 'Санкт-Петербург — Великий Новгород — Санкт-Петербург'
+            },
+            {
+                icon: 'img/kid.svg',
+                header: 'Детям',
+                text: 'Детские развлекательные центры и контактные зоопарки'
+            },
+            {
+                icon: 'img/paint.svg',
+                header: 'Мастер-классы',
+                text: 'В творческих мастерских и культурных центрах'
+            },
+            {
+                icon: 'img/theater.svg',
+                header: 'Культурные мероприятия',
+                text: 'Концерты, спектакли и киносенсы'
+            },
+            {
+                icon: 'img/museum.svg',
+                header: 'Музеи и развлечения',
+                text: 'Более 50 музейных объектов, отели, рестораны, кафе и сувенирные магазины'
+            },
+            {
+                icon: 'img/bagage.svg',
+                header: 'Экскурсии',
+                text: 'Более 30 экскурсий: театрализованные, речные, автобусные и пешеходные, обзорные и по отдельным экспозициям'
+            },
+        ]
+    }
+
+    var cardItems = [
+        {
+            icon: 'img/card-01.svg',
+            header: 'Отель',
+            text: 'Сутки в отеле “Русь Новгородская”',
+        },
+        {
+            icon: 'img/card-02.svg',
+            header: 'Завтрак',
+            text: 'Шведский стол в ресторане “Новиков”',
+        },
+        {
+            icon: 'img/card-03.svg',
+            header: 'Музей',
+            text: 'Посещение выставки',
+        },
+        {
+            icon: 'img/card-04.svg',
+            header: 'Ужин',
+            text: 'Ужин в ресторане “Новиков” на двоих',
+        },
+        {
+            icon: 'img/card-05.svg',
+            header: 'Экскурсия',
+            text: 'Обзорная экскурсия по Новгороду',
+        },
+        {
+            icon: 'img/card-06.svg',
+            header: 'Музей',
+            text: 'Посещение выставки',
+        },
+    ]
+
+    var cardPrices = [
+        {
+            header: 'Цена без карты:',
+            value: '26 000',
+        },
+        {
+            header: 'Цена с картой:',
+            value: '22 000',
+        },
+        {
+            header: 'Общая экономия:',
+            value: '4 000',
+        },
+    ]
+
+.card-slider(class=index ? '' : 'card-slider--inner')
+    .swiper#cardSwiper
+        .swiper-wrapper
+            
+            .swiper-slide
+                .card.card--first.card--before.after.after--blue(class=index ? '' : 'card--inner')
+                    .card__inner
+                        .card__header А вы знаете, как сэкономить с картой гостя, приехав на сутки в Великий Новгород?
+                        .card-content
+                            .card-content-grid
+                                each item in cardItems
+                                    include card-item.pug
+                            .card-content-prices
+                                each item in cardPrices
+                                    include card-price.pug
+                            img.card-content__image(src="img/guest-card.png", alt="")
+                            .card-content-info
+                                .card-content-info__text Узнайте выгоду при поездке на выходные
+                                a.btn.card-content-info__button(href="#") Узнать больше
+
+            .swiper-slide
+                .card.card--second.after.after--blue
+                    .card__inner
+                        img.card-content__image(src="img/rounded-text-big.svg", alt="")
+                        .card__header Путешествуйте по Великому Новгороду выгодно!
+                        .card__middle
+                            .card__text Выберите продолжительность вашего путешествия и узнайте, сколько можно сэкономить благодаря карте гостя!
+                            .card-tabs.tabs
+                                .card-tabs__controls.tabs__controls
+                                    .card-tabs__control.tabs__control Поездка на день
+                                    .card-tabs__control.tabs__control Поездка на выходные
+                        .card-content
+                            .card-content-grid
+                                each item in cardItems
+                                    include card-item.pug
+                            .card-content-prices
+                                each item in cardPrices
+                                    include card-price.pug
+                            .card-content-info
+                                img(src="img/guest-card.png", alt="")
+                                a.btn.btn--white.card-content-info__button(href="#") Купить карту
+
+            .swiper-slide
+                .card.card--before.after.after--blue(class=index ? '' : 'card--inner')
+                    .card__inner
+                        .card__top
+                            .card__top-left
+                                h2.card__header !{card.header}
+                                p.card__subheader !{card.subheader}
+                                .card__top-left-bottom
+                                    p.card__text !{card.text}
+                                    a.btn.card__button(href=card.button.href) !{card.button.text}
+                            .card__top-right
+                                img.card__image(src=card.image, alt=card.header)
+                        .card-grid
+                            each item in card.items
+                                .card__item
+                                    img.card__item-image(src=item.icon alt="")
+                                    p.card__item-header !{item.header}
+                                    p.card__item-text !{item.text}

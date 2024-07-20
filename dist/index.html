@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Onest:wght@100..900&amp;display=swap">
+    <link rel="stylesheet" href="css/libs.min.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/green-audio-player.min.css">
+    <link rel="stylesheet" href="css/jquery.jscrollpane.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Список страниц</title>
+  </head>
+  <body style="padding:0;">
+    <div class="section section--dev">
+      <div class="container">
+        <h2 class="section__header">Страницы</h2>
+        <ul>
+          <li><a href="main.html">Главная страница</a></li>
+          <li><a href="staraya-russa.html">Старая Русса</a></li>
+          <li><a href="shirokaya-maslennica.html">Широкая масленница</a></li>
+          <li><a href="otel-vizavi.html">Отель Визави</a></li>
+          <li><a href="glehmping.html">Глэмпинг</a></li>
+          <li><a href="restoran-karamazovy.html">Ресторан Карамазовы</a></li>
+          <li><a href="gde-ostanovitsya.html">Где остановиться</a></li>
+          <li><a href="gde-poest.html">Где поесть</a></li>
+          <li><a href="karta-gostya.html">Карта гостя</a></li>
+          <li><a href="inform-centry.html">Информ центры</a></li>
+          <li><a href="audiogidy.html">Аудиогиды</a></li>
+          <li><a href="audiogidy-gorod-dostoevskogo.html">Аудиогиды Город Достоевского</a></li>
+          <li><a href="velikie-imena-dostoevskij.html">Великие имена Достоевский</a></li>
+          <li><a href="o-proekte.html">О проекте</a></li>
+          <li><a href="o-regione.html">О Регионе</a></li>
+          <li><a href="kak-dobratsya.html">Как добраться</a></li>
+          <li><a href="suveniry-kresteckaya-strochka.html">Сувениры: Крестецкая строчка</a></li>
+          <li><a href="404.html">404</a></li>
+          <li><a href="search.html">Поиск</a></li>
+        </ul>
+        <h2 class="section__header">Модальные окна</h2>
+        <ul>
+          <li><a class="call-modal" href="#booking">Забронируйте поездку при помощи эксперта</a></li>
+          <li><a class="call-modal" href="#booking-tent">Забронируйте шатер при помощи эксперта</a></li>
+          <li><a class="call-modal" href="#thanks">Спасибо! Ваша заявка принята!</a></li>
+          <li><a class="call-modal" href="#postcard">Отправьте открытку (Светлая)</a></li>
+          <li><a class="call-modal" href="#postcard-dark">Отправьте открытку (Темная)</a></li>
+          <li><a class="call-modal" href="#postcard-thanks">Ваша открытка успешно отправлена! (Светлая)</a></li>
+          <li><a class="call-modal" href="#postcard-thanks-dark">Ваша открытка успешно отправлена! (Темная)</a></li>
+          <li><a class="call-modal" href="#order">Оформить заказ</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="modal modal-booking mfp-hide" id="booking">
+      <div class="modal__header">Забронируйте поездку <br>при помощи эксперта</div>
+      <form class="modal-booking-form">
+        <div class="modal-booking-form__inner">
+          <div class="modal-booking-form__half">
+            <div class="modal-booking-form__label">Как вам удобнее связаться?</div>
+            <div class="dropdown">
+              <input type="hidden" name="dropdown" value="">
+              <div class="dropdown__layout"></div>
+              <div class="dropdown__current">Выберите способ связи</div>
+              <ul class="dropdown-items">
+                <li class="dropdown__item">Способ связи №1</li>
+                <li class="dropdown__item">Способ связи №2</li>
+                <li class="dropdown__item">Способ связи №3</li>
+              </ul>
+            </div>
+          </div>
+          <div class="modal-booking-form__half">
+            <div class="modal-booking-form__label">Номер телефона / E-mail</div>
+            <input class="modal-booking-form__input" type="text" placeholder="+7 912 912 91 91 / mail@mail.ru">
+          </div>
+        </div>
+        <button class="btn btn--lightblue modal-booking-form__button" type="submit">Забронировать поездку</button>
+      </form>
+    </div>
+    <div class="modal modal-booking mfp-hide" id="booking-tent">
+      <div class="modal__header">Забронируйте шатер <br>при помощи эксперта</div>
+      <form class="modal-booking-form">
+        <div class="modal-booking-form__inner">
+          <div class="modal-booking-form__half">
+            <div class="modal-booking-form__label">Как вам удобнее связаться?</div>
+            <div class="dropdown">
+              <input type="hidden" name="dropdown" value="">
+              <div class="dropdown__layout"></div>
+              <div class="dropdown__current">Выберите способ связи</div>
+              <ul class="dropdown-items">
+                <li class="dropdown__item">Способ связи №1</li>
+                <li class="dropdown__item">Способ связи №2</li>
+                <li class="dropdown__item">Способ связи №3</li>
+              </ul>
+            </div>
+          </div>
+          <div class="modal-booking-form__half">
+            <div class="modal-booking-form__label">Номер телефона / E-mail</div>
+            <input class="modal-booking-form__input" type="text" placeholder="+7 912 912 91 91 / mail@mail.ru">
+          </div>
+        </div>
+        <button class="btn btn--lightblue modal-booking-form__button" type="submit">Забронировать шатер</button>
+      </form>
+    </div>
+    <div class="modal modal-thanks mfp-hide" id="thanks">
+      <div class="modal-thanks__inner"><img class="modal-thanks__image" src="img/check.svg" alt="">
+        <div class="modal-thanks__content">
+          <div class="modal__header">Спасибо! Ваша <br>заявка принята!</div>Наш менеджер свяжется с Вами в течение 30 минут.
+        </div>
+      </div>
+    </div>
+    <div class="modal modal-postcard mfp-hide" id="postcard">
+      <div class="modal-postcard__left">
+        <div class="modal-postcard__header">Отправьте открытку</div>
+        <div class="modal-postcard__postcard">
+          <div class="modal-postcard__postcard-header">выбранная открытка:</div>
+          <div class="postcards__item"><img class="postcards__item-image" src="img/postcards-01.png" alt="Иверский Валдайский Богородицкий Святоозерский мужской монастырь">
+            <div class="postcards__item-title">Иверский Валдайский Богородицкий Святоозерский мужской монастырь</div>
+          </div>
+          <div class="modal-postcard__postcard-text">Приезжайте путешествовать по Новгородской земле и обязательно посетите <a href="#"> место</a> на открытке</div>
+        </div>
+      </div>
+      <div class="modal-postcard__right">
+        <div class="modal-postcard__text">Заполните эту форму и мы отправим электронную открытку указанному адресату</div>
+        <form class="modal-postcard-form">
+          <label class="modal-postcard-form__label">
+            <div class="modal-postcard-form__text">От кого</div>
+            <input class="modal-postcard-form__input" type="text" placeholder="Введите ваше имя">
+          </label>
+          <label class="modal-postcard-form__label">
+            <div class="modal-postcard-form__text">E-mail получателя</div>
+            <input class="modal-postcard-form__input" type="text" placeholder="Введите e-mail получателя">
+          </label>
+          <textarea class="modal-postcard-form__textarea" placeholder="Введите сопроводительный текст"></textarea>
+          <button class="btn modal-postcard-form__button" type="submit">Отправить открытку</button>
+        </form>
+      </div>
+    </div>
+    <div class="modal modal-postcard-thanks mfp-hide" id="postcard-thanks"><img class="modal-postcard-thanks__image" src="img/tg-modal.svg" alt="">
+      <div class="modal-postcard-thanks__header">Ваша открытка <br>успешно отправлена!</div><a class="btn modal-postcard-thanks__button" href="#">Отправить еще одну открытку</a>
+    </div>
+    <div class="modal modal-postcard modal--dark mfp-hide" id="postcard-dark">
+      <div class="modal-postcard__left">
+        <div class="modal-postcard__header">Отправьте открытку</div>
+        <div class="modal-postcard__postcard">
+          <div class="modal-postcard__postcard-header">выбранная открытка:</div>
+          <div class="postcards__item"><img class="postcards__item-image" src="img/postcards-01.png" alt="Иверский Валдайский Богородицкий Святоозерский мужской монастырь">
+            <div class="postcards__item-title">Иверский Валдайский Богородицкий Святоозерский мужской монастырь</div>
+          </div>
+          <div class="modal-postcard__postcard-text">Приезжайте путешествовать по Новгородской земле и обязательно посетите <a href="#"> место</a> на открытке</div>
+        </div>
+      </div>
+      <div class="modal-postcard__right">
+        <div class="modal-postcard__text">Заполните эту форму и мы отправим электронную открытку указанному адресату</div>
+        <form class="modal-postcard-form">
+          <label class="modal-postcard-form__label">
+            <div class="modal-postcard-form__text">От кого</div>
+            <input class="modal-postcard-form__input" type="text" placeholder="Введите ваше имя">
+          </label>
+          <label class="modal-postcard-form__label">
+            <div class="modal-postcard-form__text">E-mail получателя</div>
+            <input class="modal-postcard-form__input" type="text" placeholder="Введите e-mail получателя">
+          </label>
+          <textarea class="modal-postcard-form__textarea" placeholder="Введите сопроводительный текст"></textarea>
+          <button class="btn modal-postcard-form__button" type="submit">Отправить открытку</button>
+        </form>
+      </div>
+    </div>
+    <div class="modal modal-postcard-thanks modal--dark mfp-hide" id="postcard-thanks-dark"><img class="modal-postcard-thanks__image" src="img/tg-modal.svg" alt="">
+      <div class="modal-postcard-thanks__header">Ваша открытка <br>успешно отправлена!</div><a class="btn modal-postcard-thanks__button" href="#">Отправить еще одну открытку</a>
+    </div>
+    <div class="modal modal-order mfp-hide" id="order">
+      <div class="modal__header">Оформить заказ</div>
+      <form class="modal-order-form">
+        <div class="modal-order-form-grid">
+          <div class="modal-order-form__header">Анкетные данные</div>
+          <label class="modal-order-form__label">
+            <div class="modal-order-form__text">Имя</div>
+            <input class="modal-order-form__input" type="text" placeholder="Введите ваше имя">
+          </label>
+          <label class="modal-order-form__label">
+            <div class="modal-order-form__text">Фамилия</div>
+            <input class="modal-order-form__input" type="text" placeholder="Введите вашу фамилию">
+          </label>
+          <div class="modal-order-form__label">
+            <div class="modal-order-form__text">Возраст</div>
+            <div class="dropdown dropdown--age">
+              <input type="hidden" name="dropdown" value="">
+              <div class="dropdown__layout"></div>
+              <div class="dropdown__current"> </div>
+              <ul class="dropdown-items">
+                <li class="dropdown__item">18</li>
+                <li class="dropdown__item">19</li>
+                <li class="dropdown__item">20</li>
+              </ul>
+            </div>
+          </div>
+          <div class="modal-order-form__label">
+            <div class="modal-order-form__text">Страна</div>
+            <div class="dropdown">
+              <input type="hidden" name="dropdown" value="">
+              <div class="dropdown__layout"></div>
+              <div class="dropdown__current">Выберите вашу страну</div>
+              <ul class="dropdown-items">
+                <li class="dropdown__item">РФ</li>
+                <li class="dropdown__item">Не РФ</li>
+              </ul>
+            </div>
+          </div>
+          <label class="modal-order-form__label">
+            <div class="modal-order-form__text">Телефон</div>
+            <input class="modal-order-form__input" type="text" placeholder="Введите ваш телефон">
+          </label>
+          <label class="modal-order-form__label">
+            <div class="modal-order-form__text">E-mail</div>
+            <input class="modal-order-form__input" type="text" placeholder="Введите ваш e-mail">
+          </label>
+        </div>
+        <div class="modal-order-form-grid">
+          <div class="modal-order-form__header">Способ получения</div>
+          <div class="modal-order-form__label">
+            <label class="modal-order-form__radio">
+              <input type="radio" name="options">Забрать в пункте выдачи
+            </label>
+            <div class="dropdown">
+              <input type="hidden" name="dropdown" value="">
+              <div class="dropdown__layout"></div>
+              <div class="dropdown__current">Выберите подходящий пункт</div>
+              <ul class="dropdown-items">
+                <li class="dropdown__item">Пункт выдачи 1</li>
+                <li class="dropdown__item">Пункт выдачи 2</li>
+                <li class="dropdown__item">Пункт выдачи 3</li>
+              </ul>
+            </div>
+          </div>
+          <div class="modal-order-form__label">
+            <label class="modal-order-form__radio">
+              <input type="radio" name="options">Получить в электронном виде
+            </label>
+          </div>
+          <div class="modal-order-form__label">
+            <label class="modal-order-form__radio">
+              <input type="radio" name="options">PDF на указанный e-mail
+            </label>
+          </div>
+        </div>
+        <div class="modal-order-form-grid">
+          <div class="modal-order-form__label modal-order-form__label--calendar">
+            <div class="modal-order-form__text">Укажите примерную дату получения заказа</div>
+            <div class="calendar">
+              <div class="calendar__header">Выберите дату</div>
+              <div id="calendar"></div>
+            </div>
+          </div>
+          <div class="modal-order-form__label">
+            <label class="modal-order-form__label">
+              <div class="modal-order-form__text">У меня есть промокод:</div>
+              <input class="modal-order-form__input" type="text" placeholder="Введите промокод">
+            </label>
+            <div class="modal-order-form-payment">
+              <div class="modal-order-form-payment__text">Мы принимаем к оплате:</div>
+              <div class="modal-order-form-payment__methods"><img src="img/payment-01.svg" alt=""><img src="img/payment-02.svg" alt=""><img src="img/payment-03.svg" alt=""></div>
+              <div class="modal-order-form-payment__text-small">Режим работы пункта выдачи можно уточнить на сайте. Для получения Карты Гостя в пункте выдачи предъявите ваучер или номер заказа, которые будут отправлены Вам на почту сразу после оплаты.</div>
+            </div>
+          </div>
+          <div class="modal-order-form__label">
+            <button class="btn modal-order-form__button" type="submit">Оплатить</button>
+            <div class="modal-order-form__label">
+              <label class="modal-order-form__privacy">
+                <input type="checkbox">
+                <div class="modal-order-form__radio-text">Я принимаю условия пользовательского соглашения</div>
+                <div class="modal-order-form__radio-text-small">и подтверждаю своё согласие на передачу информации в электронной форме (в том числе персональных данных) по открытым каналам связи сети Интернет c использованием SSL-шифрования.</div>
+              </label>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+    <script src="js/libs.min.js"></script>
+    <script src="js/green-audio-player.min.js"></script>
+    <script src="js/jquery.mousewheel.min.js"></script>
+    <script src="js/jquery.jscrollpane.min.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/jquery.bs.calendar.min.js"></script>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>

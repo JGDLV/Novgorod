@@ -1,0 +1,84 @@
+extends _layout.pug
+
+block variables
+    -
+        var title = 'Широкая Масленица'
+        var description = 'Широкая Масленица'
+        var index = false
+
+        var travel = {
+            header: 'Почувствуй дух праздника',
+            items: [
+                {
+                    image: '',
+                    header: 'Веселые представления',
+                    text: 'Погрузитесь в мир масленичных представлений, где каждый момент наполнен удивительной атмосферой.'
+                },
+                {
+                    image: '',
+                    header: 'Фестиваль вкуса',
+                    text: 'Наслаждайтесь горячими блинами, пирогами и чаем на каждом шагу.'
+                },
+                {
+                    image: '',
+                    header: 'Ярмарка творчества',
+                    text: 'Пройдите по ярмарке и узнайте об уникальных изделиях, созданных мастерами.'
+                },
+                {
+                    image: '',
+                    header: 'Народное веселье',
+                    text: 'Почувствуйте дух традиционных танцев и песен, представленных народными коллективами в ярком масленичном концерте.'
+                },
+            ]
+        }
+
+        var history = [
+            'Воскресенье, 26 февраля — день, наполненный увлекательными фольклорными представлениями, рассказывающими о встрече и проводах Масленицы.',
+            'Примите участие в конкурсах, театрализованных действах и деревенских играх.',
+            'Не упустите возможность насладиться горячими блинами, пирогами и ароматным чаем.',
+            'Погрузитесь в атмосферу масленичной ярмарки и насладитесь концертами, наполненными яркими выступлениями и народными танцами.'
+        ]
+
+block content
+    .intro.intro--inner.intro--shirokaya-maslennica.z-1
+        .container
+            p.intro__subheader Старая Русса
+            h1.intro__header ШИРОКАЯ <br>МАСЛЕНИЦА
+            include components/play-video-button.pug
+            .intro__text Погрузитесь в атмосферу праздника!
+            .intro-grid
+                .intro__item
+                    .intro__item-text театрализованное <br>веселье
+                .intro__item
+                    .intro__item-text игры и <br>конкурсы
+                .intro__item
+                    .intro__item-text ярмарка и <br>концерты
+    .section.section--gray.history
+        .container
+            h2.history__header.section__header История города
+            include components/history-grid.pug
+            img.history__bg-image.history__bg-image--2(src="img/history-bg-02.png" alt="")
+    .section.section--white.after.travel.z-1
+        .container
+            h2.travel__header.section__header !{travel.header}
+            include components/travel-grid.pug
+            .how-to-get-bottom.how-to-get-bottom--inner
+                .how-to-get-bottom__left
+                    img.how-to-get__image(src="img/coat-of-arms.svg" alt="")
+                .how-to-get-bottom__right
+                    p.how-to-get-bottom__text НУЖНА ПОМОЩЬ? <br>ОСТАВЬТЕ СВОИ КОНТАКТЫ И МЫ СВЯЖЕМСЯ С ВАМИ.
+                    include components/how-to-get-form.pug
+    .section.section--lightblue.atmosphere
+        .container
+            h2.atmosphere__header.section__header Атмосфера праздника
+            include components/atmosphere-grid.pug
+    .section.section--gray.section--middle
+        include components/card.pug
+        .container
+            include components/how-to-get.pug
+    include components/partners.pug
+    .section.section--gray.welcome
+        include components/welcome.pug
+
+
+

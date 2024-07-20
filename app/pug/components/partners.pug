@@ -1,0 +1,26 @@
+-
+    var partners = {
+        header: 'Наши партнеры',
+        items: [
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+        ]
+    }
+
+.section.section--white.partners
+    .container
+        h2.partners__header.section__header !{partners.header}
+        .partners-slider
+            .swiper#partnersSwiper
+                .partners-grid.swiper-wrapper
+                    each item in partners.items
+                        .partners__item.swiper-slide
+                            img.partners__item-image(src=item alt="")
+            .slider-button.slider-button-next
+            .slider-button.slider-button-prev

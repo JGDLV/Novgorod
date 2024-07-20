@@ -1,0 +1,253 @@
+extends _layout.pug
+
+block variables
+    -
+        var title = 'Информ центры'
+        var description = 'Информ центры'
+        var index = false
+
+        var inform = [
+            {
+                image: 'img/inform-01.png',
+                type: 'Туристский информационный пункт',
+                title: 'Великий Новгород вокзал',
+                address: 'Великий Новгород, ул. Октябрьская, 5',
+                whours: 'с 8:00 до 20:00 (Ежедневно)',
+            },
+            {
+                image: 'img/inform-02.png',
+                type: 'Туристский информационный пункт',
+                title: 'Чудово вокзал',
+                address: 'Чудовский район, г. Чудово, рядом с ж/д вокзалом',
+                whours: 'пн.-вс.: 11:00 - 21:00 (обед: 13:00 - 14:00)',
+                phones: [
+                    '8-800-222-00-53',
+                ],
+            },
+            {
+                image: 'img/inform-03.png',
+                type: 'Туристский информационный пункт',
+                title: 'Чудово АЗС',
+                address: 'Новгородская область, Чудовский район, М-10, 581 км, с. Успенское',
+                whours: 'пн.-вс.: 09:00 - 19:00, обед: 14:00 - 15:00',
+                phones: [
+                    '8-800-222-00-53',
+                ],
+            },
+            {
+                image: 'img/inform-04.png',
+                type: 'Туристский информационный пункт',
+                title: '563 км М-11',
+                address: 'Новгородская область, Чудовский район, 563 км скоростной автомобильной дороги М-11 "Нева"',
+                whours: 'пн.-вс.: 10:00 - 18:00, обед: 14:00 - 15:00',
+                phones: [
+                    '8-800-222-00-53',
+                ],
+            },
+            {
+                image: 'img/inform-05.png',
+                type: 'Туристский информационный пункт',
+                title: 'Окуловка',
+                address: 'Окуловский район, 423 км скоростной автомобильной дороги М-11 «Нева» ',
+                whours: 'пн.-вс.: 09:00 - 19:00, обед: 14:00 - 15:00',
+                phones: [
+                    '8-800-222-00-53',
+                ],
+            },
+            {
+                image: 'img/inform-06.png',
+                type: 'Туристский информационный пункт',
+                title: 'Валдай',
+                address: 'Новгородская область, Чудовский район, 563 км скоростной автомобильной дороги М-11 "Нева"',
+                whours: 'пн.-вс.: 09:00 - 19:00, обед: 14:00 - 15:00',
+                phones: [
+                    '8-800-222-00-53',
+                ],
+            },
+            {
+                image: 'img/inform-07.png',
+                type: 'Туристский информационный пункт',
+                title: 'Валдарай',
+                address: 'г. Валдай, пр. Комсомольский, 1 А, офис 5',
+                whours: 'пн.-пт.: 09:00 - 18:00',
+                phones: [
+                    '8-800-222-00-53',
+                    '8-960-207-22-51',
+                ],
+                url: 'www.valday-tour.ru',
+                email: 'valdaray@mail.ru'
+            },
+            {
+                image: 'img/inform-08.png',
+                type: 'Туристский информационный пункт',
+                title: 'Красная Изба',
+                address: 'Великий Новгород, Сенная площадь, 5',
+                whours: 'пн.-вс.: 9:30 - 18:00',
+                phones: [
+                    '8-800-222-00-53',
+                    '8-960-207-22-51',
+                ],
+                url: 'www.visitnovgorod.ru',
+                email: 'info@visitnovgorod.ru'
+            },
+        ]
+
+        var inform2 = [
+            {
+                image: 'img/inform-09.png',
+                type: 'Туристский информационный пункт',
+                title: 'Городской Центр туризма г. Старая Русса',
+                address: 'Новгородская обл., Старая Русса, ул. Воскресенская, 6',
+                whours: 'пн.-пт.: с 09:00 - 18:00, сб.: 10:00 - 16:00',
+                phones: [
+                    '8 (816 52) 5-29-77',
+                    '8 (911) 633-30-30',
+                ],
+                email: 'tourism.strussa@gmail.com'
+            },
+            {
+                image: 'img/inform-10.png',
+                type: 'Туристский информационный пункт',
+                title: ' Башня',
+                address: 'Новгородская область, г. Старая Русса, Соборная площадь',
+                whours: 'ср.– вс.: с 12:00 – 19:00',
+                url: 'vk.com/culturusich',
+            },
+            {
+                image: 'img/inform-11.png',
+                type: 'Туристский информационный пункт',
+                title: 'Поддорский краеведческий музей-филиала МАУ "Поддорское межпоселенческое социально-культурное объединение"',
+                address: 'Поддорский район, с. Поддорье ул. Полевая, 10',
+                whours: 'пн.-пт.: 09:00 - 17:00, обед: 13:00 - 14:00',
+                phones: [
+                    '8 (81658) 71-397',
+                ],
+                url: 'museum-poddoria.ucoz.ru',
+            },
+            {
+                image: 'img/inform-12.png',
+                type: 'Туристский информационный пункт',
+                title: 'Клуб-музей традиционной народной культуры МБУК МКДЦ Мошенского муниципального района"',
+                address: 'Мошенской район, с. Мошенское, ул. Физкультуры, 18',
+                whours: 'пн.-пт.: 08:00 - 17:00, обед: 13:00 - 14:00',
+                phones: [
+                    '8 (81653)61-459',
+                ],
+            },
+            {
+                image: 'img/inform-13.png',
+                type: 'Туристский информационный пункт',
+                title: 'Марёво',
+                address: 'Марёвский район, с. Марёво, ул. Комсомольская, 11',
+                whours: 'пн.- пт.: 09.00 - 17.00, обед: 13.00 - 14.00',
+                phones: [
+                    '8 (81658) 71-397',
+                ],
+                url: 'vk.com/public201469842',
+                email: 'cbs.marevo@yandex.ru'
+            },
+            {
+                image: 'img/inform-14.png',
+                type: 'Туристский информационный пункт',
+                title: 'МБУК "Любытинский краеведческий музей"',
+                address: 'Любытинский район, р.п. Любытино, ул.Пионерская, 1',
+                whours: 'пн.-вс.: 09:00 - 18:00 <br>Экспозиция под открытым небом «Славянская деревня X века» открыта ежедневно: <br>с 9:00 до 18:00 (апрель – сентябрь); <br>с 10:00 до 17:00 (октябрь – март). <br>Выходной день: воскресенье, понедельник (октябрь – май); понедельник (июнь – сентябрь).',
+                phones: [
+                    '8 (816) 686-17-93',
+                    '8-950-681-59-59',
+                ],
+                url: 'www.lubytino.ru/napravleniya-deyatelnosti/kultura-sport-molodezhnaya-politika-turizm/kultura/kraevedcheskiy-muzey/',
+            },
+            {
+                image: 'img/inform-15.png',
+                type: 'Туристский информационный пункт',
+                title: 'МУК «Центр изучения истории и культуры Демянского района»',
+                address: 'Демянский район, р.п. Демянск, ул. Черняховского, 22',
+                whours: 'пн.- чт.: 08:00 - 17:00, пт.: 08:00 - 16:00',
+                phones: [
+                    '8 (81651) 42-764',
+                ],
+                url: 'www.kultura-dem.nov.muzkult.ru/ciik',
+            },
+            {
+                image: 'img/inform-16.png',
+                type: 'Туристский информационный пункт',
+                title: 'На базе Центра «Краевед» муниципального бюджетного учреждения культуры «Батецкий межпоселенческий центр культуры и досуга»',
+                address: 'Батецкий район, п. Батецкий, ул. Лесная, 2а',
+                whours: 'пн.- пт.: 09:00 – 17:00',
+                phones: [
+                    '8 (81661) 22-179',
+                ],
+                url: 'www.batetsky-mckd.nov.muzkult.ru/to_',
+            },
+            {
+                image: 'img/inform-17.png',
+                type: 'Виртуальный туристский информационный пункт',
+                title: 'Крестцы',
+                url: 'vk.com/tipkresttsy',
+            },
+            {
+                image: 'img/inform-18.png',
+                type: 'Туристский информационный пункт',
+                title: 'Визит-центр Национального парка "Валдайский"',
+                address: 'Валдайский район, г. Валдай, ул. Победы, 5',
+                whours: 'пн.-вс.: 08:00 - 17.00',
+                phones: [
+                    '8 (81666) 2-18-09',
+                ],
+                url: 'www.valdaypark.ru/',
+            },
+            {
+                image: 'img/inform-19.png',
+                type: 'Туристский информационный пункт',
+                title: 'Гостиничный комплекс "Ткачи"',
+                address: 'Боровичский район, г. Боровичи, ул. Дзержинского, 8а',
+                whours: 'круглосуточно',
+                phones: [
+                    '8-800-302-05-12',
+                    '8-921-025-55-12',
+                    '8 (816-64) 443-32',
+                ],
+                url: 'www.tkachi-bor.ru/',
+            },
+        ]
+
+block content
+    .intro.intro--inform
+        .container
+            p.intro__subheader Новгородская область
+            h1.intro__header ТУРИСТИЧЕСКИЕ <br>ИНФОРМАЦИОННЫЕ ЦЕНТРЫ
+            include components/play-video-button.pug
+            .intro__text Исследуйте маршруты Новгородской области.
+            .intro-grid.intro-grid--small
+                .intro__item
+                    .intro__item-text интересные маршруты <br>и&nbsp;достопримечательности
+                .intro__item
+                    .intro__item-text персонализированный сервис <br>и&nbsp;консультации экспертов
+                .intro__item
+                    .intro__item-text актуальные события <br>и&nbsp;специальные предложения
+
+    .section.section--gray.section--middle.inform
+        .container.container--inform
+            .inform__map
+                include components/map.pug
+
+            .inform-grid
+                each item in inform
+                    include components/inform-item.pug
+
+        include components/card.pug
+
+        .container.container--inform
+            .inform-grid
+                each item in inform2
+                    include components/inform-item.pug
+
+            include components/how-to-get.pug
+
+    include components/partners.pug
+    .section.section--gray.welcome.z-1
+        include components/welcome.pug
+
+
+

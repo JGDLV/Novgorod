@@ -1,0 +1,45 @@
+-
+    var download = {
+        header: 'СКАЧАЙ МОБИЛЬНОЕ ПРИЛОЖЕНИЕ',
+        items: [
+            { icon: 'img/download-01.svg', text: 'Простой <br>и удобный поиск' },
+            { icon: 'img/download-02.svg', text: 'Большой выбор <br>мероприятий' },
+            { icon: 'img/download-03.svg', text: 'Поддержка <br>специалистов 24/7' },
+            { icon: 'img/download-04.svg', text: 'Карты <br>для маршрутов' },
+            { icon: 'img/download-05.svg', text: 'Для IOS (App Store) <br>и Android (Google Play)' },
+            {
+                icon: 'img/download-06.svg',
+                text: 'Аудиогиды',
+                button: {
+                    href: '#',
+                    icon: 'img/play-small-blue.svg',
+                    text: 'послушать'
+                }
+            },
+        ]
+    }
+
+.section.section--lightblue.download
+    .container
+        .download__inner
+            .download__left
+                h2.download__header.section__header !{download.header}
+                .download-grid
+                    each item in download.items
+                        .download__item
+                            img.download__item-icon(src=item.icon, alt="")
+                            .download__item-text
+                                | !{item.text}
+                                if item.button
+                                    a.download__item-button(href=item.button.href)
+                                        img.download__item-button-icon(src=item.button.icon, alt="")
+                                        | !{item.button.text}
+                .download-buttons
+                    a.btn.btn--blue.download__button(href="")
+                        img(src="img/appstore.svg", alt="")
+                        | Скачать из AppStore
+                    a.btn.btn--blue.download__button(href="")
+                        img(src="img/google-play.svg", alt="")
+                        | Скачать из Google Play
+            .download__right
+                img.download__image(src="img/phone.png", alt="")

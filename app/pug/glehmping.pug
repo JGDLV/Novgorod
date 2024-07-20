@@ -1,0 +1,107 @@
+extends _layout.pug
+
+block variables
+    -
+        var title = 'Глэмпинг'
+        var description = 'Глэмпинг'
+        var index = false
+
+        var travel = {
+            header: 'Пребывание в шатрах',
+            items: [
+                {
+                    image: '',
+                    header: 'Единение с природой',
+                    text: 'Глэмпинг "Космосфера" имеет свой индивидуальный смысл. Мы сделали все, чтобы Вас ничего не отвлекало от себя, друзей, семьи и природы. Уединение от всего постороннего позволит наполниться духовными силами.'
+                },
+                {
+                    image: '',
+                    header: 'Всё для отдыха',
+                    text: 'В глэмпинге "Космосфера" Вы сможете отыскать все необходимое для комфортного отдыха - зоны барбекю, место для парковки, wi-fi, водные развлечения, кафе, минимаркет. Есть зоны с костром для уютного вечера.'
+                },
+                {
+                    image: '',
+                    header: 'Готовьте с комфортом',
+                    text: 'Практически возле каждого купольного шатра находятся зоны барбекю, где можно пожарить сочный шашлык, приготовить ароматный плов и другие блюда для себя и компании.'
+                },
+                {
+                    image: '',
+                    header: 'Уютные шатры',
+                    text: '“На территории глэмпинга в шатрах созданы все условия для комфортного проживания от 1 до 4 человек. Все условия находятся внутри.'
+                },
+            ]
+        }
+
+        var history = [
+            'Располагается на берегу озера Ильмень с удобным спуском к воде. Живописные виды в любое время суток завораживают каждого, кто побывал в этом месте.',
+            'На территории установлены купольные шатры. Утром можно встречать рассвет, не вставая с кровати, а вечером с чашечкой любимого напитка провожать закат.',
+            'В шатрах созданы все условия для комфортного проживания от 1 до 4 человек. Завтрак включен в стоимость. К услугам гостей: зоны барбекю, место для парковки, wi-fi, водные развлечения, кафе, минимаркет.',
+            '«Космосфера» - идеальное место для романтических вечеров, а также для отдыха всей семьей или компанией друзей.',
+        ]
+
+block content
+    .intro.intro--inner.intro--glehmping
+        .container
+            p.intro__subheader Глэмпинг
+            h1.intro__header КОСМО <br>СФЕРА
+            include components/play-video-button.pug
+            .intro__text Воплотите мечту о жизни в купольном <br>шатре на берегу озера в реальность!
+            .intro-grid
+                .intro__item
+                    .intro__item-text релакс и <br>активность
+                .intro__item
+                    .intro__item-text группой или <br>в одиночку
+                .intro__item
+                    .intro__item-text комфортный <br>отдых
+    .section.section--gray.history
+        .container
+            h2.history__header.section__header Философия глэмпинга
+            include components/history-grid.pug
+    .section.section--white.after.travel.z-1
+        .container
+            h2.travel__header.section__header !{travel.header}
+            include components/travel-grid.pug
+            .how-to-get-bottom.how-to-get-bottom--inner
+                .how-to-get-bottom__left
+                    img.how-to-get__image(src="img/coat-of-arms.svg" alt="")
+                .how-to-get-bottom__right
+                    p.how-to-get-bottom__text Нужна помощь? <br>Оставьте свои контакты и мы свяжемся с вами.
+                    include components/how-to-get-form.pug
+    .section.section--lightblue.atmosphere
+        .container
+            h2.atmosphere__header.section__header Наши шатры
+            include components/atmosphere-grid.pug
+    .section.section--gray.section--middle
+        include components/card.pug
+        .container
+            .how-to-get
+                .how-to-get-map
+                    .how-to-get-map__inner
+                        h2.how-to-get-map__header.section__header КАК ДОБРАТЬСЯ
+                        .how-to-get-map-grid
+                            .how-to-get-map__item
+                                .how-to-get-map__item-header Адрес:
+                                .how-to-get-map__item-text Старорусский район, Наговское сельское поселение, деревня Ретлё, Дачная улица
+                            .how-to-get-map__item
+                                .how-to-get-map__item-header Телефон:
+                                .how-to-get-map__item-text #[a(href="tel:+79006593029") +7 (900) 659-30-297]
+                            .how-to-get-map__item
+                                .how-to-get-map__item-header E-mail:
+                                .how-to-get-map__item-text
+                                    p #[a(href="mailto:kosmosfera@parkglampov.ru") kosmosfera@parkglampov.ru]
+                            .how-to-get-map__item
+                                .how-to-get-map__item-header Сайт:
+                                .how-to-get-map__item-text
+                                    p #[a(href="//parkglampov.ru") parkglampov.ru ]
+                                    p #[a(href="//vk.com/parkglampov") vk.com/parkglampov]
+                            .how-to-get-map__item
+                                .how-to-get-map__item-header GPS:
+                                .how-to-get-map__item-text 58.155632105534, 31.095639962949
+                    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ac2450d3813beb73a45b4493c51dfc0afdbb4d07f184e3198a38290e6a7724390&amp;width=100%25&amp;height=529&amp;lang=ru_RU&amp;scroll=false"></script>
+                include components/how-to-get-bottom.pug
+    include components/partners.pug
+    .section.section--gray.welcome
+        include components/welcome.pug
+
+
+

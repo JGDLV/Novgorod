@@ -1,0 +1,359 @@
+extends _layout.pug
+
+block variables
+    -
+        var title = 'Карта гостя'
+        var description = 'Карта гостя'
+        var index = false
+
+        var profit = {
+            header: 'Путешествуй с выгодой',
+            items: [
+                {
+                    icon: 'img/profit-01.svg',
+                    profit: '-10%',
+                    header: 'Автобусные поездки',
+                    text: 'Санкт-Петербург — Великий Новгород — Санкт-Петербург',
+                },
+                {
+                    icon: 'img/profit-02.svg',
+                    profit: '-10-25%',
+                    header: 'Развлечения',
+                    text: 'Отели, рестораны, кафе и сувенирные магазины',
+                },
+                {
+                    icon: 'img/profit-03.svg',
+                    profit: '-10-20%',
+                    header: 'детям',
+                    text: 'Детские развлекательные центры и контактные зоопарки',
+                },
+                {
+                    icon: 'img/profit-04.svg',
+                    profit: '-5-15%',
+                    header: 'Культурные мероприятия',
+                    text: 'Концерты, спектакли и киносеансы',
+                },
+                {
+                    icon: 'img/profit-05.svg',
+                    profit: '-10-20%',
+                    header: 'Мастер-классы',
+                    text: 'В творческих мастерских и культурных центрах',
+                },
+                {
+                    icon: 'img/profit-06.svg',
+                    profit: '-10-15%',
+                    header: 'Экскурсии',
+                    text: 'театрализованные, речные, автобусные, пешеходные, обзорные и по отдельным экспозициям',
+                },
+            ]
+        }
+
+        var programPartners = {
+            header: 'ПАРТНЕРЫ ПРОГРАММЫ',
+            items: [
+                {
+                    image: 'img/partner-01.svg',
+                    text: 'Межрегиональный туристский проект «Серебряное ожерелье России»'
+                },
+                {
+                    image: 'img/partner-02.svg',
+                    text: 'Туристский информационный центр «Красная Изба»'
+                },
+                {
+                    image: 'img/partner-03.svg',
+                    text: 'Новгородский государственный объединенный музей-заповедник'
+                },
+            ]
+        }
+
+        var pointsOfSale = {
+            header: 'пункты продажи и выдачи',
+            items: [
+                {
+                    image: '',
+                    type: 'Поселок',
+                    title: 'Батецкий',
+                    population: '5 051 человек',
+                    city: 'Батецкий район',
+                },
+                {
+                    image: '',
+                    type: 'Город',
+                    title: 'Боровичи',
+                    population: '50 896 человек',
+                    city: 'Боровичский район',
+                },
+                {
+                    image: '',
+                    type: 'Город',
+                    title: 'Бронница',
+                    population: '',
+                    city: 'Новгородский район',
+                },
+                {
+                    image: '',
+                    type: 'Поселок',
+                    title: 'Валдай',
+                    population: '14 379 человек',
+                    city: 'Валдайский район',
+                },
+                {
+                    image: '',
+                    type: 'Город',
+                    title: 'Великий Новгород',
+                    population: '222 868 человек',
+                    city: 'Новгородский район',
+                },
+                {
+                    image: '',
+                    type: 'Поселок',
+                    title: 'Волот',
+                    population: '2 547 человек',
+                    city: 'Волотовский район',
+                },
+            ]
+        }
+
+        var buy = {
+            header: 'Купить карту гостя онлайн',
+            items: [
+                {
+                    icon: 'img/personal.svg',
+                    header: 'Индивидуальная',
+                    text: 'для одного путешественника',
+                    className: 'personal'
+                },
+                {
+                    image: 'img/card-01.png',
+                    title: 'На один день',
+                    price: '500 руб.',
+                },
+                {
+                    image: 'img/card-02.png',
+                    title: 'На два дня',
+                    price: '700 руб.',
+                },
+                {
+                    image: 'img/card-03.png',
+                    title: 'На три дня',
+                    price: '1.000 руб.',
+                },
+                {
+                    icon: 'img/family.svg',
+                    header: 'Семейная',
+                    text: 'предназначена для семьи из двух родителей и двух несовершеннолетних детей',
+                    className: 'family'
+                },
+                {
+                    image: 'img/card-04.png',
+                    title: 'На один день',
+                    price: '1.000 руб.',
+                },
+                {
+                    image: 'img/card-05.png',
+                    title: 'На два дня',
+                    price: '1.500 руб.',
+                },
+                {
+                    image: 'img/card-06.png',
+                    title: 'На три дня',
+                    price: '2.000 руб.',
+                },
+            ]
+        }
+
+        var history = [
+            'Экономия средств. Карта Гостя — идеальный пакет для наиболее выгодной организации путешествия, который при активном использовании позволяет сэкономить от 30% и более затрат на поездку.',
+            'Путеводитель по городу. В комплект Карты Гостя входит путеводитель (на русском и английском), где содержится информация о самых интересных достопримечательностях Новгородской области.',
+            'Для кого создана Карта гостя? Карта гостя Руси Новгородской подходит как для индивидуальных путешественников, так и для семей. 2 тарифа на 24, 48 и 72 часа позволяют гибко планировать поездку и экономить.',
+            'Правила использования. Заполните дату начала и окончания использования карты гостя на оборотной стороне. Предъявите Карту Гостя вместе с путеводителем и получите билет.',
+        ]
+
+block content
+    .intro.intro--card
+        .container
+            p.intro__subheader Выгодное путешествие
+            h1.intro__header КАРТА ГОСТЯ
+            include components/play-video-button.pug
+            .intro__text Твое безлимитное путешествие <br>по Новгородской области
+            .intro-grid
+                .intro__item
+                    .intro__item-header 350+
+                    .intro__item-text объектов туристической <br>индустрии
+                .intro__item
+                    .intro__item-header 180+
+                    .intro__item-text партнеров <br>проекта
+                .intro__item
+                    .intro__item-header #[span до] 30%
+                    .intro__item-text экономия услугах <br>и развлечениях
+            img.intro__image(src="img/guest-card.png" alt="")
+
+    .section.section--gray.history.history--compact.z-1
+        .container
+            h2.history__header.section__header Как это работает
+            include components/history-grid.pug
+            a.btn.history__button(href="#") купить карту
+
+    .section.section--white.profit
+        .container
+            h2.profit__header.section__header !{profit.header}
+            .profit__inner
+                .profit-grid
+                    each item in profit.items
+                        .profit__item
+                            .profit__item-icon-part
+                                img.profit__item-icon(src=item.icon, alt="")
+                            .profit__item-content
+                                .profit__item-profit !{item.profit}
+                                .profit__item-header !{item.header}
+                                .profit__item-text !{item.text}
+                .profit__banner
+                    img.profit__banner-icon(src="img/profit-07.svg" alt="")
+                    .profit__banner-profit -100%
+                    .profit__banner-header музеи
+                    .profit__banner-text Более 55 музейных объектов в Новгородской области
+
+    .section.section--gray
+        .container
+            .buy
+                h2.section__header.buy__header !{buy.header}
+                .buy-grid
+                    each item in buy.items
+                        if item.icon
+                            .buy__item.buy__item--main(class="buy__item--" + item.className)
+                                img.buy__item-icon(src=item.icon, alt="")
+                                .buy__item-content
+                                    .buy__item-header !{item.header}
+                                    .buy__item-text !{item.text}
+                        else
+                            .buy__item
+                                img.buy__item-image(src=item.image, alt="")
+                                .buy__item-content
+                                    .buy__item-info
+                                        .buy__item-title !{item.title}
+                                        .buy__item-price !{item.price}
+                                    .buy__item-quantity
+                                        form.buy__item-quantity-form
+                                            button.buy__item-quantity-form__minus(type="button") -
+                                            input.buy__item-quantity-form__input(type="text" value="0")
+                                            button.buy__item-quantity-form__plus(type="button") +
+
+                .buy-total
+                    .buy-total-price
+                        .buy-total-price__header Итого:
+                        .buy-total-price__text 3.000 руб.
+                    a.btn.buy-total__button(href="#") оплатить
+                    .buy-total__text После оформления и оплаты заказа на Вашу электронную почту будет отправлен ваучер с уникальным номером. Вы предъявляете ваучер в одном из пунктов выдачи и получаете Карту Гостя.
+
+            .brochure
+                h2.brochure__header ПУТЕВОДИТЕЛЬ
+                .brochure__text К карте гостя Руси Новгородской прилагается компактный печатный путеводитель. В нем вы найдете описания самых интересных достопримечательностей Новгородской области, скидки и специальные предложения, действующие при предъявлении карты гостя, а также карту исторического центра и другую полезную информацию. Путеводитель поможет вам спланировать свое путешествие и провести время с максимальной пользой.
+                a.btn.brochure__button(href="#") подробнее
+                img.brochure__image(src="img/guidebook2.png" alt="")
+
+    .section.section--white.section--middle.places
+        .container
+            .places-tabs.tabs
+                .places-tabs-controls
+                    .places-tabs__control.tabs__control Где принимают карту гостя
+                    .places-tabs__control.tabs__control Где получить карту гостя
+                .places-tabs__content.tabs__content
+                    .map-rounded.map-rounded--strong
+                        include components/map.pug
+
+                    .places-tabs__content-bottom
+                        .places-tabs-grid
+                            .places-tabs__item
+                                .places-tabs__item-header Великий Новгород:
+                                .places-tabs__item-text
+                                    p Бутик-отель «Юрьевское подворье»
+                                    p Гостиница «Welcome inn»
+                                    p Гостиница «Волхов»
+                                    p Мини-отель «Ганза»
+                            .places-tabs__item
+                                .places-tabs__item-text
+                                    p Отель «БИАНКИ»
+                                    p Бутик-отель «Трувор»
+                                    p Grace Hotel
+                                    p Гостевой дом «Три Кота»
+                                    p Дом отдыха "Красный Бережок"
+                            .places-tabs__item
+                                .places-tabs__item-half
+                                    .places-tabs__item-header Боровичи:
+                                    .places-tabs__item-text
+                                        p Гостиница «Ткачи»
+                                .places-tabs__item-half
+                                    .places-tabs__item-header Любытино:
+                                    .places-tabs__item-text
+                                        p База отдыха «Любытино-Хутор»
+                            .places-tabs__item
+                                .places-tabs__item-text.places-tabs__item-text--small
+                                    p В связи с обновлением информации для некоторых объектов аудиогиды временно недоступны.
+                                    p Скидка на проживание в отеле предоставляется только при бронировании непосредственно через отель.
+                                    p Информация в брошюре о времени работы конкретного места посещения может отличаться от фактической. Уточняйте часы работы непосредственно у туристического объекта.
+                .places-tabs__content.tabs__content
+                    .map-rounded.map-rounded--strong
+                        include components/map.pug
+
+                    .places-tabs__content-bottom
+                        .places-tabs-grid
+                            .places-tabs__item
+                                .places-tabs__item-header Великий Новгород:
+                                .places-tabs__item-text
+                                    p Бутик-отель «Юрьевское подворье»
+                                    p Гостиница «Welcome inn»
+                                    p Гостиница «Волхов»
+                                    p Мини-отель «Ганза»
+                            .places-tabs__item
+                                .places-tabs__item-text
+                                    p Отель «БИАНКИ»
+                                    p Бутик-отель «Трувор»
+                                    p Grace Hotel
+                                    p Гостевой дом «Три Кота»
+                                    p Дом отдыха "Красный Бережок"
+                            .places-tabs__item
+                                .places-tabs__item-half
+                                    .places-tabs__item-header Боровичи:
+                                    .places-tabs__item-text
+                                        p Гостиница «Ткачи»
+                                .places-tabs__item-half
+                                    .places-tabs__item-header Любытино:
+                                    .places-tabs__item-text
+                                        p База отдыха «Любытино-Хутор»
+                            .places-tabs__item
+                                .places-tabs__item-text.places-tabs__item-text--small
+                                    p В связи с обновлением информации для некоторых объектов аудиогиды временно недоступны.
+                                    p Скидка на проживание в отеле предоставляется только при бронировании непосредственно через отель.
+                                    p Информация в брошюре о времени работы конкретного места посещения может отличаться от фактической. Уточняйте часы работы непосредственно у туристического объекта.
+
+    .section.section--gray.points-of-sale
+        .container
+            h2.section__header.points-of-sale__header !{pointsOfSale.header}
+            .points-of-sale-grid
+                each item in pointsOfSale.items
+                    .points-of-sale__item
+                        img.points-of-sale__item-image(src=item.image, alt=item.title)
+                        .points-of-sale__item-content
+                            .points-of-sale__item-type !{item.type}
+                            .points-of-sale__item-title !{item.title}
+                            if item.population
+                            .points-of-sale__item-population !{item.population}
+                            .points-of-sale__item-city.city !{item.city}
+
+            include components/controls.pug
+
+    .section.section--white.program-partners
+        .container
+            h2.section__header.program-partners__header !{programPartners.header}
+            .program-partners-grid
+                each item in programPartners.items
+                    .program-partners__item
+                        .program-partners__item-image-part
+                            img.program-partners__item-image(src=item.image alt="")
+                        .program-partners__item-text !{item.text}
+
+    .section.section--gray.welcome
+        include components/welcome.pug
+
+
+

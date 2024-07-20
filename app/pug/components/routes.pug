@@ -1,0 +1,43 @@
+-
+    var routes = {
+        header: 'популярные маршруты',
+        items: [
+            {
+                image: 'img/roadmaps-01.png',
+                title: 'Аракчеевские казармы',
+                text: 'Не единственные, но, пожалуй, самые известные из всех. поскольку расположенны вдоль оживленной трассы...',
+                duration: '4 часа'
+            },
+            {
+                image: 'img/roadmaps-01.png',
+                title: 'Государева дорога',
+                text: 'По праву может именоваться историчес-кой дорогой мира. Построена по Указу Петра I. Протяженность - 777 км. Первая дорога с твердым покрытием из...',
+                duration: '11 часа'
+            },
+            {
+                image: 'img/roadmaps-01.png',
+                title: 'Софийский собор',
+                text: 'Официально главный православный храм Великого Новгорода, созданный в 1045—1050 годах...',
+                duration: '6 часа'
+            },
+            {
+                image: 'img/roadmaps-01.png',
+                title: 'Софийский собор',
+                text: 'Официально главный православный храм Великого Новгорода, созданный в 1045—1050 годах...',
+                duration: '6 часа'
+            },
+        ]
+    }
+
+.section.section--gray.routes.z-1
+    .container
+        h2.routes__header.section__header !{routes.header}
+        .swiper#routesSwiper
+            .routes-grid.swiper-wrapper
+                each item in routes.items
+                    .routes__item.swiper-slide
+                        a.routes__item-link(href="#") 
+                            img.routes__item-image(src=item.image, alt="")
+                        a.routes__item-title(href="#") !{item.title}
+                        .routes__item-text !{item.text}
+                        .routes__item-duration продолжительность: #[span !{item.duration}]

@@ -1,0 +1,64 @@
+-
+    var journal = {
+        header: 'Журнал',
+        items: [
+            {
+                image: '',
+                text: 'Команда НовГУ заняла первое место в матчевой встрече по...',
+                date: '02.02.24'
+            },
+            {
+                image: '',
+                text: 'Конкурс "Земля Новгородская 2022"...',
+                date: '02.02.24'
+            },
+            {
+                image: '',
+                text: 'Викторина к 101-летию Республики Коми',
+                date: '02.02.24'
+            },
+            {
+                image: '',
+                text: 'Музеи Новгородской области проведут бесплатные...',
+                date: '02.02.24'
+            },
+            {
+                image: '',
+                text: 'Команда НовГУ заняла первое место в матчевой встрече по...',
+                date: '02.02.24'
+            },
+            {
+                image: '',
+                text: 'Конкурс "Земля Новгородская 2022"...',
+                date: '02.02.24'
+            },
+            {
+                image: '',
+                text: 'Викторина к 101-летию Республики Коми',
+                date: '02.02.24'
+            },
+        ]
+    }
+
+.section.section--gray.journal.z-1
+    .container
+        .section__top
+            h2.journal__header.section__header !{journal.header}
+            .section__top-text
+                p Интересно обо всех событиях <br>Великого Новгорода и <br>Новгородской области!
+        .pastime-grid
+            each item in journal.items
+                .pastime__item
+                    img.pastime__item-image(src=item.image alt="")
+                    .pastime__item-text !{item.text}
+                    .pastime__item-bottom
+                        .pastime__item-date !{item.date}
+            .journal-banner
+                .journal-banner__header Узнай новости первым!
+                .journal-banner__text подпишись на нас в социальных сетях:
+                .journal-banner__socials
+                    a.journal-banner__social(href="#") 
+                        img(src="img/vk.svg", alt="")
+                    a.journal-banner__social(href="#") 
+                        img(src="img/tg.svg", alt="")
+        include controls.pug

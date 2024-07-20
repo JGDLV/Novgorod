@@ -1,0 +1,45 @@
+-
+    var thisIs = {
+        header: 'Русь Новгородская - это...',
+        text: [
+            'Великий Новгород и Новгородская область — это регион, являющий собой часть глубокой истории Российского Государства.',
+            'На наш взгляд, поэтому крайне важно при позиционировании говорить именно о его исторической идентичности и значении как культурно-исторического центра России.',
+        ],
+        items: [
+            {
+                icon: 'img/building-01.svg',
+                header: '1 378',
+                text: 'выявленных объектов культурного наследия'
+            },
+            {
+                icon: 'img/building-02.svg',
+                header: '5 071',
+                text: 'объектов культурного наследия'
+            },
+            {
+                icon: 'img/building-03.svg',
+                header: '1 657',
+                text: 'объектов имеют региональную категорию историко-культурного значения'
+            },
+            {
+                icon: 'img/building-04.svg',
+                header: '2 036',
+                text: 'объектов имеют федеральную категорию историко-культурного значения'
+            },
+        ]
+    }
+
+.this-is
+    .this-is__inner
+        .this-is__left
+            h2.this-is__header !{thisIs.header}
+            .this-is__text
+                each item in thisIs.text
+                    p !{item}
+        .this-is__right
+            .this-is-grid
+                each item in thisIs.items
+                    .this-is__item
+                        img.this-is__item-image(src=item.icon alt="")
+                        p.this-is__item-header !{item.header}
+                        p.this-is__item-text !{item.text}

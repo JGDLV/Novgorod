@@ -1,0 +1,83 @@
+extends _layout.pug
+
+block variables
+    -
+        var title = 'О регионе'
+        var description = 'О регионе'
+        var index = false
+
+        var travel = {
+            header: 'От приключений на природе до культурных событий',
+            items: [
+                {
+                    image: '',
+                    header: 'Исторические достопримечательности',
+                    text: 'Посетите величественный Кремль, древние церкви и уникальные музеи, раскрывающие тайны прошлого.'
+                },
+                {
+                    image: '',
+                    header: 'Природные виды',
+                    text: 'Откройте великолепие природы Новгородской области: живописные озера, леса и пейзажи, вдохновляющие к каждому путешествию..'
+                },
+                {
+                    image: '',
+                    header: 'Традиционные события',
+                    text: 'Участвуйте в праздниках и фестивалях, которые погружают вас в атмосферу старинных традиций и обычаев.'
+                },
+                {
+                    image: '',
+                    header: 'Культурные центры',
+                    text: 'Посещайте музеи, галереи и театры, где каждый экспонат и представление — часть истории.'
+                },
+            ]
+        }
+
+        var history = [
+            'Регион с богатой историей и культурным наследием',
+            'Уникальные памятники и архитектурные шедевры.',
+            'Возможности для погружения в историческую атмосферу.',
+            'Традиционные мероприятия и фестивали, отражающие историческую идентичность.',
+        ]
+
+block content
+    .intro.intro--region
+        .container
+            p.intro__subheader О регионе
+            h1.intro__header НОВГОРОДСКАЯ <br>ОБЛАСТЬ
+            .intro__text Путешествие сквозь века
+            include components/play-video-button.pug
+            .intro-grid.intro-grid--small
+                .intro__item
+                    .intro__item-text глубокая историческая <br>привлекательность
+                .intro__item
+                    .intro__item-text глубокая историческая <br>привлекательность
+                .intro__item
+                    .intro__item-text возможность погружения в <br>историческую атмосферу
+    .section.section--gray.history
+        .container
+            h2.history__header.section__header Философия Новгородской области
+            include components/history-grid.pug
+    .section.section--white.after.travel.z-1
+        .container
+            h2.travel__header.section__header !{travel.header}
+            include components/travel-grid.pug
+            .how-to-get-bottom.how-to-get-bottom--inner
+                .how-to-get-bottom__left
+                    img.how-to-get__image(src="img/coat-of-arms.svg" alt="")
+                .how-to-get-bottom__right
+                    p.how-to-get-bottom__text НУЖНА ПОМОЩЬ? <br>ОСТАВЬТЕ СВОИ КОНТАКТЫ И МЫ СВЯЖЕМСЯ С ВАМИ.
+                    include components/how-to-get-form.pug
+    .section.section--lightblue.atmosphere
+        .container
+            h2.atmosphere__header.section__header Атмосфера Великого Новгорода
+            include components/atmosphere-grid.pug
+    .section.section--gray.section--middle
+        include components/card.pug
+        .container
+            include components/how-to-get.pug
+    include components/partners.pug
+    .section.section--gray.welcome
+        include components/welcome.pug
+
+
+

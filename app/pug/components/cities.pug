@@ -1,0 +1,25 @@
+-
+    var cities = [
+        { image: 'img/cities-01.png', header: 'Валдай' },
+        { image: 'img/cities-02.png', header: 'СОЛЬЦЫ' },
+        { image: 'img/cities-03.png', header: 'Великий новгород' },
+        { image: 'img/cities-04.png', header: 'КРЕСТЦЫ' },
+        { image: 'img/cities-05.png', header: 'ПАРФИНО' },
+        { image: 'img/cities-06.png', header: 'ОКУЛОВКА' },
+        { image: 'img/cities-06.png', header: 'ОКУЛОВКА' },
+        { image: 'img/cities-06.png', header: 'ОКУЛОВКА' },
+    ]
+
+.cities
+    h2.cities__header.section__header Города Новгородской области
+    .cities-slider
+        .swiper#citiesSwiper
+            .cities-items.swiper-wrapper
+                each item in cities
+                    .cities__item.swiper-slide
+                        a.cities__item-link(href="#") 
+                            img.cities__item-image(src=item.image, alt="")
+                        a.cities__item-header(href="#") !{item.header}
+                        a.cities__item-more(href="#") подробнее
+        .slider-button.slider-button-next
+        .slider-button.slider-button-prev

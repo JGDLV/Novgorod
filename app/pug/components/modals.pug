@@ -1,0 +1,163 @@
+.modal.modal-booking.mfp-hide#booking
+    .modal__header Забронируйте поездку <br>при помощи эксперта
+    form.modal-booking-form
+        .modal-booking-form__inner
+            .modal-booking-form__half
+                .modal-booking-form__label Как вам удобнее связаться?
+                include dropdown.pug
+            .modal-booking-form__half
+                .modal-booking-form__label Номер телефона / E-mail
+                input.modal-booking-form__input(type="text" placeholder="+7 912 912 91 91 / mail@mail.ru")
+        button.btn.btn--lightblue.modal-booking-form__button(type="submit") Забронировать поездку
+
+.modal.modal-booking.mfp-hide#booking-tent
+    .modal__header Забронируйте шатер <br>при помощи эксперта
+    form.modal-booking-form
+        .modal-booking-form__inner
+            .modal-booking-form__half
+                .modal-booking-form__label Как вам удобнее связаться?
+                include dropdown.pug
+            .modal-booking-form__half
+                .modal-booking-form__label Номер телефона / E-mail
+                input.modal-booking-form__input(type="text" placeholder="+7 912 912 91 91 / mail@mail.ru")
+        button.btn.btn--lightblue.modal-booking-form__button(type="submit") Забронировать шатер
+
+.modal.modal-thanks.mfp-hide#thanks
+    .modal-thanks__inner
+        img.modal-thanks__image(src="img/check.svg", alt="")
+        .modal-thanks__content
+            .modal__header Спасибо! Ваша <br>заявка принята!
+            | Наш менеджер свяжется с Вами в течение 30 минут.
+
+.modal.modal-postcard.mfp-hide#postcard
+    .modal-postcard__left
+        .modal-postcard__header Отправьте открытку
+        .modal-postcard__postcard
+            .modal-postcard__postcard-header выбранная открытка:
+            .postcards__item
+                img.postcards__item-image(src="img/postcards-01.png" alt="Иверский Валдайский Богородицкий Святоозерский мужской монастырь")
+                .postcards__item-title Иверский Валдайский Богородицкий Святоозерский мужской монастырь
+            .modal-postcard__postcard-text Приезжайте путешествовать по Новгородской земле и обязательно посетите #[a(href="#")  место] на открытке
+    .modal-postcard__right
+        .modal-postcard__text Заполните эту форму и мы отправим электронную открытку указанному адресату
+        form.modal-postcard-form
+            label.modal-postcard-form__label
+                .modal-postcard-form__text От кого
+                input.modal-postcard-form__input(type="text" placeholder="Введите ваше имя")
+            label.modal-postcard-form__label
+                .modal-postcard-form__text E-mail получателя
+                input.modal-postcard-form__input(type="text" placeholder="Введите e-mail получателя")
+            textarea.modal-postcard-form__textarea(placeholder="Введите сопроводительный текст")
+            button.btn.modal-postcard-form__button(type="submit") Отправить открытку
+            
+.modal.modal-postcard-thanks.mfp-hide#postcard-thanks
+    img.modal-postcard-thanks__image(src="img/tg-modal.svg", alt="")
+    .modal-postcard-thanks__header Ваша открытка <br>успешно отправлена!
+    a.btn.modal-postcard-thanks__button(href="#") Отправить еще одну открытку
+
+.modal.modal-postcard.modal--dark.mfp-hide#postcard-dark
+    .modal-postcard__left
+        .modal-postcard__header Отправьте открытку
+        .modal-postcard__postcard
+            .modal-postcard__postcard-header выбранная открытка:
+            .postcards__item
+                img.postcards__item-image(src="img/postcards-01.png" alt="Иверский Валдайский Богородицкий Святоозерский мужской монастырь")
+                .postcards__item-title Иверский Валдайский Богородицкий Святоозерский мужской монастырь
+            .modal-postcard__postcard-text Приезжайте путешествовать по Новгородской земле и обязательно посетите #[a(href="#")  место] на открытке
+    .modal-postcard__right
+        .modal-postcard__text Заполните эту форму и мы отправим электронную открытку указанному адресату
+        form.modal-postcard-form
+            label.modal-postcard-form__label
+                .modal-postcard-form__text От кого
+                input.modal-postcard-form__input(type="text" placeholder="Введите ваше имя")
+            label.modal-postcard-form__label
+                .modal-postcard-form__text E-mail получателя
+                input.modal-postcard-form__input(type="text" placeholder="Введите e-mail получателя")
+            textarea.modal-postcard-form__textarea(placeholder="Введите сопроводительный текст")
+            button.btn.modal-postcard-form__button(type="submit") Отправить открытку
+
+.modal.modal-postcard-thanks.modal--dark.mfp-hide#postcard-thanks-dark
+    img.modal-postcard-thanks__image(src="img/tg-modal.svg", alt="")
+    .modal-postcard-thanks__header Ваша открытка <br>успешно отправлена!
+    a.btn.modal-postcard-thanks__button(href="#") Отправить еще одну открытку
+
+.modal.modal-order.mfp-hide#order
+    .modal__header Оформить заказ
+    form.modal-order-form
+        .modal-order-form-grid
+            .modal-order-form__header Анкетные данные
+            label.modal-order-form__label
+                .modal-order-form__text Имя
+                input.modal-order-form__input(type="text" placeholder="Введите ваше имя")
+            label.modal-order-form__label
+                .modal-order-form__text Фамилия
+                input.modal-order-form__input(type="text" placeholder="Введите вашу фамилию")
+            .modal-order-form__label
+                .modal-order-form__text Возраст
+                .dropdown.dropdown--age
+                    input(type='hidden' name='dropdown' value='')
+                    .dropdown__layout
+                    .dropdown__current 
+                    ul.dropdown-items
+                        li.dropdown__item 18
+                        li.dropdown__item 19
+                        li.dropdown__item 20
+            .modal-order-form__label
+                .modal-order-form__text Страна
+                .dropdown
+                    input(type='hidden' name='dropdown' value='')
+                    .dropdown__layout
+                    .dropdown__current Выберите вашу страну
+                    ul.dropdown-items
+                        li.dropdown__item РФ
+                        li.dropdown__item Не РФ
+            label.modal-order-form__label
+                .modal-order-form__text Телефон
+                input.modal-order-form__input(type="text" placeholder="Введите ваш телефон")
+            label.modal-order-form__label
+                .modal-order-form__text E-mail
+                input.modal-order-form__input(type="text" placeholder="Введите ваш e-mail")
+        .modal-order-form-grid
+            .modal-order-form__header Способ получения
+            .modal-order-form__label
+                label.modal-order-form__radio
+                    input(type="radio", name="options")
+                    | Забрать в пункте выдачи
+                .dropdown
+                    input(type='hidden' name='dropdown' value='')
+                    .dropdown__layout
+                    .dropdown__current Выберите подходящий пункт
+                    ul.dropdown-items
+                        li.dropdown__item Пункт выдачи 1
+                        li.dropdown__item Пункт выдачи 2
+                        li.dropdown__item Пункт выдачи 3
+            .modal-order-form__label
+                label.modal-order-form__radio
+                    input(type="radio", name="options")
+                    | Получить в электронном виде
+            .modal-order-form__label
+                label.modal-order-form__radio
+                    input(type="radio", name="options")
+                    | PDF на указанный e-mail
+        .modal-order-form-grid
+            .modal-order-form__label.modal-order-form__label--calendar
+                .modal-order-form__text Укажите примерную дату получения заказа
+                include calendar.pug
+            .modal-order-form__label
+                label.modal-order-form__label
+                    .modal-order-form__text У меня есть промокод:
+                    input.modal-order-form__input(type="text" placeholder="Введите промокод")
+                .modal-order-form-payment
+                    .modal-order-form-payment__text Мы принимаем к оплате:
+                    .modal-order-form-payment__methods
+                        img(src="img/payment-01.svg", alt="")
+                        img(src="img/payment-02.svg", alt="")
+                        img(src="img/payment-03.svg", alt="")
+                    .modal-order-form-payment__text-small Режим работы пункта выдачи можно уточнить на сайте. Для получения Карты Гостя в пункте выдачи предъявите ваучер или номер заказа, которые будут отправлены Вам на почту сразу после оплаты.
+            .modal-order-form__label
+                button.btn.modal-order-form__button(type="submit") Оплатить
+                .modal-order-form__label
+                    label.modal-order-form__privacy
+                        input(type="checkbox")
+                        .modal-order-form__radio-text Я принимаю условия пользовательского соглашения
+                        .modal-order-form__radio-text-small и подтверждаю своё согласие на передачу информации в электронной форме (в том числе персональных данных) по открытым каналам связи сети Интернет c использованием SSL-шифрования.

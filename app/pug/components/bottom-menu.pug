@@ -1,0 +1,26 @@
+-
+    var bottomMenu = [
+        {
+            href: '#',
+            icon: 'img/bottom-guide.svg',
+            text: 'Путеводитель',
+        },
+        {
+            href: '#',
+            icon: 'img/bottom-card.svg',
+            text: 'Карта гостя',
+        },
+        {
+            href: '#',
+            icon: 'img/bottom-app.svg',
+            text: 'Приложение',
+        },
+    ]
+
+.bottom-menu.mobile-only
+    ul.bottom-menu-items
+        each item in bottomMenu
+            li.bottom-menu__item
+                a.bottom-menu__link(href=item.href)
+                    img.bottom-menu__link-image(src=item.icon alt="")
+                    .bottom-menu__link-text !{item.text}

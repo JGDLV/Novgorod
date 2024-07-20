@@ -1,0 +1,87 @@
+-
+    var search = {
+        items: [
+            {
+                type: 'Рестораны',
+                title: 'Ресторан АМАКС «Россия»',
+                city: 'Великий Новгород',
+            },
+            {
+                type: 'Бары и пабы',
+                title: 'Майкрофт паб',
+                city: 'Великий Новгород',
+            },
+            {
+                type: 'Бары и пабы',
+                title: 'Коктейль-бар «Вандам»',
+                city: 'Великий Новгород',
+            },
+            {
+                type: 'Рестораны',
+                title: 'Ресторан «Садко»',
+                city: 'Великий Новгород',
+            },
+            {
+                type: 'Чайханы',
+                title: 'Чайхана «Сказка»',
+                city: 'Великий Новгород',
+            },
+            {
+                type: 'Чайханы',
+                title: 'Чайхана «Сказка»',
+                city: 'Великий Новгород',
+            },
+            {
+                type: 'Рестораны',
+                title: 'Ресторан «Садко»',
+                city: 'Великий Новгород',
+            },
+            {
+                type: 'Чайханы',
+                title: 'Чайхана «Сказка»',
+                city: 'Великий Новгород',
+            },
+            {
+                type: 'Чайханы',
+                title: 'Чайхана «Сказка»',
+                city: 'Великий Новгород',
+            },
+            {
+                type: 'Чайханы',
+                title: 'Чайхана «Сказка»',
+                city: 'Великий Новгород',
+            },
+            {
+                type: 'Чайханы',
+                title: 'Чайхана «Сказка»',
+                city: 'Великий Новгород',
+            },
+            {
+                type: 'Чайханы',
+                title: 'Чайхана «Сказка»',
+                city: 'Великий Новгород',
+            },
+        ]
+    }
+
+.section.section--white.section--middle.search-page
+    .container
+        .search-page-top
+            h2.section__header.search-page__header результаты поиска
+            form.search-page-form
+                input.search-page-form__input(type="text" placeholder="" value="Текст поискового запроса, по которому отображаются результаты...")
+                button.btn.search-page-form__button(type="submit") Найти
+        .search-page-bottom
+            .guide-grid
+                each item in search.items
+                    .guide__item
+                        .guide__item-discount
+                            .guide__item-discount-value -15%
+                            .guide__item-discount-text по карте гостя
+                        a.guide__item-link(href=item.href)
+                            img.guide__item-image(src="" alt="")
+                        .guide__item-content
+                            .guide__item-type !{item.type}
+                            .guide__item-title !{item.title}
+                            .guide__item-city !{item.city}
+            include controls.pug

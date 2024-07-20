@@ -1,0 +1,96 @@
+-
+    var guide = {
+        items: [
+            {
+                title: 'Ярославо дворище и древний торг',
+                city: 'Великий Новгород',
+                href: '#'
+            },
+            {
+                title: '"В Солецкий край за живой и мёртвой водой"',
+                city: 'Сольцы',
+                href: '#'
+            },
+            {
+                title: 'Крестецкий краеведческий музей',
+                city: 'Крестцы',
+                href: '#'
+            },
+            {
+                title: 'Ярославо дворище и древний торг',
+                city: 'Великий Новгород',
+                href: '#'
+            },
+            {
+                title: '"В Солецкий край за живой и мёртвой водой"',
+                city: 'Сольцы',
+                href: '#'
+            },
+            {
+                title: 'Крестецкий краеведческий музей',
+                city: 'Крестцы',
+                href: '#'
+            },
+            {
+                title: 'Ярославо дворище и древний торг',
+                city: 'Великий Новгород',
+                href: '#'
+            },
+            {
+                title: '"В Солецкий край за живой и мёртвой водой"',
+                city: 'Сольцы',
+                href: '#'
+            },
+            {
+                title: 'Крестецкий краеведческий музей',
+                city: 'Крестцы',
+                href: '#'
+            },
+        ]
+    }
+
+.section.section--white.after.guide
+    .container
+        .guide-top
+            h2.guide__header Путеводитель по <br>ярким впечатлениям
+            .guide__text
+                p Открой для себя Новгородскую область... Отправляйся в яркое путешествие по живописным местам и культурным объектам. 
+                p Познакомься с местными традициями. Останься под впечатлением <br>от разнообразия мест, событий и инфраструктуры. 
+                p Знакомься и получай новые впечатления от разнообразия локаций <br>и событий!
+        .guide-bottom.z-1
+            .guide-aside
+                .guide-accordion.accordion
+                    .guide-accordion__item.accordion__item
+                        .guide-accordion__item-head.accordion__item-head Выбери тип впечатления
+                        .guide-accordion__item-body.accordion__item-body
+                            .guide__type.active Экскурсии
+                            .guide__type События
+                            .guide__type Музеи
+                            .guide__type Мастер-классы
+                            .guide__type Культура
+                            .guide__type Выставки
+                            .guide__type Религия
+                            .guide__type Активный отдых
+                            .guide__type Детский отдых
+                            .guide__type Оздоровительный туризм
+                            .guide__type Необычные места
+                            .guide__type Поклонный туризм
+                            .guide__type Гастрономический туризм
+                            .guide__type Охота и рыбалка
+                    .guide-accordion__item.accordion__item
+                        .guide-accordion__item-head.accordion__item-head Способ передвижения
+                        .guide-accordion__item-body.accordion__item-body
+                    .guide-accordion__item.accordion__item
+                        .guide-accordion__item-head.accordion__item-head Города
+                        .guide-accordion__item-body.accordion__item-body
+            .guide-content
+                .guide-grid
+                    each item in guide.items
+                        .guide__item
+                            img.guide__item-image(src="", alt="")
+                            .guide__item-content
+                                .guide__item-title !{item.title}
+                                .guide__item-city !{item.city}
+                                a.guide__item-more(href=item.href) Посетить
+                include controls.pug
+        img.guide__bg-image(src="img/guide-bg-image.png", alt="")

@@ -1,0 +1,365 @@
+$gray = #3F4B5B
+$blue = #124285
+$lightblue = #1698DE
+$lightblue2 = #00A0E3
+$bggray = #F2F4F7
+
+.content
+    overflow: hidden
+
+.section
+    padding: 38px 0 74px
+
+    &__header
+        font-size: 76px
+        line-height: 67.488px
+        text-transform: uppercase
+        color: $blue
+
+    &__top
+        display: flex
+        align-items: flex-end
+        justify-content: space-between
+        margin-bottom: 53px
+
+        &-text
+            color: $gray
+            font-size: 15px
+            padding-right: 38px
+            margin-bottom: -6px
+            line-height: 1.3
+
+    &--white
+        background: #fff
+
+        &.after
+            &::after
+                background-image: url('../img/after-white.svg')
+
+    &--gray
+        background: $bggray
+
+        &.after
+            &::after
+                background-image: url('../img/after-gray.svg')
+
+    &--blue
+        background: $blue
+
+        &.after
+            &::after
+                background-image: url('../img/after-blue.svg')
+
+        .section__header
+            color: #fff
+
+    &--lightblue
+        background: $lightblue2
+
+        .section__header
+            color: #fff
+
+    &--middle
+        padding: 85px 0 !important
+
+    &--dev
+        background: $bggray
+        min-height: 100vh
+
+        h2
+            font-size: 40px
+            margin-bottom: 16px
+            line-height: 1.3
+
+        ul
+            list-style: disc
+            padding-left: 30px
+            padding-bottom: 30px
+
+        a
+            color: #1698DE
+            font-size: 16px
+            font-weight: 500
+
+        span
+            color: red
+            font-weight: 500
+            font-size: 14px
+
+        p
+            &:first-of-type
+                margin-top: 10px
+
+            &:last-of-type
+                margin-bottom: 10px
+
+.after
+    position: relative
+
+    &::after
+        absolute()
+        top: 100%
+        left: 50%
+        transform: translateX(-50%)
+        width: 119px
+        height: 37px
+        background-size: contain
+        background-repeat: no-repeat
+        z-index: 10
+
+    &--blue
+        &::after
+            background-image: url('../img/after-blue.svg')
+
+    &--white
+        &::after
+            background-image: url('../img/after-white.svg')
+
+    &--gray
+        &::after
+            background-image: url('../img/after-gray.svg')
+
+.z-1
+    position: relative
+    z-index: 1
+
+.dropdown
+    border-radius: 6px
+    cursor: pointer
+    text-align: left
+    color: $blue
+    position: relative
+    background: #FFF url('../img/spoiler.svg') no-repeat top 50% right 12px
+    height: 40px
+
+    &--bordered
+        border: 1px solid $blue
+
+        .dropdown-items
+            border: 1px solid $blue
+            border-top: 0
+            left: -1px
+            right: -1px
+
+    &--audioguides
+        max-width: 234px
+
+        .dropdown__current
+            color: $blue !important
+            font-weight: 700 !important
+
+    &--ideas
+        width: 353px
+
+        .jspVerticalBar
+            right: 6px
+
+            .jspArrow
+                background: #fff
+                height: 5px
+                position: relative
+
+        .dropdown__current
+            display: block
+            line-height: 40px
+            max-width: 95%
+            white-space: nowrap
+            text-overflow: ellipsis
+            overflow: hidden
+
+    &.active
+        border-bottom: 0
+        border-radius: 6px 6px 0 0
+
+        .dropdown__layout
+            display: block
+
+    &__layout
+        position: fixed
+        top: 0
+        right: 0
+        bottom: 0
+        left: 0
+        z-index: 18
+        display: none
+
+    &__current
+        color: rgba(63, 75, 91, 0.2)
+        height: 100%
+        display: flex
+        align-items: center
+        padding: 0 12px
+
+        &.changed
+            color: $gray
+
+    &-items
+        display: none
+        font-size: 12px
+        position: absolute
+        background: #fff
+        left: 0
+        right: 0
+        padding: 6px 12px 8px
+        z-index: 20
+        border-radius: 0 0 6px 6px
+
+    &__item
+        & + &
+            margin-top: 5px
+
+    p
+        margin-bottom: 5px
+
+        &:last-child
+            margin-bottom: 0
+
+        a
+            color: $blue
+
+.city
+    font-size: 11px
+    line-height: 14.02px
+    position: relative
+    padding-left: 13px
+
+    &::before
+        absolute()
+        top: 2px
+        left: 1px
+        width: 8px
+        height: 10px
+        background: url('../img/pin-lightblue.svg') no-repeat
+        background-size: contain
+
+.audio-player
+    border-radius: 25px
+    background: $bggray
+    width: 100%
+    height: 50px
+    padding: 11px 19px 11px 11px
+    box-shadow: none !important
+    min-width: 0 !important
+
+    &.is_playing
+        .slider .gap-progress .pin
+            opacity: 0
+
+    .play-pause-btn
+        width: 28px
+        height: 28px
+        background: #eee
+        border-radius: 50%
+
+    .controls
+        margin: 0
+
+    .controls .controls__slider
+        height: 2px
+        border-radius: 1px
+        background: #CBD1DC
+        margin-left: 12px
+        margin-right: 12px
+
+    .slider .gap-progress
+        background: $lightblue2
+
+    .slider .gap-progress .pin
+        background: $lightblue2
+        width: 6px
+        height: 6px
+        box-shadow: none
+
+    .controls .controls__slider .controls__progress .progress__pin
+        top: -2px
+        right: -2px
+
+    .controls
+        font-size: 10px
+        color: #3F4B5B
+
+    .controls__current-time
+        font-weight: 700
+
+    .volume
+        margin-left: 10px
+
+        .volume__button.open path
+            fill: $blue !important
+
+        .volume__controls
+            height: 78px
+            width: 20px
+            border-radius: 24.5px
+            background: #3F4B5B
+
+            .volume__slider
+                width: 2px
+                border-radius: 37px
+                background: none
+                margin-top: 8px
+                margin-bottom: 7px
+
+                .volume__progress
+                    width: 2px
+                    background: #F2F4F7
+
+                    .volume__pin
+                        left: -2px
+                        top: 0
+
+        .volume__controls.top
+            bottom: 22px
+            left: -4px
+
+    .holder .loading .loading__spinner
+        left: 6px
+        bottom: 6px
+
+    &--compact
+        margin: 0
+        padding: 0
+        min-width: 28px !important
+        width: 28px
+        height: 28px
+
+        .controls, .volume
+            display: none !important
+
+.jspVerticalBar
+    z-index: 1
+    width: 4px
+    background: none
+    border-radius: 2px
+
+    &::before
+        absolute()
+        width: 2px
+        left: 1px
+        top: 0
+        bottom: 0
+        background: #F3F3F3
+
+.jspTrack
+    background: none
+
+.jspDrag
+    background: $blue
+    width: 4px
+    border-radius: 4px
+
+.slider-button
+    width: 27.998px
+    height: 27.998px
+    background-repeat: no-repeat
+    background-size: contain
+    cursor: pointer
+
+    &-prev
+        background-image: url('../img/arrow-left.svg')
+
+    &-next
+        background-image: url('../img/arrow-right.svg')
+
+    // &.swiper-button-disabled
+        // opacity: 0.5

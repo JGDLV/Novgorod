@@ -1,0 +1,139 @@
+-
+	var menu01 = [
+		{ href: '#', text: 'Батецкий район' },
+		{ href: '#', text: 'Боровичский район' },
+		{ href: '#', text: 'Валдайский район' },
+		{ href: '#', text: 'Великий новгород' },
+		{ href: '#', text: 'Волотовский округ' },
+		{ href: '#', text: 'Демянский район' },
+		{ href: '#', text: 'Крестецкий район' },
+		{ href: '#', text: 'Любытинский район' },
+		{ href: '#', text: 'Маловишерский район' },
+		{ href: '#', text: 'Маревский округ' },
+		{ href: '#', text: 'Мошенской район' },
+		{ href: '#', text: 'Новгородский район' },
+		{ href: '#', text: 'Окуловский район' },
+		{ href: '#', text: 'Парфинский район' },
+		{ href: '#', text: 'Пестовский район' },
+		{ href: '#', text: 'Поддорский район' },
+		{ href: '#', text: 'Солецкий округ' },
+		{ href: '#', text: 'Старорусский район' },
+		{ href: '#', text: 'Хвойнинский округ' },
+		{ href: '#', text: 'Холмский район' },
+		{ href: '#', text: 'Чудовский район' },
+		{ href: '#', text: 'Шимский район' },
+	]
+
+	var menu02 = [
+		{ href: '#', text: 'Музеи' },
+		{ href: '#', text: 'Храмы и монастыри' },
+		{ href: '#', text: 'Детский отдых' },
+		{ href: '#', text: 'Активный отдых' },
+		{ href: '#', text: 'Природа' },
+		{ href: '#', text: 'Выставки' },
+		{ href: '#', text: 'Оздоровительный туризм' },
+		{ href: '#', text: 'Развлечения' },
+		{ href: '#', text: 'Приключения' },
+		{ href: '#', text: 'Гастрономический туризм' },
+		{ href: '#', text: 'Культура' },
+		{ href: '#', text: 'Необычные места' },
+		{ href: '#', text: 'Мастер классы' },
+		{ href: '#', text: 'Поклонный туризм' },
+		{ href: '#', text: 'Охота и рыбалка' },
+	]
+
+	var menu03 = [
+		{ href: '#', text: 'Гостиница' },
+		{ href: '#', text: 'Санаторий' },
+		{ href: '#', text: 'База отдыха' },
+		{ href: '#', text: 'Апартаменты' },
+		{ href: '#', text: 'Хостел' },
+		{ href: '#', text: 'Гостевой дом' },
+		{ href: '#', text: 'Глэмпинг' },
+	]
+
+	var menu04 = [
+		{ href: '#', text: 'Партнеры' },
+		{ href: '#', text: 'Обратная связь' },
+		{ href: '#', text: 'Контакты' },
+	]
+
+	var menu05 = [
+		{ href: '#', text: 'Рестораны' },
+		{ href: '#', text: 'Бары и пабы' },
+		{ href: '#', text: 'Чайханы' },
+		{ href: '#', text: 'Кафе и кофейни' },
+		{ href: '#', text: 'Траттории' },
+		{ href: '#', text: 'Столовые' },
+	]
+
+	var menu06 = [
+		{ href: '#', text: 'Карта гостя' },
+		{ href: '#', text: 'Туроператоры' },
+		{ href: '#', text: 'Инфо-Центры' },
+		{ href: '#', text: 'Аудиогиды' },
+		{ href: '#', text: 'Видеогиды' },
+		{ href: '#', text: 'Журнал' },
+		{ href: '#', text: 'Великие имена' },
+	]
+
+	var grid = [
+		{ href: '#', text: 'Карта гостя', },
+		{ href: '#', text: 'Инфо-Центры', },
+		{ href: '#', text: 'Журнал', },
+		{ href: '#', text: 'Туроператоры', },
+		{ href: '#', text: 'Аудиогиды', },
+		{ href: '#', text: 'Великие имена', },
+	]
+
+.footer
+	.container
+		.footer__top
+			a.footer__logo(href="#") 
+				img.footer__logo-image(src="img/logo.svg" alt="")
+				p.footer__logo-text При поддержке <br>Правительства Новогородской области
+			.footer-grid.mobile-only
+				each item in grid
+					a.footer__link(href=item.href) !{item.text}
+		.footer__bottom
+			.footer__bottom-inner
+				.footer__bottom-block.footer__bottom-block--1
+					.footer__bottom-block-header Города и населенные пункты
+					.footer-menu
+						ul.footer-menu-items
+							each item in menu01
+								li.footer-menu__item
+									a.footer-menu__link(href=item.href) !{item.text}
+				.footer__bottom-block.footer__bottom-block--2
+					.footer__bottom-block-header #[a(href="#") Места] / #[a(href="#") Экскурсии] / #[a(href="#") События]
+					.footer-menu
+						ul.footer-menu-items
+							each item in menu02
+								li.footer-menu__item
+									a.footer-menu__link(href=item.href) !{item.text}
+				.footer__bottom-block.footer__bottom-block--3
+					.footer__bottom-block-header #[a(href="#") Где остановиться]
+					.footer-menu
+						ul.footer-menu-items
+							each item in menu03
+								li.footer-menu__item
+									a.footer-menu__link(href=item.href) !{item.text}
+					.footer__bottom-block-header #[a(href="#") О проекте]
+					.footer-menu
+						ul.footer-menu-items
+							each item in menu04
+								li.footer-menu__item
+									a.footer-menu__link(href=item.href) !{item.text}
+				.footer__bottom-block.footer__bottom-block--4
+					.footer__bottom-block-header #[a(href="#") Где поесть]
+					.footer-menu
+						ul.footer-menu-items
+							each item in menu05
+								li.footer-menu__item
+									a.footer-menu__link(href=item.href) !{item.text}
+					.footer-menu.footer-menu--bold
+						ul.footer-menu-items
+							each item in menu06
+								li.footer-menu__item
+									a.footer-menu__link(href=item.href) !{item.text}
+

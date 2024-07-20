@@ -1,0 +1,24 @@
+.inform__item
+    img.inform__item-image(src=item.image, alt="")
+    .inform__item-content
+        .inform__item-type !{item.type}
+        .inform__item-title !{item.title}
+        if item.address
+            .inform__item-address !{item.address}
+        if item.whours
+            .inform__item-whours !{item.whours}
+        if item.phones
+            .inform__item-phones
+                each phone, index in item.phones
+                    a.inform__item-phone(href="tel:+" + phone) 
+                        nobr !{phone}
+
+                    //- if index < item.phones.length - 1
+                    //-     a.inform__item-phone(href="tel:+" + phone) !{phone}
+                    //- else
+                    //-     a.inform__item-phone(href="tel:+" + phone) !{phone}
+        if item.url
+            a.inform__item-url(href='//' + item.url) !{item.url}
+        if item.email
+            a.inform__item-email(href="mailto:" + item.email) !{item.email}
+        a.inform__item-description(href="#") показать описание

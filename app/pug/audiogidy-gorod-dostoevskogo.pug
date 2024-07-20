@@ -1,0 +1,158 @@
+extends _layout.pug
+
+block variables
+    -
+        var title = 'Аудиогиды Город Достоевского'
+        var description = 'Аудиогиды Город Достоевского'
+        var index = false
+
+        audioguides = {
+            text: 'Выберите населенный пункт:',
+            items: [
+                {
+                    image: '',
+                    title: 'Земля Новгородская',
+                    text: 'Увлекательный рассказ об истории Земли Новгородской.',
+                },
+                {
+                    image: '',
+                    title: 'Новгородская икона Божией Матери «Знамение»',
+                    text: 'Увлекательный рассказ об истории Земли Новгородской.',
+                },
+                {
+                    image: '',
+                    title: '«Народный путеводитель» по Великому Новгороду',
+                    text: '',
+                },
+                {
+                    image: '',
+                    title: 'Великий Новгород – Ганзейский город',
+                    text: '',
+                },
+                {
+                    image: '',
+                    title: '«Великий Новгород - Родина российских гениев». Сергей Рахманинов',
+                    text: '',
+                },
+                {
+                    image: '',
+                    title: 'Прогулка с историями о Новгородской земле',
+                    text: '',
+                },
+                {
+                    image: '',
+                    title: 'Аудиогид по Ярославову дворищу',
+                    text: '',
+                },
+                {
+                    image: '',
+                    title: 'Аудиогид по Новгородскому Кремлю',
+                    text: 'Живая история Великого Новгорода раскроется перед вашими глазами.',
+                },
+                {
+                    image: '',
+                    title: 'Святой благоверный Великий Князь Александр Невский на новгородской земле.',
+                    text: 'По Указу Президента России наступивший 2021 год пройдет под именем Александра Невского. Именно в этом году отмечается 800-летие со дня рождения Святог...',
+                },
+            ],
+            button: {
+                href: '#',
+                text: 'Показать еще'
+            }
+        }
+
+block content
+    .intro.intro--audioguide
+        .container
+            p.intro__subheader Аудиогид
+            h1.intro__header СТАРАЯ РУССА — <br>ГОРОД ДОСТОЕВСКОГО
+            .intro__text По следам великого писателя
+            .intro-grid.intro-grid--small
+                .intro__item
+                    .intro__item-text подробности из жизни <br>Ф. М. Достоевского
+                .intro__item
+                    .intro__item-text аудиосопровождение <br>по знаковым местам
+                .intro__item
+                    .intro__item-text погружение в атмосферу города, <br>вдохновившего классика
+    .section.section--gray.audioguide
+        .container
+            .audioguide-top
+                .audioguide__text Старая Русса живописно расположена на реке Полисти, в центре города происходит слияние ее с Перерытицей и Порусьей. Город издавна славился своими минеральными источниками, привлекавшими многообразное общество из Москвы и Петербурга. Это место было выбрано семьей Достоевских для летнего отдыха с детьми.
+                img.audioguide__image(src="img/audioguide-image.png" alt="")
+            .audioguide-bottom
+                .audioguide-grid
+                    .audioguide__left
+                        .audioguide-content
+                            .audioguides__item
+                                img.audioguides__item-image(src="" alt="")
+                                .audioguides__item-info
+                                    .audioguides__item-type Аудиогид
+                                    .audioguides__item-city.city Старая Русса
+                                .audioguides__item-title(href="#") Советская набережная и Живой мост
+                            .audioguide-content__player.audio-player
+                                audio(src="Treasures.mp3")
+                            .audioguide-content__text.scroll-pane(style="height:341px")
+                                div
+                                    p В Старой Руссе времен Достоевского любимым местом прогулок у местных и приезжих людей был так называемый Красный берег (набережная реки Полисти). Там находился Городской сад, где проходили народные гулянья. На Красном берегу размещались Земская управа, царский Путевой дворец, фабрика акционерного общества «Александр Мартин Лютер», лесопильный завод Де Бука.
+                                    p Также здесь находилась пароходная пристань. Именно сюда 16 мая 1872 года пристал пароход, на котором совершала свое первое путешествие по Новгородской земле семья Достоевских.
+                                    p В настоящее время эти объекты утрачены.
+                                    p Совершая прогулки с женой и детьми или в одиночестве, Достоевский часто направлялся от Торговой площади (здесь писатель бывал 
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius unde non voluptas reiciendis numquam odit tenetur, a quae culpa quisquam consectetur cum deserunt corrupti dolorum ipsam repellat consequuntur dolorem debitis.Illum commodi tempora minus accusantium nam veritatis perspiciatis, beatae laborum ratione similique quas eligendi fugiat doloribus aspernatur animi harum quisquam, voluptas sed dicta quos doloremque rem odio? Consectetur, sint doloribus!Laudantium, iusto magni molestiae hic itaque quod eaque corporis laborum impedit sequi iste voluptatem possimus fugiat corrupti, vel error alias sed aperiam obcaecati. Molestiae dolores voluptatem ipsum, odit accusantium perferendis.Et accusamus ipsam culpa molestiae iure labore corporis rerum! Ipsam fugiat vel accusamus aliquid totam assumenda exercitationem, reiciendis adipisci consectetur architecto. Obcaecati fugiat quisquam rerum quaerat vel possimus at ut.Animi eum quisquam id sit tempore, recusandae nihil vitae officiis expedita obcaecati minus illo ipsa quibusdam neque eveniet. Architecto excepturi exercitationem eum ipsum qui ducimus laboriosam officia eos itaque veniam.Ab, perferendis ipsum. Doloremque quisquam fugiat libero provident possimus culpa labore magnam sequi, molestias aut eligendi. Consectetur optio nihil pariatur, fugiat rem odio sed molestias, deserunt est a, et adipisci!Accusamus molestiae possimus voluptas esse deleniti, ipsum autem quidem, sed consequatur pariatur hic odit sunt veniam deserunt. Earum possimus dicta odio dignissimos repellat qui, vitae ea nulla distinctio nam quidem!Eligendi repellendus velit laborum, ratione accusamus illum facilis dignissimos, debitis distinctio tempora quibusdam recusandae voluptatem vitae aut sit a sapiente voluptatum non minus, alias voluptates aliquam saepe voluptas? Earum, dolore.Ipsa vero totam eos libero quia voluptatem. Illo quis quisquam, exercitationem qui earum saepe dolorum repellat temporibus vero eos aspernatur necessitatibus quia nostrum consequuntur quidem voluptas, sed magni omnis? Animi.Perspiciatis blanditiis neque placeat sint rem aperiam provident, maiores quae quibusdam accusantium ipsum dolor omnis adipisci odio, quasi accusamus quod quo, maxime laborum! Nam, fuga quidem atque esse harum asperiores!
+                            
+                    .audioguide__right
+                        .audioguide-list
+                            .audioguide-list__header СПИСОК АУДИОГИДОВ
+                            .audioguide-list-items
+                                .audioguide-list__item
+                                    .audio-player.audio-player--compact
+                                        audio(src="Treasures.mp3")
+                                    | 1. Советская набережная и Живой мост
+                                .audioguide-list__item
+                                    .audio-player.audio-player--compact
+                                        audio(src="Treasures.mp3")
+                                    | 2. Соборная площадь
+                                .audioguide-list__item
+                                    .audio-player.audio-player--compact
+                                        audio(src="Treasures.mp3")
+                                    | 3. Воскресенский собор
+                                .audioguide-list__item
+                                    .audio-player.audio-player--compact
+                                        audio(src="Treasures.mp3")
+                                    | 4. Музей романа «Братья Карамазовы»
+                                .audioguide-list__item
+                                    .audio-player.audio-player--compact
+                                        audio(src="Treasures.mp3")
+                                    | 5. Набережная Достоевского и Дом-музей Ф.М. Достоевского
+                                .audioguide-list__item
+                                    .audio-player.audio-player--compact
+                                        audio(src="Treasures.mp3")
+                                    | 6. Церковь святого Великомученика Мины
+                                .audioguide-list__item
+                                    .audio-player.audio-player--compact
+                                        audio(src="Treasures.mp3")
+                                    | 7. Церковь святого Великомученика Георгия Победоносца
+                                .audioguide-list__item
+                                    .audio-player.audio-player--compact
+                                        audio(src="Treasures.mp3")
+                                    | 8. Река Порусья и Памятник Ф.М. Достоевскому и Улица Сварога
+                                .audioguide-list__item
+                                    .audio-player.audio-player--compact
+                                        audio(src="Treasures.mp3")
+                                    | 9. Река Порусья и Памятник Ф.М. Достоевскому и Улица Сварога
+                                .audioguide-list__item
+                                    .audio-player.audio-player--compact
+                                        audio(src="Treasures.mp3")
+                                    | 10. Курорт «Старая Русса»
+                                .audioguide-list__item
+                                    .audio-player.audio-player--compact
+                                        audio(src="Treasures.mp3")
+                                    | 11. Мурал Достоевского
+                                .audioguide-list__item
+                                    .audio-player.audio-player--compact
+                                        audio(src="Treasures.mp3")
+                                    | 12. Спасо–Преображенский монастырь
+                        .audioguide-map
+                            .map-rounded
+                                include components/map.pug
+    .section.section--white.section--middle.welcome.z-1
+        include components/welcome.pug

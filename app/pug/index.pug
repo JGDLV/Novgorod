@@ -1,0 +1,57 @@
+doctype html
+html(lang="en")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+		link(rel='preconnect' href='https://fonts.googleapis.com')
+		link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin)
+		link(rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap')
+		link(rel='stylesheet' href='css/libs.min.css')
+		link(rel='stylesheet' href='css/swiper-bundle.min.css')
+		link(rel='stylesheet' href='css/green-audio-player.min.css')
+		link(rel='stylesheet' href='css/jquery.jscrollpane.css')
+		link(rel='stylesheet' href='css/style.css')
+		title Список страниц
+	body(style="padding:0;")
+		.section.section--dev
+			.container
+				h2.section__header Страницы
+				ul
+					li #[a(href="main.html") Главная страница]
+					li #[a(href="staraya-russa.html") Старая Русса]
+					li #[a(href="shirokaya-maslennica.html") Широкая масленница]
+					li #[a(href="otel-vizavi.html") Отель Визави]
+					li #[a(href="glehmping.html") Глэмпинг]
+					li #[a(href="restoran-karamazovy.html") Ресторан Карамазовы]
+					li #[a(href="gde-ostanovitsya.html") Где остановиться]
+					li #[a(href="gde-poest.html") Где поесть]
+					li #[a(href="karta-gostya.html") Карта гостя]
+					li #[a(href="inform-centry.html") Информ центры]
+					li #[a(href="audiogidy.html") Аудиогиды]
+					li #[a(href="audiogidy-gorod-dostoevskogo.html") Аудиогиды Город Достоевского]
+					li #[a(href="velikie-imena-dostoevskij.html") Великие имена Достоевский]
+					li #[a(href="o-proekte.html") О проекте]
+					li #[a(href="o-regione.html") О Регионе]
+					li #[a(href="kak-dobratsya.html") Как добраться]
+					li #[a(href="suveniry-kresteckaya-strochka.html") Сувениры: Крестецкая строчка]
+					li #[a(href="404.html") 404]
+					li #[a(href="search.html") Поиск]
+				h2.section__header Модальные окна
+				ul
+					li #[a.call-modal(href="#booking") Забронируйте поездку при помощи эксперта]
+					li #[a.call-modal(href="#booking-tent") Забронируйте шатер при помощи эксперта]
+					li #[a.call-modal(href="#thanks") Спасибо! Ваша заявка принята!]
+					li #[a.call-modal(href="#postcard") Отправьте открытку (Светлая)]
+					li #[a.call-modal(href="#postcard-dark") Отправьте открытку (Темная)]
+					li #[a.call-modal(href="#postcard-thanks") Ваша открытка успешно отправлена! (Светлая)]
+					li #[a.call-modal(href="#postcard-thanks-dark") Ваша открытка успешно отправлена! (Темная)]
+					li #[a.call-modal(href="#order") Оформить заказ]
+
+		include components/modals.pug
+		script(src='js/libs.min.js')
+		script(src='js/green-audio-player.min.js')
+		script(src='js/jquery.mousewheel.min.js')
+		script(src='js/jquery.jscrollpane.min.js')
+		script(src='js/swiper-bundle.min.js')
+		script(src='js/jquery.bs.calendar.min.js')
+		script(src='js/scripts.js')
